@@ -12,7 +12,6 @@
         .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
         .form-container, .quiz-container, .result-container { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         h2 { color: #667eea; margin-bottom: 25px; font-size: 1.6em; }
-        .sociologia h2 { color: #56ab2f; }
         .form-group { margin-bottom: 25px; }
         label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
         input, select { width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; }
@@ -21,6 +20,8 @@
         .btn.sociologia { background: #56ab2f; }
         .btn:hover { background: #5568d3; }
         .btn.sociologia:hover { background: #4a9528; }
+        .error-msg { background: #ffebee; color: #c62828; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #c62828; display: none; }
+        .error-msg.show { display: block; }
         .question { margin-bottom: 35px; padding-bottom: 25px; border-bottom: 2px solid #eee; }
         .question:last-of-type { border-bottom: none; }
         .question-text { font-size: 1.1em; color: #333; margin-bottom: 20px; font-weight: 600; line-height: 1.5; }
@@ -47,7 +48,7 @@
 </head>
 <body>
     <header id="header">
-        <h1 id="title">Quiz</h1>
+        <h1 id="title">📝 Quiz</h1>
         <p id="subtitle">Teste seus conhecimentos</p>
     </header>
 
@@ -57,6 +58,8 @@
             <h2>📋 Identificação do Estudante</h2>
             <p style="margin-bottom: 25px; color: #666;">Preencha os dados abaixo para iniciar o quiz:</p>
             
+            <div class="error-msg" id="errorMsg"></div>
+
             <div class="form-group">
                 <label for="studentName">Nome Completo *</label>
                 <input type="text" id="studentName" required placeholder="Digite seu nome completo">
@@ -78,13 +81,14 @@
                 </select>
             </div>
 
-            <button class="btn" id="startBtn" onclick="startQuiz()">Iniciar Quiz</button>
+            <button type="button" class="btn" id="startBtn" onclick="startQuiz()">Iniciar Quiz</button>
         </div>
 
         <!-- Quiz -->
         <div class="quiz-container hidden" id="quizContainer">
-            <h2>Questões</h2>
+            <h2 id="quizTitle">Questões</h2>
             <div id="questionsContainer"></div>
+            <div class="error-msg" id="quizErrorMsg"></div>
             <button type="button" class="btn" id="submitBtn" onclick="submitQuiz()">Finalizar Quiz</button>
         </div>
 
@@ -99,4 +103,202 @@
                     <div id="corrections"></div>
                 </div>
                 <a href="#" id="backToLesson" class="back-btn">← Voltar à Aula</a>
-               
+                <a href="#" id="backToList" class="back-btn" style="margin-left: 10px;">Ver Outras Aulas</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="dados-aulas.js"></script>
+    <script>
+        // Verifica se os dados foram carregados
+        if (typeof dadosAulas === 'undefined') {
+            alert('ERRO: Não foi possível carregar as questões. Verifique se o arquivo dados-aulas.js está no repositório.');
+            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Erro ao carregar</h1><p>Arquivo de dados não encontrado.</p><a href="index.html">Voltar ao início</a></div>';
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const materia = urlParams.get('materia');
+        const aulaNum = parseInt(urlParams.get('aula'));
+        const isSociologia = materia === 'sociologia';
+
+        if (!materia || !aulaNum || !dadosAulas[materia] || !dadosAulas[materia][aulaNum]) {
+            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Aula não encontrada</h1><p>Verifique o link.</p><a href="index.html">Voltar ao início</a></div>';
+        } else {
+            const aula = dadosAulas[materia][aulaNum];
+            document.getElementById('title').textContent = `📝 Quiz - Aula ${aulaNum}`;
+            document.getElementById('subtitle').textContent = aula.titulo;
+            document.getElementById('quizTitle').textContent = `Questões - ${aula.titulo}`;
+            document.getElementById('backToLesson').href = `aula.html?materia=${materia}&aula=${aulaNum}`;
+            document.getElementById('backToList').href = `aulas-${materia}.html`;
+
+            if (isSociologia) {
+                document.getElementById('header').classList.add('sociologia');
+                document.getElementById('startBtn').classList.add('sociologia');
+                document.getElementById('submitBtn').classList.add('sociologia');
+                document.getElementById('scoreDisplay').classList.add('sociologia');
+                document.getElementById('backToLesson').classList.add('sociologia');
+                document.getElementById('backToList').classList.add('sociologia');
+            }
+        }
+
+        let studentData = {};
+        let currentQuestions = [];
+
+        function showError(elementId, message) {
+            const errorDiv = document.getElementById(elementId);
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+            setTimeout(() => errorDiv.classList.remove('show'), 4000);
+        }
+
+        function startQuiz() {
+            const name = document.getElementById('studentName').value.trim();
+            const classSelected = document.getElementById('studentClass').value;
+
+            if (!name || name.length < 3) {
+                showError('errorMsg', '⚠️ Por favor, preencha seu nome completo (mínimo 3 caracteres).');
+                return;
+            }
+            if (!classSelected) {
+                showError('errorMsg', '⚠️ Por favor, selecione sua turma.');
+                return;
+            }
+
+            studentData = {
+                name: name,
+                class: classSelected,
+                materia: materia,
+                aula: aulaNum,
+                date: new Date().toLocaleString('pt-BR')
+            };
+
+            // Embaralha as alternativas mas mantém a ordem das questões
+            const questoesOriginais = dadosAulas[materia][aulaNum].quiz;
+            currentQuestions = questoesOriginais.map(q => {
+                const alternativas = [
+                    { letra: 'a', texto: q.alternativas.a },
+                    { letra: 'b', texto: q.alternativas.b },
+                    { letra: 'c', texto: q.alternativas.c },
+                    { letra: 'd', texto: q.alternativas.d },
+                    { letra: 'e', texto: q.alternativas.e }
+                ];
+                
+                // Embaralha
+                for (let i = alternativas.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [alternativas[i], alternativas[j]] = [alternativas[j], alternativas[i]];
+                }
+                
+                const novaLetraCorreta = alternativas.find(a => a.letra === q.correta).letra;
+                const novasLetras = ['a', 'b', 'c', 'd', 'e'];
+                const novasAlternativas = {};
+                alternativas.forEach((alt, idx) => {
+                    novasAlternativas[novasLetras[idx]] = alt.texto;
+                });
+                
+                return {
+                    enunciado: q.enunciado,
+                    alternativas: novasAlternativas,
+                    correta: novaLetraCorreta,
+                    explicacao: q.explicacao
+                };
+            });
+
+            // Renderiza questões
+            let html = '';
+            currentQuestions.forEach((q, idx) => {
+                html += `<div class="question"><div class="question-text"><strong>Questão ${idx + 1}:</strong> ${q.enunciado}</div><div class="options">`;
+                ['a', 'b', 'c', 'd', 'e'].forEach(letra => {
+                    html += `<label><input type="radio" name="q${idx}" value="${letra}"> ${letra}) ${q.alternativas[letra]}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            document.getElementById('questionsContainer').innerHTML = html;
+
+            document.getElementById('formContainer').classList.add('hidden');
+            document.getElementById('quizContainer').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        function submitQuiz() {
+            const answers = {};
+            for (let i = 0; i < currentQuestions.length; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (!selected) {
+                    showError('quizErrorMsg', `⚠️ Por favor, responda a questão ${i + 1} antes de finalizar.`);
+                    return;
+                }
+                answers[`q${i}`] = selected.value;
+            }
+
+            let score = 0;
+            const corrections = [];
+
+            currentQuestions.forEach((q, idx) => {
+                const userAnswer = answers[`q${idx}`];
+                const isCorrect = userAnswer === q.correta;
+                if (isCorrect) score++;
+                corrections.push({
+                    question: idx + 1,
+                    enunciado: q.enunciado,
+                    userAnswer,
+                    correctAnswer: q.correta,
+                    userText: q.alternativas[userAnswer],
+                    correctText: q.alternativas[q.correta],
+                    isCorrect,
+                    explanation: q.explicacao
+                });
+            });
+
+            // Salva resultado
+            const result = {
+                ...studentData,
+                score: score,
+                totalQuestions: currentQuestions.length,
+                percentage: Math.round((score / currentQuestions.length) * 100),
+                timestamp: new Date().toISOString()
+            };
+
+            let allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
+            allResults.push(result);
+            localStorage.setItem('quizResults', JSON.stringify(allResults));
+
+            displayResults(score, corrections);
+        }
+
+        function displayResults(score, corrections) {
+            document.getElementById('quizContainer').classList.add('hidden');
+            document.getElementById('resultContainer').classList.remove('hidden');
+
+            document.getElementById('scoreDisplay').textContent = `${score}/${currentQuestions.length}`;
+
+            let message = '';
+            if (score === currentQuestions.length) message = '🏆 Excelente! Você dominou o conteúdo!';
+            else if (score >= 3) message = '👍 Bom trabalho! Revise os erros para aperfeiçoar.';
+            else message = '📚 Continue estudando! Revise a aula e tente novamente.';
+            document.getElementById('messageDisplay').textContent = message;
+
+            let correctionsHTML = '';
+            corrections.forEach(corr => {
+                const statusClass = corr.isCorrect ? 'correct' : 'incorrect';
+                const statusIcon = corr.isCorrect ? '✅' : '❌';
+                
+                correctionsHTML += `
+                    <div class="question-correction ${statusClass}">
+                        <strong>${statusIcon} Questão ${corr.question}</strong>
+                        <p style="margin-bottom:10px;color:#555;font-style:italic;">${corr.enunciado}</p>
+                        <p>${corr.isCorrect ? 
+                            `<span class="correct-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - CORRETA</span>` : 
+                            `<span class="user-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - ERRADA</span><br>
+                             <span class="correct-answer">Resposta correta: ${corr.correctAnswer}) ${corr.correctText}</span>`
+                        }</p>
+                        <div class="explanation"><strong>Explicação:</strong> ${corr.explanation}</div>
+                    </div>
+                `;
+            });
+            document.getElementById('corrections').innerHTML = correctionsHTML;
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
