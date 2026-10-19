@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulão de Revisão - Provão Paulista 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .school {
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .subject-selection {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .subject-card {
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .philosophy {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .philosophy:hover {
+            border-color: #667eea;
+        }
+
+        .sociology {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+            color: white;
+        }
+
+        .sociology:hover {
+            border-color: #56ab2f;
+        }
+
+        .subject-card h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .subject-card p {
+            font-size: 1.1em;
+        }
+
+        .class-selection {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .class-selection label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .class-selection select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            margin-top: 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .subject-selection {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 AULÃO DE REVISÃO</h1>
+        <h2 style="text-align: center; color: #667eea; margin-bottom: 10px;">PROVÃO PAULISTA 2026</h2>
+        <div class="school">
+            E.E. Prof. Esli Garcia Diniz<br>
+            Professor Vitor Piedade
+        </div>
+
+        <div class="subject-selection">
+            <div class="subject-card philosophy" onclick="selectSubject('filosofia')">
+                <h2>🏛️ FILOSOFIA</h2>
+                <p>12 aulas de revisão com questões do ENEM</p>
+            </div>
+            <div class="subject-card sociology" onclick="selectSubject('sociologia')">
+                <h2>👥 SOCIOLOGIA</h2>
+                <p>12 aulas de revisão com questões do ENEM</p>
+            </div>
+        </div>
+
+        <div class="class-selection" id="classSection">
+            <label for="classSelect">Selecione sua turma:</label>
+            <select id="classSelect">
+                <option value="">-- Selecione a turma --</option>
+                <optgroup label="1ª Série">
+                    <option value="1A">1A</option>
+                    <option value="1B">1B</option>
+                    <option value="1C">1C</option>
+                    <option value="1D">1D</option>
+                    <option value="1E">1E</option>
+                </optgroup>
+                <optgroup label="2ª Série">
+                    <option value="2A">2A</option>
+                    <option value="2B">2B</option>
+                    <option value="2C">2C</option>
+                    <option value="2D">2D</option>
+                    <option value="2E">2E</option>
+                </optgroup>
+                <optgroup label="3ª Série">
+                    <option value="3A">3A</option>
+                    <option value="3B">3B</option>
+                    <option value="3C">3C</option>
+                    <option value="3D">3D</option>
+                    <option value="3F">3F</option>
+                </optgroup>
+            </select>
+            <button class="btn" onclick="goToLessons()">Continuar</button>
+        </div>
+    </div>
+
+    <script>
+        let selectedSubject = '';
+
+        function selectSubject(subject) {
+            selectedSubject = subject;
+            // Remove active class from all cards
+            document.querySelectorAll('.subject-card').forEach(card => {
+                card.style.border = '3px solid transparent';
+            });
+            // Add active class to selected card
+            event.currentTarget.style.border = '3px solid white';
+        }
+
+        function goToLessons() {
+            const classSelect = document.getElementById('classSelect');
+            if (!selectedSubject) {
+                alert('Por favor, selecione uma disciplina (Filosofia ou Sociologia)');
+                return;
+            }
+            if (!classSelect.value) {
+                alert('Por favor, selecione sua turma');
+                return;
+            }
+            
+            // Store in localStorage
+            localStorage.setItem('selectedSubject', selectedSubject);
+            localStorage.setItem('selectedClass', classSelect.value);
+            
+            // Redirect to lessons page
+            window.location.href = `aulas-${selectedSubject}.html`;
+        }
+    </script>
+</body>
+</html>
