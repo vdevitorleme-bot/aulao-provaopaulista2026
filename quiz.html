@@ -20,8 +20,11 @@
         .btn.sociologia { background: #56ab2f; }
         .btn:hover { background: #5568d3; }
         .btn.sociologia:hover { background: #4a9528; }
+        .btn:disabled { background: #999; cursor: not-allowed; }
         .error-msg { background: #ffebee; color: #c62828; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #c62828; display: none; }
         .error-msg.show { display: block; }
+        .success-msg { background: #e8f5e9; color: #2e7d32; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2e7d32; display: none; }
+        .success-msg.show { display: block; }
         .question { margin-bottom: 35px; padding-bottom: 25px; border-bottom: 2px solid #eee; }
         .question:last-of-type { border-bottom: none; }
         .question-text { font-size: 1.1em; color: #333; margin-bottom: 20px; font-weight: 600; line-height: 1.5; }
@@ -44,6 +47,8 @@
         .explanation { margin-top: 10px; padding: 12px; background: #f5f7fa; border-radius: 5px; font-size: 0.95em; color: #555; }
         .back-btn { display: inline-block; margin-top: 20px; padding: 12px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 25px; font-weight: 600; }
         .back-btn.sociologia { background: #56ab2f; }
+        .loading { display: inline-block; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -98,6 +103,7 @@
                 <h2>📊 Resultado do Quiz</h2>
                 <div class="score" id="scoreDisplay">0/5</div>
                 <div class="message" id="messageDisplay"></div>
+                <div id="saveStatus" class="success-msg"></div>
                 <div class="correction" id="correctionContainer">
                     <h3>📖 Correção Detalhada</h3>
                     <div id="corrections"></div>
@@ -110,10 +116,12 @@
 
     <script src="dados-aulas.js"></script>
     <script>
-        // Verifica se os dados foram carregados
+        // ⚠️ IMPORTANTE: Cole aqui a URL do seu Apps Script (a que termina em /exec)
+        const GOOGLE_SCRIPT_URL = 'COLE_AQUI_SUA_URL_DO_APPS_SCRIPT';
+
         if (typeof dadosAulas === 'undefined') {
-            alert('ERRO: Não foi possível carregar as questões. Verifique se o arquivo dados-aulas.js está no repositório.');
-            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Erro ao carregar</h1><p>Arquivo de dados não encontrado.</p><a href="index.html">Voltar ao início</a></div>';
+            alert('ERRO: Não foi possível carregar as questões.');
+            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Erro ao carregar</h1><a href="index.html">Voltar ao início</a></div>';
         }
 
         const urlParams = new URLSearchParams(window.location.search);
@@ -122,7 +130,7 @@
         const isSociologia = materia === 'sociologia';
 
         if (!materia || !aulaNum || !dadosAulas[materia] || !dadosAulas[materia][aulaNum]) {
-            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Aula não encontrada</h1><p>Verifique o link.</p><a href="index.html">Voltar ao início</a></div>';
+            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Aula não encontrada</h1><a href="index.html">Voltar ao início</a></div>';
         } else {
             const aula = dadosAulas[materia][aulaNum];
             document.getElementById('title').textContent = `📝 Quiz - Aula ${aulaNum}`;
@@ -172,7 +180,7 @@
                 date: new Date().toLocaleString('pt-BR')
             };
 
-            // Embaralha as alternativas mas mantém a ordem das questões
+            // Embaralha as alternativas
             const questoesOriginais = dadosAulas[materia][aulaNum].quiz;
             currentQuestions = questoesOriginais.map(q => {
                 const alternativas = [
@@ -183,7 +191,6 @@
                     { letra: 'e', texto: q.alternativas.e }
                 ];
                 
-                // Embaralha
                 for (let i = alternativas.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
                     [alternativas[i], alternativas[j]] = [alternativas[j], alternativas[i]];
@@ -204,7 +211,6 @@
                 };
             });
 
-            // Renderiza questões
             let html = '';
             currentQuestions.forEach((q, idx) => {
                 html += `<div class="question"><div class="question-text"><strong>Questão ${idx + 1}:</strong> ${q.enunciado}</div><div class="options">`;
@@ -220,7 +226,23 @@
             window.scrollTo(0, 0);
         }
 
-        function submitQuiz() {
+        // Função que envia os dados para a planilha
+        async function enviarParaPlanilha(resultado) {
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(resultado)
+                });
+                return true;
+            } catch(error) {
+                console.error('Erro ao enviar:', error);
+                return false;
+            }
+        }
+
+        async function submitQuiz() {
             const answers = {};
             for (let i = 0; i < currentQuestions.length; i++) {
                 const selected = document.querySelector(`input[name="q${i}"]:checked`);
@@ -250,8 +272,7 @@
                 });
             });
 
-            // Salva resultado
-            const result = {
+            const resultado = {
                 ...studentData,
                 score: score,
                 totalQuestions: currentQuestions.length,
@@ -259,14 +280,23 @@
                 timestamp: new Date().toISOString()
             };
 
+            // Desabilita botão e mostra loading
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="loading"></span> Salvando...';
+
+            // Envia para a planilha
+            const enviado = await enviarParaPlanilha(resultado);
+
+            // Também salva no localStorage (backup)
             let allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
-            allResults.push(result);
+            allResults.push(resultado);
             localStorage.setItem('quizResults', JSON.stringify(allResults));
 
-            displayResults(score, corrections);
+            displayResults(score, corrections, enviado);
         }
 
-        function displayResults(score, corrections) {
+        function displayResults(score, corrections, enviado) {
             document.getElementById('quizContainer').classList.add('hidden');
             document.getElementById('resultContainer').classList.remove('hidden');
 
@@ -277,6 +307,19 @@
             else if (score >= 3) message = '👍 Bom trabalho! Revise os erros para aperfeiçoar.';
             else message = '📚 Continue estudando! Revise a aula e tente novamente.';
             document.getElementById('messageDisplay').textContent = message;
+
+            // Status de salvamento
+            const saveStatus = document.getElementById('saveStatus');
+            if (enviado) {
+                saveStatus.textContent = '✅ Seu resultado foi registrado com sucesso!';
+                saveStatus.classList.add('show');
+            } else {
+                saveStatus.textContent = '⚠️ Não foi possível enviar os dados automaticamente, mas suas respostas foram registradas localmente.';
+                saveStatus.style.background = '#fff3cd';
+                saveStatus.style.color = '#856404';
+                saveStatus.style.borderLeftColor = '#ffc107';
+                saveStatus.classList.add('show');
+            }
 
             let correctionsHTML = '';
             corrections.forEach(corr => {
