@@ -23,7 +23,6 @@
         .lesson-content li { margin-bottom: 10px; }
         .image-container { margin: 25px 0; text-align: center; }
         .image-container img { max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .image-container figcaption { margin-top: 10px; font-style: italic; color: #666; font-size: 0.9em; }
         .quiz-link { display: block; text-align: center; padding: 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 15px; font-size: 1.3em; font-weight: 600; margin-top: 30px; transition: transform 0.3s, box-shadow 0.3s; }
         .quiz-link.sociologia { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); }
         .quiz-link:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); }
@@ -43,7 +42,6 @@
         .bibliography a { color: #667eea; text-decoration: none; font-weight: 500; }
         .bibliography.sociologia a { color: #56ab2f; }
         .bibliography a:hover { text-decoration: underline; }
-        .loading { text-align: center; padding: 50px; font-size: 1.2em; color: #666; }
     </style>
 </head>
 <body>
@@ -55,25 +53,44 @@
 
     <div class="container">
         <div class="lesson-content" id="lessonContent">
-            <div class="loading">Carregando conteúdo da aula...</div>
+            <p style="text-align:center;">Carregando conteúdo da aula...</p>
         </div>
     </div>
 
     <script src="dados-aulas.js"></script>
     <script>
-        // Pega os parâmetros da URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const materia = urlParams.get('materia');
-        const aulaNum = parseInt(urlParams.get('aula'));
-
-        if (!materia || !aulaNum || !dadosAulas[materia] || !dadosAulas[materia][aulaNum]) {
-            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Aula não encontrada</h1><p>Verifique o link e tente novamente.</p><a href="index.html">Voltar ao início</a></div>';
+        if (typeof dadosAulas === 'undefined') {
+            document.body.innerHTML = `
+                <div style="text-align:center;padding:50px;">
+                    <h1 style="color:#e74c3c;">⚠️ Erro ao carregar</h1>
+                    <p style="margin:20px 0;">Não foi possível carregar o conteúdo da aula.</p>
+                    <a href="index.html" style="display:inline-block;padding:15px 30px;background:#667eea;color:white;text-decoration:none;border-radius:25px;font-weight:600;">Voltar ao Início</a>
+                </div>
+            `;
         } else {
+            carregarAula();
+        }
+
+        function carregarAula() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const materia = urlParams.get('materia');
+            const aulaNum = parseInt(urlParams.get('aula'));
+
+            if (!materia || !aulaNum || !dadosAulas[materia] || !dadosAulas[materia][aulaNum]) {
+                document.body.innerHTML = `
+                    <div style="text-align:center;padding:50px;">
+                        <h1 style="color:#e74c3c;">⚠️ Aula não encontrada</h1>
+                        <p style="margin:20px 0;">Verifique o link e tente novamente.</p>
+                        <a href="index.html" style="display:inline-block;padding:15px 30px;background:#667eea;color:white;text-decoration:none;border-radius:25px;font-weight:600;">Voltar ao Início</a>
+                    </div>
+                `;
+                return;
+            }
+
             const aula = dadosAulas[materia][aulaNum];
             const isSociologia = materia === 'sociologia';
             const classeMateria = isSociologia ? 'sociologia' : '';
 
-            // Configura o header
             document.title = `Aula ${aulaNum}: ${aula.titulo} - Provão Paulista 2026`;
             document.getElementById('title').textContent = `📖 Aula ${aulaNum}: ${aula.titulo}`;
             document.getElementById('subtitle').textContent = aula.subtitulo;
@@ -90,36 +107,22 @@
             
             backBtn.href = `aulas-${materia}.html`;
 
-            // Monta o conteúdo
-            let html = `
-                <h2>📚 Conteúdo da Aula</h2>
-                ${aula.conteudo}
-            `;
+            let html = `<h2>📚 Conteúdo da Aula</h2>`;
 
-            // Adiciona imagem se existir
             if (aula.imagem) {
-                html = `
-                    <h2>📚 Conteúdo da Aula</h2>
-                    <div class="image-container">
-                        <img src="${aula.imagem}" alt="${aula.titulo}">
-                    </div>
-                ` + html;
+                html += `<div class="image-container"><img src="${aula.imagem}" alt="${aula.titulo}"></div>`;
             }
 
-            // Adiciona bibliografia se existir
+            html += aula.conteudo;
+
             if (aula.bibliografia && aula.bibliografia.length > 0) {
-                html += `
-                    <div class="bibliography ${classeMateria}">
-                        <h3>📖 Bibliografia e Leituras Complementares</h3>
-                        <ul>
-                `;
+                html += `<div class="bibliography ${classeMateria}"><h3>📖 Bibliografia e Leituras Complementares</h3><ul>`;
                 aula.bibliografia.forEach(ref => {
                     html += `<li><a href="${ref.link}" target="_blank">${ref.titulo}</a> - ${ref.descricao}</li>`;
                 });
                 html += `</ul></div>`;
             }
 
-            // Adiciona link para o quiz
             html += `<a href="quiz.html?materia=${materia}&aula=${aulaNum}" class="quiz-link ${classeMateria}">📝 FAZER QUIZ DA AULA ${aulaNum} →</a>`;
 
             lessonContent.innerHTML = html;

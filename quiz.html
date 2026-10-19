@@ -9,6 +9,11 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; min-height: 100vh; }
         header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 20px; text-align: center; }
         header.sociologia { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); }
+        header h1 { font-size: 1.8em; margin-bottom: 10px; }
+        .header-btns { margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .header-btn { display: inline-block; padding: 10px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s; }
+        .header-btn.sociologia { color: #56ab2f; }
+        .header-btn:hover { transform: scale(1.05); }
         .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
         .form-container, .quiz-container, .result-container { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         h2 { color: #667eea; margin-bottom: 25px; font-size: 1.6em; }
@@ -16,11 +21,13 @@
         label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
         input, select { width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; }
         input:focus, select:focus { outline: none; border-color: #667eea; }
-        .btn { display: block; width: 100%; padding: 18px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+        .btn { display: block; width: 100%; padding: 18px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
         .btn.sociologia { background: #56ab2f; }
         .btn:hover { background: #5568d3; }
         .btn.sociologia:hover { background: #4a9528; }
         .btn:disabled { background: #999; cursor: not-allowed; }
+        .btn-secondary { background: #95a5a6; }
+        .btn-secondary:hover { background: #7f8c8d; }
         .error-msg { background: #ffebee; color: #c62828; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #c62828; display: none; }
         .error-msg.show { display: block; }
         .success-msg { background: #e8f5e9; color: #2e7d32; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2e7d32; display: none; }
@@ -45,8 +52,6 @@
         .correct-answer { color: #56ab2f; font-weight: 600; }
         .user-answer { color: #e74c3c; font-weight: 600; }
         .explanation { margin-top: 10px; padding: 12px; background: #f5f7fa; border-radius: 5px; font-size: 0.95em; color: #555; }
-        .back-btn { display: inline-block; margin-top: 20px; padding: 12px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 25px; font-weight: 600; }
-        .back-btn.sociologia { background: #56ab2f; }
         .loading { display: inline-block; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
     </style>
@@ -55,6 +60,10 @@
     <header id="header">
         <h1 id="title">📝 Quiz</h1>
         <p id="subtitle">Teste seus conhecimentos</p>
+        <div class="header-btns">
+            <a href="index.html" class="header-btn" id="homeBtn">🏠 Voltar ao Início</a>
+            <a href="#" class="header-btn" id="backToListBtn">← Voltar às Aulas</a>
+        </div>
     </header>
 
     <div class="container">
@@ -87,6 +96,7 @@
             </div>
 
             <button type="button" class="btn" id="startBtn" onclick="startQuiz()">Iniciar Quiz</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">🏠 Voltar ao Início</button>
         </div>
 
         <!-- Quiz -->
@@ -108,8 +118,8 @@
                     <h3>📖 Correção Detalhada</h3>
                     <div id="corrections"></div>
                 </div>
-                <a href="#" id="backToLesson" class="back-btn">← Voltar à Aula</a>
-                <a href="#" id="backToList" class="back-btn" style="margin-left: 10px;">Ver Outras Aulas</a>
+                <a href="#" id="backToLesson" class="btn" style="display:inline-block;width:auto;margin-top:20px;">← Voltar à Aula</a>
+                <a href="#" id="backToList" class="btn btn-secondary" style="display:inline-block;width:auto;margin-top:20px;margin-left:10px;">Ver Outras Aulas</a>
             </div>
         </div>
     </div>
@@ -117,27 +127,47 @@
     <script src="dados-aulas.js"></script>
     <script>
         // ⚠️ IMPORTANTE: Cole aqui a URL do seu Apps Script (a que termina em /exec)
-        const GOOGLE_SCRIPT_URL = https://script.google.com/macros/s/AKfycbw8gl706UfeInLDaeH-VmrR_u9mKn_UjEmikvcAziafoYj_R2wx1AXv6rWKRZf5q4bp/exec;
+        // Se não quiser usar o Google Sheets, deixe como está (funciona só com localStorage)
+        const GOOGLE_SCRIPT_URL = ''; // Ex: 'https://script.google.com/macros/s/SEU_ID/exec'
 
+        // Verifica se os dados foram carregados
         if (typeof dadosAulas === 'undefined') {
-            alert('ERRO: Não foi possível carregar as questões.');
-            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Erro ao carregar</h1><a href="index.html">Voltar ao início</a></div>';
+            document.body.innerHTML = `
+                <div style="text-align:center;padding:50px;">
+                    <h1 style="color:#e74c3c;">⚠️ Erro ao carregar</h1>
+                    <p style="margin:20px 0;">Não foi possível carregar as questões do quiz.</p>
+                    <p style="margin:20px 0;">Verifique se o arquivo <strong>dados-aulas.js</strong> está presente no repositório.</p>
+                    <a href="index.html" style="display:inline-block;padding:15px 30px;background:#667eea;color:white;text-decoration:none;border-radius:25px;font-weight:600;margin-top:20px;">Voltar ao Início</a>
+                </div>
+            `;
+        } else {
+            inicializarQuiz();
         }
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const materia = urlParams.get('materia');
-        const aulaNum = parseInt(urlParams.get('aula'));
-        const isSociologia = materia === 'sociologia';
+        function inicializarQuiz() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const materia = urlParams.get('materia');
+            const aulaNum = parseInt(urlParams.get('aula'));
+            const isSociologia = materia === 'sociologia';
 
-        if (!materia || !aulaNum || !dadosAulas[materia] || !dadosAulas[materia][aulaNum]) {
-            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Aula não encontrada</h1><a href="index.html">Voltar ao início</a></div>';
-        } else {
+            if (!materia || !aulaNum || !dadosAulas[materia] || !dadosAulas[materia][aulaNum]) {
+                document.body.innerHTML = `
+                    <div style="text-align:center;padding:50px;">
+                        <h1 style="color:#e74c3c;">⚠️ Aula não encontrada</h1>
+                        <p style="margin:20px 0;">Verifique o link e tente novamente.</p>
+                        <a href="index.html" style="display:inline-block;padding:15px 30px;background:#667eea;color:white;text-decoration:none;border-radius:25px;font-weight:600;">Voltar ao Início</a>
+                    </div>
+                `;
+                return;
+            }
+
             const aula = dadosAulas[materia][aulaNum];
             document.getElementById('title').textContent = `📝 Quiz - Aula ${aulaNum}`;
             document.getElementById('subtitle').textContent = aula.titulo;
             document.getElementById('quizTitle').textContent = `Questões - ${aula.titulo}`;
             document.getElementById('backToLesson').href = `aula.html?materia=${materia}&aula=${aulaNum}`;
             document.getElementById('backToList').href = `aulas-${materia}.html`;
+            document.getElementById('backToListBtn').href = `aulas-${materia}.html`;
 
             if (isSociologia) {
                 document.getElementById('header').classList.add('sociologia');
@@ -146,6 +176,8 @@
                 document.getElementById('scoreDisplay').classList.add('sociologia');
                 document.getElementById('backToLesson').classList.add('sociologia');
                 document.getElementById('backToList').classList.add('sociologia');
+                document.getElementById('backToListBtn').classList.add('sociologia');
+                document.getElementById('homeBtn').classList.add('sociologia');
             }
         }
 
@@ -171,6 +203,10 @@
                 showError('errorMsg', '⚠️ Por favor, selecione sua turma.');
                 return;
             }
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const materia = urlParams.get('materia');
+            const aulaNum = parseInt(urlParams.get('aula'));
 
             studentData = {
                 name: name,
@@ -226,10 +262,14 @@
             window.scrollTo(0, 0);
         }
 
-        // Função que envia os dados para a planilha
         async function enviarParaPlanilha(resultado) {
+            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === '') {
+                console.log('Google Sheets não configurado, usando apenas localStorage');
+                return false;
+            }
+            
             try {
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
@@ -280,15 +320,12 @@
                 timestamp: new Date().toISOString()
             };
 
-            // Desabilita botão e mostra loading
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="loading"></span> Salvando...';
 
-            // Envia para a planilha
             const enviado = await enviarParaPlanilha(resultado);
 
-            // Também salva no localStorage (backup)
             let allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
             allResults.push(resultado);
             localStorage.setItem('quizResults', JSON.stringify(allResults));
@@ -308,13 +345,12 @@
             else message = '📚 Continue estudando! Revise a aula e tente novamente.';
             document.getElementById('messageDisplay').textContent = message;
 
-            // Status de salvamento
             const saveStatus = document.getElementById('saveStatus');
-            if (enviado) {
+            if (GOOGLE_SCRIPT_URL && enviado) {
                 saveStatus.textContent = '✅ Seu resultado foi registrado com sucesso!';
                 saveStatus.classList.add('show');
-            } else {
-                saveStatus.textContent = '⚠️ Não foi possível enviar os dados automaticamente, mas suas respostas foram registradas localmente.';
+            } else if (GOOGLE_SCRIPT_URL) {
+                saveStatus.textContent = '⚠️ Não foi possível enviar para a planilha, mas suas respostas foram registradas.';
                 saveStatus.style.background = '#fff3cd';
                 saveStatus.style.color = '#856404';
                 saveStatus.style.borderLeftColor = '#ffc107';
