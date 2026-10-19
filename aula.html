@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregando aula...</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 20px; text-align: center; }
+        header.sociologia { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); }
+        header h1 { font-size: 1.8em; margin-bottom: 10px; }
+        .back-btn { display: inline-block; margin-top: 15px; padding: 10px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 25px; font-weight: 600; }
+        .back-btn.sociologia { color: #56ab2f; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .lesson-content { background: white; border-radius: 15px; padding: 40px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .lesson-content h2 { color: #667eea; margin-bottom: 20px; font-size: 1.8em; }
+        .lesson-content.sociologia h2 { color: #56ab2f; }
+        .lesson-content h3 { color: #764ba2; margin: 25px 0 15px 0; font-size: 1.3em; }
+        .lesson-content.sociologia h3 { color: #4a9528; }
+        .lesson-content p { margin-bottom: 15px; text-align: justify; color: #444; }
+        .lesson-content ul { margin: 15px 0 15px 30px; color: #444; }
+        .lesson-content li { margin-bottom: 10px; }
+        .image-container { margin: 25px 0; text-align: center; }
+        .image-container img { max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .image-container figcaption { margin-top: 10px; font-style: italic; color: #666; font-size: 0.9em; }
+        .quiz-link { display: block; text-align: center; padding: 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 15px; font-size: 1.3em; font-weight: 600; margin-top: 30px; transition: transform 0.3s, box-shadow 0.3s; }
+        .quiz-link.sociologia { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); }
+        .quiz-link:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); }
+        .highlight-box { background: #e8ecff; border-left: 5px solid #667eea; padding: 20px; margin: 25px 0; border-radius: 5px; }
+        .highlight-box.sociologia { background: #e8f5e9; border-left-color: #56ab2f; }
+        .philosopher { background: #f8f9ff; padding: 20px; border-radius: 10px; margin: 20px 0; border: 2px solid #667eea; }
+        .philosopher.sociologia { background: #f1f8e9; border-color: #56ab2f; }
+        .philosopher strong { color: #667eea; display: block; margin-bottom: 10px; font-size: 1.2em; }
+        .philosopher.sociologia strong { color: #56ab2f; }
+        .bibliography { background: #f8f9ff; border-radius: 10px; padding: 25px; margin-top: 30px; border: 2px solid #667eea; }
+        .bibliography.sociologia { background: #f1f8e9; border-color: #56ab2f; }
+        .bibliography h3 { color: #667eea; margin-bottom: 15px; }
+        .bibliography.sociologia h3 { color: #56ab2f; }
+        .bibliography ul { list-style: none; padding: 0; }
+        .bibliography li { margin-bottom: 12px; padding-left: 25px; position: relative; }
+        .bibliography li:before { content: "📚"; position: absolute; left: 0; }
+        .bibliography a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .bibliography.sociologia a { color: #56ab2f; }
+        .bibliography a:hover { text-decoration: underline; }
+        .loading { text-align: center; padding: 50px; font-size: 1.2em; color: #666; }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 id="title">Carregando...</h1>
+        <p id="subtitle"></p>
+        <a href="#" id="backBtn" class="back-btn">← Voltar às Aulas</a>
+    </header>
+
+    <div class="container">
+        <div class="lesson-content" id="lessonContent">
+            <div class="loading">Carregando conteúdo da aula...</div>
+        </div>
+    </div>
+
+    <script src="dados-aulas.js"></script>
+    <script>
+        // Pega os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const materia = urlParams.get('materia');
+        const aulaNum = parseInt(urlParams.get('aula'));
+
+        if (!materia || !aulaNum || !dadosAulas[materia] || !dadosAulas[materia][aulaNum]) {
+            document.body.innerHTML = '<div style="text-align:center;padding:50px;"><h1>Aula não encontrada</h1><p>Verifique o link e tente novamente.</p><a href="index.html">Voltar ao início</a></div>';
+        } else {
+            const aula = dadosAulas[materia][aulaNum];
+            const isSociologia = materia === 'sociologia';
+            const classeMateria = isSociologia ? 'sociologia' : '';
+
+            // Configura o header
+            document.title = `Aula ${aulaNum}: ${aula.titulo} - Provão Paulista 2026`;
+            document.getElementById('title').textContent = `📖 Aula ${aulaNum}: ${aula.titulo}`;
+            document.getElementById('subtitle').textContent = aula.subtitulo;
+            
+            const header = document.getElementById('header');
+            const backBtn = document.getElementById('backBtn');
+            const lessonContent = document.getElementById('lessonContent');
+            
+            if (isSociologia) {
+                header.classList.add('sociologia');
+                backBtn.classList.add('sociologia');
+                lessonContent.classList.add('sociologia');
+            }
+            
+            backBtn.href = `aulas-${materia}.html`;
+
+            // Monta o conteúdo
+            let html = `
+                <h2>📚 Conteúdo da Aula</h2>
+                ${aula.conteudo}
+            `;
+
+            // Adiciona imagem se existir
+            if (aula.imagem) {
+                html = `
+                    <h2>📚 Conteúdo da Aula</h2>
+                    <div class="image-container">
+                        <img src="${aula.imagem}" alt="${aula.titulo}">
+                    </div>
+                ` + html;
+            }
+
+            // Adiciona bibliografia se existir
+            if (aula.bibliografia && aula.bibliografia.length > 0) {
+                html += `
+                    <div class="bibliography ${classeMateria}">
+                        <h3>📖 Bibliografia e Leituras Complementares</h3>
+                        <ul>
+                `;
+                aula.bibliografia.forEach(ref => {
+                    html += `<li><a href="${ref.link}" target="_blank">${ref.titulo}</a> - ${ref.descricao}</li>`;
+                });
+                html += `</ul></div>`;
+            }
+
+            // Adiciona link para o quiz
+            html += `<a href="quiz.html?materia=${materia}&aula=${aulaNum}" class="quiz-link ${classeMateria}">📝 FAZER QUIZ DA AULA ${aulaNum} →</a>`;
+
+            lessonContent.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
