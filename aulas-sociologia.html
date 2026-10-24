@@ -20,6 +20,25 @@
         .lesson-btn { display: inline-block; padding: 12px 30px; background: #56ab2f; color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: background 0.3s; }
         .lesson-btn:hover { background: #4a9528; }
         .topic-tag { display: inline-block; padding: 5px 12px; background: #e8f5e9; color: #56ab2f; border-radius: 15px; font-size: 0.85em; margin-bottom: 15px; font-weight: 600; }
+    /* ===== RESPONSIVIDADE MOBILE ===== */
+@media (max-width: 768px) {
+    header { padding: 20px 15px; }
+    header h1 { font-size: 1.4em; }
+    header p { font-size: 0.9em; margin-top: 5px; }
+    .back-btn { padding: 8px 18px; font-size: 0.85em; margin-top: 10px; }
+    .container { padding: 20px 15px; }
+    .lessons-grid { grid-template-columns: 1fr; gap: 15px; }
+    .lesson-card { padding: 20px; }
+    .lesson-card h3 { font-size: 1.2em; margin-bottom: 10px; }
+    .lesson-card p { font-size: 0.9em; margin-bottom: 15px; }
+    .lesson-btn { padding: 10px 20px; font-size: 0.9em; }
+    .topic-tag { font-size: 0.75em; padding: 4px 10px; margin-bottom: 10px; }
+}
+
+@media (max-width: 400px) {
+    header h1 { font-size: 1.2em; }
+    .lesson-card h3 { font-size: 1.1em; }
+}
     </style>
 </head>
 <body>
