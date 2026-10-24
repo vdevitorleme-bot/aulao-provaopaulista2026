@@ -5,87 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Provão Paulista 2026</title>
     <style>
-        /* ===== COMPACTAR TELA DE CORREÇÃO NO MOBILE ===== */
-@media (max-width: 768px) {
-    /* Container de resultado */
-    .result-container { padding: 20px 15px; }
-    .result-box { padding: 10px 5px; }
-    .result-box h2 { font-size: 1.2em; margin-bottom: 10px; }
-    
-    /* Pontuação menor */
-    .score { font-size: 2.2em; margin: 10px 0; }
-    .message { font-size: 0.95em; margin-bottom: 15px; }
-    
-    /* Caixa de correção */
-    .correction { padding: 15px 10px; margin-top: 15px; }
-    .correction h3 { font-size: 1em; margin-bottom: 12px; }
-    
-    /* Cada questão na correção - MUITO mais compacta */
-    .question-correction { 
-        margin-bottom: 12px; 
-        padding: 10px; 
-    }
-    .question-correction strong { 
-        font-size: 0.85em; 
-        margin-bottom: 5px; 
-    }
-    .question-correction p { 
-        font-size: 0.82em; 
-        line-height: 1.3; 
-        margin-bottom: 5px;
-    }
-    
-    /* Enunciado da questão em itálico - menor */
-    .question-correction p[style*="italic"],
-    .question-correction p:nth-of-type(1) { 
-        font-size: 0.82em !important;
-        margin-bottom: 6px !important;
-    }
-    
-    /* Respostas do usuário e corretas */
-    .correct-answer, .user-answer { 
-        font-size: 0.82em; 
-        line-height: 1.3;
-    }
-    
-    /* Explicação - mais compacta */
-    .explanation { 
-        margin-top: 6px; 
-        padding: 8px; 
-        font-size: 0.8em !important; 
-        line-height: 1.3;
-    }
-    
-    /* Botões no final - empilhados no celular */
-    .btn-group { 
-        flex-direction: column; 
-        gap: 8px; 
-    }
-    .btn-group .btn { 
-        min-width: 100%; 
-        margin: 0 !important;
-        padding: 12px;
-        font-size: 0.9em;
-    }
-    
-    /* Mensagens de status */
-    .success-msg, .error-msg { 
-        padding: 10px; 
-        font-size: 0.85em; 
-        margin-bottom: 10px; 
-    }
-}
-
-/* Celular muito pequeno */
-@media (max-width: 400px) {
-    .result-container { padding: 15px 10px; }
-    .score { font-size: 2em; }
-    .correction { padding: 12px 8px; }
-    .question-correction { padding: 8px; margin-bottom: 10px; }
-    .question-correction strong { font-size: 0.8em; }
-    .question-correction p { font-size: 0.78em; }
-    .explanation { font-size: 0.75em !important; padding: 6px; }
-}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 20px; text-align: center; }
+        header.sociologia { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); }
+        header h1 { font-size: 1.8em; margin-bottom: 10px; }
+        .header-btns { margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .header-btn { display: inline-block; padding: 10px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s; }
+        .header-btn.sociologia { color: #56ab2f; }
+        .header-btn:hover { transform: scale(1.05); }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .form-container, .quiz-container, .result-container { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h2 { color: #667eea; margin-bottom: 25px; font-size: 1.6em; }
+        .form-group { margin-bottom: 25px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        input, select { width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; }
+        input:focus, select:focus { outline: none; border-color: #667eea; }
+        .btn { display: block; width: 100%; padding: 18px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
+        .btn.sociologia { background: #56ab2f; }
+        .btn:hover { background: #5568d3; }
+        .btn.sociologia:hover { background: #4a9528; }
+        .btn:disabled { background: #999; cursor: not-allowed; }
+        .btn-secondary { background: #95a5a6; }
+        .btn-secondary:hover { background: #7f8c8d; }
+        .error-msg { background: #ffebee; color: #c62828; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #c62828; display: none; }
+        .error-msg.show { display: block; }
+        .success-msg { background: #e8f5e9; color: #2e7d32; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2e7d32; display: none; }
+        .success-msg.show { display: block; }
+        .question { margin-bottom: 35px; padding-bottom: 25px; border-bottom: 2px solid #eee; }
+        .question:last-of-type { border-bottom: none; }
+        .question-text { font-size: 1.1em; color: #333; margin-bottom: 20px; font-weight: 600; line-height: 1.5; }
+        .options label { display: block; padding: 15px; background: #f8f9ff; border: 2px solid #e8ecff; border-radius: 8px; margin-bottom: 12px; cursor: pointer; transition: all 0.3s; font-weight: normal; }
+        .options label:hover { background: #e8ecff; border-color: #667eea; }
+        .options input[type="radio"] { margin-right: 12px; width: auto; }
+        .hidden { display: none; }
+        .result-box { text-align: center; padding: 30px; }
+        .score { font-size: 4em; color: #667eea; font-weight: bold; margin: 20px 0; }
+        .score.sociologia { color: #56ab2f; }
+        .message { font-size: 1.3em; color: #444; margin-bottom: 30px; }
+        .correction { text-align: left; margin-top: 30px; padding: 25px; background: #f8f9ff; border-radius: 10px; }
+        .correction h3 { color: #667eea; margin-bottom: 20px; }
+        .question-correction { margin-bottom: 25px; padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #667eea; }
+        .question-correction.correct { border-left-color: #56ab2f; }
+        .question-correction.incorrect { border-left-color: #e74c3c; }
+        .question-correction strong { color: #333; display: block; margin-bottom: 10px; }
+        .correct-answer { color: #56ab2f; font-weight: 600; }
+        .user-answer { color: #e74c3c; font-weight: 600; }
+        .explanation { margin-top: 10px; padding: 12px; background: #f5f7fa; border-radius: 5px; font-size: 0.95em; color: #555; }
+        .loading { display: inline-block; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
