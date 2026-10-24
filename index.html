@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Aulão de Revisão - Provão Paulista 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,33 +13,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
         }
         .container {
             background: white;
             border-radius: 20px;
-            padding: 40px;
+            padding: 30px 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             max-width: 900px;
             width: 100%;
         }
-        h1 { text-align: center; color: #333; margin-bottom: 10px; font-size: 2.5em; }
-        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 1.2em; }
-        .school { text-align: center; color: #555; margin-bottom: 40px; font-weight: 600; }
-        .instruction {
-            text-align: center;
-            color: #333;
-            margin-bottom: 25px;
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-        .subject-selection {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
+        h1 { text-align: center; color: #333; margin-bottom: 10px; font-size: 1.8em; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 20px; font-size: 1.1em; }
+        .school { text-align: center; color: #555; margin-bottom: 30px; font-weight: 600; font-size: 0.95em; line-height: 1.5; }
+        .instruction { text-align: center; color: #333; margin-bottom: 20px; font-size: 1em; font-weight: 500; }
+        .subject-selection { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .subject-card {
-            padding: 50px 30px;
+            padding: 35px 20px;
             border-radius: 20px;
             text-align: center;
             cursor: pointer;
@@ -48,55 +38,51 @@
             position: relative;
             overflow: hidden;
         }
-        .subject-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-        }
+        .subject-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 15px 40px rgba(0,0,0,0.25); }
+        .subject-card:active { transform: translateY(-2px) scale(0.98); }
         .subject-card.selected {
             border: 5px solid #FFD700;
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
-            transform: translateY(-5px) scale(1.03);
+            transform: translateY(-3px) scale(1.02);
         }
         .subject-card.selected::after {
             content: "✓ SELECIONADO";
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 10px;
+            right: 10px;
             background: #FFD700;
             color: #333;
-            padding: 5px 12px;
+            padding: 4px 10px;
             border-radius: 20px;
-            font-size: 0.8em;
+            font-size: 0.7em;
             font-weight: bold;
         }
-        .philosophy {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        .sociology {
-            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
-            color: white;
-        }
-        .subject-card h2 { font-size: 2.2em; margin-bottom: 15px; }
-        .subject-card p { font-size: 1.1em; opacity: 0.95; }
-        .subject-card .icon { font-size: 4em; margin-bottom: 20px; display: block; }
-        .footer-info {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #eee;
-            text-align: center;
-            color: #888;
-            font-size: 0.9em;
-        }
-        .footer-info a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-        }
+        .philosophy { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .sociology { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); color: white; }
+        .subject-card h2 { font-size: 1.7em; margin-bottom: 10px; }
+        .subject-card p { font-size: 0.95em; opacity: 0.95; line-height: 1.4; }
+        .subject-card .icon { font-size: 3.5em; margin-bottom: 15px; display: block; }
+        
+        /* ===== RESPONSIVIDADE MOBILE ===== */
         @media (max-width: 768px) {
-            .subject-selection { grid-template-columns: 1fr; }
-            h1 { font-size: 1.8em; }
-            .subject-card h2 { font-size: 1.6em; }
+            body { padding: 10px; align-items: flex-start; padding-top: 20px; }
+            .container { padding: 25px 18px; border-radius: 15px; }
+            h1 { font-size: 1.5em; margin-bottom: 8px; }
+            .subtitle { font-size: 1em; margin-bottom: 15px; }
+            .school { font-size: 0.88em; margin-bottom: 20px; }
+            .instruction { font-size: 0.95em; margin-bottom: 15px; }
+            .subject-selection { grid-template-columns: 1fr; gap: 15px; }
+            .subject-card { padding: 28px 18px; }
+            .subject-card h2 { font-size: 1.5em; }
+            .subject-card p { font-size: 0.9em; }
+            .subject-card .icon { font-size: 3em; margin-bottom: 12px; }
+        }
+        
+        @media (max-width: 400px) {
+            .container { padding: 20px 15px; }
+            h1 { font-size: 1.3em; }
+            .subject-card h2 { font-size: 1.3em; }
+            .subject-card .icon { font-size: 2.5em; }
         }
     </style>
 </head>
@@ -123,17 +109,15 @@
                 <p>12 aulas de revisão com questões do ENEM</p>
             </div>
         </div>
+    </div>
 
     <script>
         function selectSubject(subject, element) {
-            // Remove seleção de todos
             document.querySelectorAll('.subject-card').forEach(card => {
                 card.classList.remove('selected');
             });
-            // Adiciona seleção ao clicado
             element.classList.add('selected');
             
-            // Salva e redireciona após pequeno delay para mostrar a animação
             setTimeout(() => {
                 localStorage.setItem('selectedSubject', subject);
                 window.location.href = `aulas-${subject}.html`;
