@@ -4,7 +4,7 @@ const dadosAulas = {
         1: {
             titulo: "Mito e Filosofia",
             subtitulo: "As origens do pensamento filosófico na Grécia Antiga",
-            imagem: "https://images.unsplash.com/photo-1524492412937-b2807495d7a1?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/04d2c7470-4129-4f0a-8155-3c2c3cf06da18430.png",
             conteudo: `
                 <h3>A Passagem do Mito ao Logos</h3>
                 <p>O nascimento da filosofia na Grécia Antiga, por volta do século VI a.C., representa uma das maiores revoluções do pensamento humano. Antes da filosofia, os gregos explicavam o mundo através dos <strong>mitos</strong> - narrativas fantásticas que envolviam deuses, heróis e forças sobrenaturais para explicar a origem do universo, os fenômenos naturais e a condição humana.</p>
@@ -108,7 +108,7 @@ const dadosAulas = {
         2: {
             titulo: "Platão e Aristóteles",
             subtitulo: "A filosofia de Platão e Aristóteles na obra 'Escola de Atenas'",
-            imagem: "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/14d2c7470-4129-4f0a-8155-3c2c3cf06da12182.png",
             conteudo: `
                 <h3>A Escola de Atenas: Encontro de Duas Filosofias</h3>
                 <p>A famosa pintura de Rafael Sanzio, "A Escola de Atenas", representa o encontro entre as duas grandes correntes da filosofia grega: <strong>Platão</strong> e <strong>Aristóteles</strong>. Na obra, Platão aponta para cima (mundo das Ideias) e Aristóteles aponta para frente (mundo sensível).</p>
@@ -230,7 +230,7 @@ const dadosAulas = {
             `,
             bibliografia: [
                 { titulo: "Estética", link: "https://pt.wikipedia.org/wiki/Est%C3%A9tica", descricao: "Wikipedia - Ramo da filosofia que estuda a beleza e a arte" },
-                { titulo: "Filosofia da arte", link: "https://pt.wikipedia.org/wiki/Filosofia_da_arte", descricao: "Wikipedia - Reflexões filosóficas sobre a arte" },
+               { titulo: "Crítica do Julgamento (Kant)", link: "https://pt.wikipedia.org/wiki/Cr%C3%ADtica_do_Julgamento", descricao: "Wikipedia - a terceira crítica de Kant: o juízo de gosto, o belo e o sublime" },
                 { titulo: "Catarse", link: "https://pt.wikipedia.org/wiki/Catarse", descricao: "Wikipedia - Conceito aristotélico de purificação" },
                 { titulo: "Walter Benjamin", link: "https://pt.wikipedia.org/wiki/Walter_Benjamin", descricao: "Wikipedia - Filósofo que analisou a arte na era técnica" }
             ],
@@ -776,7 +776,7 @@ const dadosAulas = {
         9: {
             titulo: "Levinas e Habermas",
             subtitulo: "Alteridade, ética do discurso e valores democráticos",
-            imagem: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/24d2c7470-4129-4f0a-8155-3c2c3cf06da16980.png",
             conteudo: `
                 <h3>Emmanuel Lévinas: A Ética como Filosofia Primeira</h3>
                 <p><strong>Lévinas</strong> (1906-1995) inverte a tradição filosófica: antes da ontologia (o estudo do ser), vem a <strong>ética</strong> (a relação com o Outro). O "rosto do Outro" me interpela e me exige responsabilidade infinita.</p>
@@ -798,8 +798,8 @@ const dadosAulas = {
             bibliografia: [
                 { titulo: "Emmanuel Lévinas", link: "https://pt.wikipedia.org/wiki/Emmanuel_L%C3%A9vinas", descricao: "Wikipedia - Filósofo da alteridade" },
                 { titulo: "Jürgen Habermas", link: "https://pt.wikipedia.org/wiki/J%C3%BCrgen_Habermas", descricao: "Wikipedia - Filósofo da ação comunicativa" },
-                { titulo: "Alteridade", link: "https://pt.wikipedia.org/wiki/Alteridade", descricao: "Wikipedia - Conceito filosófico do Outro" },
-                { titulo: "Ação comunicativa", link: "https://pt.wikipedia.org/wiki/Teoria_da_a%C3%A7%C3%A3o_comunicativa", descricao: "Wikipedia - Teoria habermasiana" }
+                { titulo: "Intersubjetividade", link: "https://pt.wikipedia.org/wiki/Intersubjetividade", descricao: "Wikipedia - a relação entre sujeitos e o reconhecimento mútuo (o caminho da alteridade)" },
+                { titulo: "Democracia deliberativa", link: "https://pt.wikipedia.org/wiki/Democracia_deliberativa", descricao: "Wikipedia - o modelo deliberativo de democracia proposto por Habermas" },
             ],
             quiz: [
                 {
@@ -891,7 +891,7 @@ const dadosAulas = {
                 { titulo: "Günther Anders", link: "https://pt.wikipedia.org/wiki/G%C3%BCnther_Anders", descricao: "Wikipedia - Filósofo da tecnologia" },
                 { titulo: "Hans Jonas", link: "https://pt.wikipedia.org/wiki/Hans_Jonas", descricao: "Wikipedia - Filósofo da ética da responsabilidade" },
                 { titulo: "Bioética", link: "https://pt.wikipedia.org/wiki/Bio%C3%A9tica", descricao: "Wikipedia - Ética aplicada às ciências da vida" },
-                { titulo: "Ética tecnológica", link: "https://pt.wikipedia.org/wiki/%C3%89tica_da_tecnologia", descricao: "Wikipedia - Reflexões sobre tecnologia e valores" }
+                { titulo: "Filosofia da tecnologia", link: "https://pt.wikipedia.org/wiki/Filosofia_da_tecnologia", descricao: "Wikipedia - o subcampo da filosofia que estuda a tecnologia e seus efeitos sociais" },
             ],
             quiz: [
                 {
@@ -959,7 +959,7 @@ const dadosAulas = {
         11: {
             titulo: "Foucault e Sociedade Disciplinar",
             subtitulo: "Panóptico, poder disciplinar e sociedade de controle",
-            imagem: "https://images.unsplash.com/photo-1555848962-6e77729260f7?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/04d2c7470-4129-4f0a-8155-3c2c3cf06da14627.png",
             conteudo: `
                 <h3>Michel Foucault: A Microfísica do Poder</h3>
                 <p><strong>Michel Foucault</strong> (1926-1984) analisou como o poder não está apenas no Estado ou nas leis, mas circula em todas as relações sociais. Ele estudou as instituições disciplinares: prisões, hospitais, escolas, quartéis.</p>
@@ -1073,9 +1073,9 @@ const dadosAulas = {
             `,
             bibliografia: [
                 { titulo: "Byung-Chul Han", link: "https://pt.wikipedia.org/wiki/Byung-Chul_Han", descricao: "Wikipedia - Filósofo sul-coreano contemporâneo" },
-                { titulo: "Sociedade do Cansaço", link: "https://pt.wikipedia.org/wiki/A_Sociedade_do_Cansa%C3%A7o", descricao: "Wikipedia - Obra principal de Han" },
-                { titulo: "Sociedade do desempenho", link: "https://pt.wikipedia.org/wiki/Sociedade_do_desempenho", descricao: "Wikipedia - Conceito haniano" },
-                { titulo: "Burnout", link: "https://pt.wikipedia.org/wiki/Burnout", descricao: "Wikipedia - Síndrome do esgotamento profissional" }
+               { titulo: "Trabalho (economia)", link: "https://pt.wikipedia.org/wiki/Trabalho_(economia)", descricao: "Wikipedia - o trabalho na organização econômica do capitalismo, palco da sociedade do desempenho" },
+               { titulo: "Alienação", link: "https://pt.wikipedia.org/wiki/Aliena%C3%A7%C3%A3o", descricao: "Wikipedia - o conceito de alienação que Han atualiza na crítica à sociedade do cansaço" },
+                { titulo: "Síndrome de burnout", link: "https://pt.wikipedia.org/wiki/S%C3%ADndrome_de_burnout", descricao: "Wikipedia - a síndrome do esgotamento profissional, marca do nosso tempo" },
             ],
             quiz: [
                 {
@@ -1174,8 +1174,7 @@ const dadosAulas = {
                 { titulo: "Sociologia", link: "https://pt.wikipedia.org/wiki/Sociologia", descricao: "Wikipedia - Ciência da sociedade" },
                 { titulo: "Senso comum", link: "https://pt.wikipedia.org/wiki/Senso_comum", descricao: "Wikipedia - Conhecimento não sistemático" },
                 { titulo: "Auguste Comte", link: "https://pt.wikipedia.org/wiki/Auguste_Comte", descricao: "Wikipedia - Fundador da Sociologia" },
-                { titulo: "Método sociológico", link: "https://pt.wikipedia.org/wiki/M%C3%A9todo_sociol%C3%B3gico", descricao: "Wikipedia - Métodos de pesquisa em Sociologia" }
-            ],
+                { titulo: "Imaginação sociológica", link: "https://pt.wikipedia.org/wiki/Imagina%C3%A7%C3%A3o_sociol%C3%B3gica", descricao: "Wikipedia - C. Wright Mills: conectar a experiência pessoal às estruturas sociais" },
             quiz: [
                 {
                     enunciado: "A Sociologia diferencia-se do senso comum principalmente porque:",
@@ -1242,7 +1241,7 @@ const dadosAulas = {
         2: {
             titulo: "Marx, Durkheim e Weber",
             subtitulo: "As três matrizes fundamentais da Sociologia",
-            imagem: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/24d2c7470-4129-4f0a-8155-3c2c3cf06da18482.png",
             conteudo: `
                 <h3>Émile Durkheim: O Fato Social</h3>
                 <p><strong>Durkheim</strong> (1858-1917) definiu o objeto da Sociologia: os <strong>fatos sociais</strong>. São maneiras de agir, pensar e sentir que existem fora do indivíduo e exercem sobre ele uma <strong>coerção</strong> (pressão).</p>
@@ -1355,7 +1354,7 @@ const dadosAulas = {
         3: {
             titulo: "Cultura e Identidade",
             subtitulo: "Etnocentrismo, relativismo cultural e construção da identidade",
-            imagem: "https://images.unsplash.com/photo-1529156069182-903391a171a7?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/34d2c7470-4129-4f0a-8155-3c2c3cf06da18168.png",
             conteudo: `
                 <h3>O Que é Cultura?</h3>
                 <p>Na Sociologia, <strong>cultura</strong> é o conjunto de conhecimentos, crenças, artes, moral, leis, costumes e quaisquer outras capacidades e hábitos adquiridos pelo homem como membro da sociedade (definição de Edward Tylor).</p>
@@ -1450,7 +1449,7 @@ const dadosAulas = {
         4: {
             titulo: "Estratificação Social",
             subtitulo: "Classes sociais, mobilidade e produção das desigualdades",
-            imagem: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/14d2c7470-4129-4f0a-8155-3c2c3cf06da18691.png",
             conteudo: `
                 <h3>O Que é Estratificação Social?</h3>
                 <p>A <strong>estratificação social</strong> é a divisão da sociedade em camadas (estratos) hierarquizadas, com diferentes níveis de acesso a recursos, poder e prestígio. Não é natural, mas uma construção social.</p>
@@ -1551,7 +1550,7 @@ const dadosAulas = {
         5: {
             titulo: "Racismo Estrutural",
             subtitulo: "Racismo estrutural, relações étnico-raciais e combate ao preconceito",
-            imagem: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/34d2c7470-4129-4f0a-8155-3c2c3cf06da14232.png",
             conteudo: `
                 <h3>O Que é Racismo Estrutural?</h3>
                 <p>O <strong>racismo estrutural</strong> (conceito desenvolvido por Silvio Almeida e outros pensadores) não é apenas um ato individual de preconceito, mas uma <strong>estrutura</strong> que organiza a sociedade, a economia, a política e as instituições de forma a reproduzir desigualdades raciais.</p>
@@ -1654,7 +1653,7 @@ const dadosAulas = {
         6: {
             titulo: "Gênero e Patriarcado",
             subtitulo: "Construção social de gênero, violência simbólica e relações de poder",
-            imagem: "https://images.unsplash.com/photo-1607748854627-9a94a3b9e2e1?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/04d2c7470-4129-4f0a-8155-3c2c3cf06da19599.png",
             conteudo: `
                 <h3>O Que é Gênero?</h3>
                 <p><strong>Gênero</strong> é uma construção social que atribui papéis, comportamentos, expectativas e identidades a homens e mulheres. Diferente do <strong>sexo</strong> (biológico), o gênero é aprendido e varia entre culturas e épocas.</p>
@@ -1755,7 +1754,7 @@ const dadosAulas = {
         7: {
             titulo: "Estado e Cidadania",
             subtitulo: "Formação do Estado brasileiro, cidadania e direitos políticos",
-            imagem: "https://images.unsplash.com/photo-1591991731833-b4807cf7fb94?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/44d2c7470-4129-4f0a-8155-3c2c3cf06da19035.png",
             conteudo: `
                 <h3>O Que é Estado?</h3>
                 <p>O <strong>Estado</strong> é uma forma de organização política que detém o monopólio do uso legítimo da força em um determinado território. Seus elementos constitutivos são: <strong>soberania</strong>, <strong>território</strong>, <strong>povo</strong> e <strong>governo</strong>.</p>
@@ -1847,7 +1846,7 @@ const dadosAulas = {
         8: {
             titulo: "Democracia e Autoritarismo",
             subtitulo: "Democracia representativa e participativa, clientelismo e populismo",
-            imagem: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/74d2c7470-4129-4f0a-8155-3c2c3cf06da18010.png",
             conteudo: `
                 <h3>O Que é Democracia?</h3>
                 <p>A <strong>democracia</strong> é um regime político onde o poder emana do povo. Existem diferentes modelos:</p>
@@ -1944,7 +1943,7 @@ const dadosAulas = {
         9: {
             titulo: "Movimentos Sociais",
             subtitulo: "Ação coletiva, políticas públicas e o direito a ter direitos",
-            imagem: "https://images.unsplash.com/photo-1591189824344-9a4d29a3a2a2?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/24d2c7470-4129-4f0a-8155-3c2c3cf06da19673.png",
             conteudo: `
                 <h3>O Que São Movimentos Sociais?</h3>
                 <p><strong>Movimentos sociais</strong> são formas de ação coletiva organizada que buscam transformar a sociedade, defender direitos ou resistir a opressões. Não são "quebra da ordem", mas parte fundamental da democracia.</p>
@@ -2046,7 +2045,7 @@ const dadosAulas = {
         10: {
             titulo: "Modernidade Líquida",
             subtitulo: "Bauman, sociedade de consumo e relações descartáveis",
-            imagem: "https://images.unsplash.com/photo-1579621970795-87facc9f9cb6?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/04d2c7470-4129-4f0a-8155-3c2c3cf06da13164.png",
             conteudo: `
                 <h3>Zygmunt Bauman e a Modernidade Líquida</h3>
                 <p><strong>Zygmunt Bauman</strong> (1925-2017) foi um sociólogo polonês que analisou as transformações da sociedade contemporânea. Ele cunhou o conceito de <strong>modernidade líquida</strong> para descrever a fragilidade dos laços sociais na atualidade.</p>
@@ -2144,7 +2143,7 @@ const dadosAulas = {
         11: {
             titulo: "Sociedade de Risco",
             subtitulo: "Ulrich Beck, riscos fabricados e desafios ambientais",
-            imagem: "https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/14d2c7470-4129-4f0a-8155-3c2c3cf06da17036.png",
             conteudo: `
                 <h3>Ulrich Beck e a Sociedade de Risco</h3>
                 <p><strong>Ulrich Beck</strong> (1944-2015) foi um sociólogo alemão que analisou os riscos produzidos pela própria modernidade. Ele argumenta que a sociedade contemporânea é uma <strong>sociedade de risco</strong>, onde os perigos são "fabricados" pelas decisões humanas.</p>
@@ -2275,7 +2274,7 @@ const dadosAulas = {
                 </div>
             `,
             bibliografia: [
-                { titulo: "Mundo do trabalho", link: "https://pt.wikipedia.org/wiki/Mundo_do_trabalho", descricao: "Wikipedia - Transformações contemporâneas" },
+               { titulo: "Direito do trabalho", link: "https://pt.wikipedia.org/wiki/Direito_do_trabalho", descricao: "Wikipedia - as normas que regulam as relações de trabalho e protegem o trabalhador" },
                 { titulo: "Precariado", link: "https://pt.wikipedia.org/wiki/Precariado", descricao: "Wikipedia - Nova classe social" },
                 { titulo: "Uberização", link: "https://pt.wikipedia.org/wiki/Uberiza%C3%A7%C3%A3o", descricao: "Wikipedia - Precarização do trabalho" },
                 { titulo: "Desemprego estrutural", link: "https://pt.wikipedia.org/wiki/Desemprego_estrutural", descricao: "Wikipedia - Desemprego por mudanças estruturais" }
