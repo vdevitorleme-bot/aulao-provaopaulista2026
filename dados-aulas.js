@@ -4,7 +4,7 @@ const dadosAulas = {
         1: {
             titulo: "Mito e Filosofia",
             subtitulo: "As origens do pensamento filosófico na Grécia Antiga",
-            imagem: "https://images.unsplash.com/photo-1528168366336-8574880fe611?w=800",
+            imagem: "https://images.unsplash.com/photo-1524492412937-b2807495d7a1?w=800",
             conteudo: `
                 <h3>A Passagem do Mito ao Logos</h3>
                 <p>O nascimento da filosofia na Grécia Antiga, por volta do século VI a.C., representa uma das maiores revoluções do pensamento humano. Antes da filosofia, os gregos explicavam o mundo através dos <strong>mitos</strong> - narrativas fantásticas que envolviam deuses, heróis e forças sobrenaturais para explicar a origem do universo, os fenômenos naturais e a condição humana.</p>
@@ -108,7 +108,7 @@ const dadosAulas = {
         2: {
             titulo: "Platão e Aristóteles",
             subtitulo: "A filosofia de Platão e Aristóteles na obra 'Escola de Atenas'",
-            imagem: "https://images.unsplash.com/photo-1608376639808-3b9b1e460d5b?w=800",
+            imagem: "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=800",
             conteudo: `
                 <h3>A Escola de Atenas: Encontro de Duas Filosofias</h3>
                 <p>A famosa pintura de Rafael Sanzio, "A Escola de Atenas", representa o encontro entre as duas grandes correntes da filosofia grega: <strong>Platão</strong> e <strong>Aristóteles</strong>. Na obra, Platão aponta para cima (mundo das Ideias) e Aristóteles aponta para frente (mundo sensível).</p>
@@ -678,7 +678,7 @@ const dadosAulas = {
         8: {
             titulo: "Ubuntu e Protagonismo",
             subtitulo: "Filosofia Ubuntu e filósofos negros e indígenas brasileiros",
-            imagem: "https://images.unsplash.com/photo-1523365280197-833a0a7a2f5e?w=800",
+            imagem: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=800",
             conteudo: `
                 <h3>Filosofia Ubuntu: "Sou porque somos"</h3>
                 <p>O <strong>Ubuntu</strong> é uma filosofia africana que expressa a ideia de que a humanidade de uma pessoa está intrinsecamente ligada à humanidade dos outros. "Eu sou porque nós somos" - a identidade individual se constrói na relação com a comunidade.</p>
@@ -776,7 +776,7 @@ const dadosAulas = {
         9: {
             titulo: "Levinas e Habermas",
             subtitulo: "Alteridade, ética do discurso e valores democráticos",
-            imagem: "https://images.unsplash.com/photo-1529156069182-903391a171a7?w=800",
+            imagem: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800",
             conteudo: `
                 <h3>Emmanuel Lévinas: A Ética como Filosofia Primeira</h3>
                 <p><strong>Lévinas</strong> (1906-1995) inverte a tradição filosófica: antes da ontologia (o estudo do ser), vem a <strong>ética</strong> (a relação com o Outro). O "rosto do Outro" me interpela e me exige responsabilidade infinita.</p>
@@ -959,7 +959,7 @@ const dadosAulas = {
         11: {
             titulo: "Foucault e Sociedade Disciplinar",
             subtitulo: "Panóptico, poder disciplinar e sociedade de controle",
-            imagem: "https://images.unsplash.com/photo-1577962917302-cd874c4daf7c?w=800",
+            imagem: "https://images.unsplash.com/photo-1555848962-6e77729260f7?w=800",
             conteudo: `
                 <h3>Michel Foucault: A Microfísica do Poder</h3>
                 <p><strong>Michel Foucault</strong> (1926-1984) analisou como o poder não está apenas no Estado ou nas leis, mas circula em todas as relações sociais. Ele estudou as instituições disciplinares: prisões, hospitais, escolas, quartéis.</p>
