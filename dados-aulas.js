@@ -1690,67 +1690,67 @@ const dadosAulas = {
                 { titulo: "Feminismo", link: "https://pt.wikipedia.org/wiki/Feminismo", descricao: "Wikipedia - Movimento pela igualdade de gênero" }
             ],
             quiz: [
-                {
-                    enunciado: "A diferença entre 'sexo' e 'gênero' pode ser compreendida como:",
-                    alternativas: {
-                        a: "Sexo é construção social; gênero é biológico.",
-                        b: "Sexo refere-se às características biológicas; gênero é uma construção social que atribui papéis e identidades.",
-                        c: "São exatamente a mesma coisa, sem diferença conceitual.",
-                        d: "Sexo é cultural; gênero é natural.",
-                        e: "Ambos são determinados exclusivamente pela genética."
-                    },
-                    correta: "b",
-                    explicacao: "Sexo refere-se às características biológicas (cromossomos, hormônios, anatomia); gênero é uma construção social que atribui papéis, comportamentos e identidades a homens e mulheres, variando entre culturas e épocas."
-                },
-                {
-                    enunciado: "O patriarcado pode ser definido como:",
-                    alternativas: {
-                        a: "Um sistema de organização social que privilegia as mulheres em detrimento dos homens.",
-                        b: "Um sistema de organização social que privilegia os homens em detrimento das mulheres.",
-                        c: "Um sistema igualitário que trata homens e mulheres da mesma forma.",
-                        d: "Um sistema religioso que não tem relação com a organização social.",
-                        e: "Um sistema biológico determinado pelos cromossomos."
-                    },
-                    correta: "b",
-                    explicacao: "O patriarcado é um sistema histórico de organização social que privilegia os homens em detrimento das mulheres, manifestando-se na família, no trabalho, na política e na cultura. Não é natural, mas uma construção histórica."
-                },
-                {
-                    enunciado: "A 'violência simbólica', segundo Pierre Bourdieu, se caracteriza por:",
-                    alternativas: {
-                        a: "Ser uma agressão física explícita e visível.",
-                        b: "Ser uma violência suave, invisível, que se exerce com a cumplicidade dos dominados, que internalizam os estereótipos.",
-                        c: "Ser uma violência apenas praticada por homens contra mulheres.",
-                        d: "Ser uma violência exclusiva das sociedades pré-modernas.",
-                        e: "Ser uma violência que não tem qualquer efeito sobre as vítimas."
-                    },
-                    correta: "b",
-                    explicacao: "A violência simbólica é uma forma de violência suave, invisível, que se exerce com a cumplicidade dos próprios dominados, que internalizam os estereótipos e os reproduzem como se fossem 'naturais'. Ex: mulheres que acreditam que 'lugar de mulher é na cozinha'."
-                },
-                {
-                    enunciado: "A afirmação 'menino não chora' é um exemplo de:",
-                    alternativas: {
-                        a: "Conselho médico baseado em evidências científicas.",
-                        b: "Estereótipo de gênero que naturaliza a repressão emocional dos homens.",
-                        c: "Uma verdade biológica sobre o corpo masculino.",
-                        d: "Uma tradição religiosa que deve ser respeitada.",
-                        e: "Uma lei brasileira que proíbe homens de chorar."
-                    },
-                    correta: "b",
-                    explicacao: "'Menino não chora' é um estereótipo de gênero que naturaliza a repressão emocional dos homens, ensinando-os desde criança a não expressar sentimentos. É uma forma de violência simbólica que limita as possibilidades afetivas dos homens."
-                },
-                {
-                    enunciado: "A divisão sexual do trabalho atribui tradicionalmente:",
-                    alternativas: {
-                        a: "Trabalhos domésticos e de cuidado às mulheres; trabalhos públicos e de poder aos homens.",
-                        b: "Trabalhos domésticos aos homens; trabalhos públicos às mulheres.",
-                        c: "Todos os trabalhos igualmente a homens e mulheres, sem distinção.",
-                        d: "Apenas trabalhos intelectuais às mulheres; trabalhos manuais aos homens.",
-                        e: "Apenas trabalhos políticos aos homens; trabalhos religiosos às mulheres."
-                    },
-                    correta: "a",
-                    explicacao: "A divisão sexual do trabalho atribui tradicionalmente às mulheres trabalhos domésticos e de cuidado (desvalorizados economicamente) e aos homens trabalhos públicos e de poder (valorizados). Essa divisão é uma construção social, não biológica."
-                }
-            ]
+    {
+        enunciado: "Uma menina de 5 anos ganha uma boneca e um menino de 5 anos ganha um carrinho. A menina quer brincar com o carrinho, mas ouve: 'Isso é coisa de menino.' Essa cena cotidiana ilustra:",
+        alternativas: {
+            a: "Uma preferência biológica: crianças escolhem brinquedos conforme disposições hormonais inatas.",
+            b: "A construção social de gênero: a sociedade atribui papéis, comportamentos e expectativas a meninos e meninas desde a infância, ensinando o que é 'apropriado' para cada um.",
+            c: "Uma escolha individual: cada criança decide livremente seus gostos, sem influência do meio social.",
+            d: "Uma estratégia econômica: a indústria de brinquedos cria as preferências infantis apenas para segmentar o mercado.",
+            e: "Uma norma religiosa: a separação de brinquedos deriva de prescrições morais tradicionais."
+        },
+        correta: "b",
+        explicacao: "A atribuição de brinquedos, cores e comportamentos por gênero é uma construção social. Não há nada 'natural' em boneca ser 'de menina' e carrinho 'de menino'. A sociedade ensina (socialização de gênero) o que é 'apropriado' para cada gênero, limitando as possibilidades de meninos e meninas."
+    },
+    {
+        enunciado: "A frase 'lugar de mulher é na cozinha' foi repetida por tantas gerações que algumas mulheres passam a acreditar que isso é verdade e reproduzem a mesma frase para suas filhas. Segundo Bourdieu, esse fenômeno é:",
+        alternativas: {
+            a: "Violência física, pois a frase produz dano corporal direto e visível sobre as mulheres que a escutam.",
+            b: "Violência simbólica: dominação invisível exercida com a cumplicidade dos dominados, que internalizam estereótipos e os reproduzem como se fossem naturais.",
+            c: "Violência institucional, pois a frase é pronunciada apenas por órgãos oficiais do Estado em cerimônias formais.",
+            d: "Violência recreativa, pois a frase circula exclusivamente como humor inofensivo, sem pretensão normativa.",
+            e: "Violência estrutural, pois a frase resulta diretamente da organização econômica do trabalho doméstico."
+        },
+        correta: "b",
+        explicacao: "A violência simbólica é suave e invisível: não é agressão física, mas dominação exercida pela internalização de estereótipos. As próprias vítimas reproduzem a dominação ('lugar de mulher é na cozinha') sem perceber, naturalizando a desigualdade. É uma violência que se esconde na 'normalidade'."
+    },
+    {
+        enunciado: "No Brasil, as mulheres gastam, em média, o dobro de tempo em trabalho doméstico não remunerado comparado aos homens, mesmo quando trabalham fora. Esse dado ilustra:",
+        alternativas: {
+            a: "A preferência natural das mulheres pelas tarefas domésticas, explicada pelo instinto maternal.",
+            b: "A divisão sexual do trabalho: construção social que atribui às mulheres o cuidado e a casa (desvalorizados) e aos homens o espaço público (valorizado), produzindo desigualdade.",
+            c: "Um arranjo econômico conjugal livremente negociado por cada casal conforme suas disponibilidades.",
+            d: "Uma necessidade biológica: as tarefas domésticas exigem capacidades físicas que apenas as mulheres possuem.",
+            e: "Um fenômeno residual em extinção, sem expressão estatística relevante no Brasil contemporâneo."
+        },
+        correta: "b",
+        explicacao: "A divisão sexual do trabalho não é natural; é uma construção social que atribui às mulheres o trabalho doméstico e de cuidado (desvalorizado) e aos homens o trabalho público (valorizado). Isso limita as oportunidades das mulheres e contribui para a desigualdade de gênero."
+    },
+    {
+        enunciado: "O patriarcado é um sistema histórico de dominação masculina que se manifesta na família, no trabalho, na política e na cultura. No Brasil, as mulheres só conquistaram o direito ao voto em 1932, após décadas de luta. Esse fato mostra que:",
+        alternativas: {
+            a: "O patriarcado nunca existiu no Brasil, pois as mulheres sempre tiveram plena participação política.",
+            b: "O patriarcado é uma construção histórica: a exclusão das mulheres da vida pública não era natural, e foi contestada e parcialmente superada pela luta social.",
+            c: "A participação política feminina é um fenômeno natural recente, sem história anterior ao século XX.",
+            d: "A conquista do voto feminino decorreu de uma evolução biológica que tornou as mulheres aptas à política.",
+            e: "O voto de 1932 foi um gesto simbólico sem efeitos práticos, pois as mulheres só votaram após 1988."
+        },
+        correta: "b",
+        explicacao: "O patriarcado é um sistema histórico de dominação masculina que excluiu as mulheres da vida pública e política. A conquista do voto feminino (1932 no Brasil) foi resultado de lutas sociais. Isso mostra que o patriarcado não é natural nem imutável: é uma construção histórica que pode ser contestada."
+    },
+    {
+        enunciado: "A 'masculinidade tóxica' descreve normas sociais que pressionam os homens a serem sempre fortes, não chorar, não demonstrar vulnerabilidade e resolver conflitos com violência. A frase 'menino não chora' exemplifica essas normas. Elas:",
+        alternativas: {
+            a: "São benéficas para a saúde mental masculina, pois estimulam o controle emocional e a resiliência.",
+            b: "São socialmente prejudiciais: aos homens (repressão emocional, dificuldade de pedir ajuda) e às mulheres (normalização da violência), e podem ser desconstruídas.",
+            c: "São características biológicas do sexo masculino, imutáveis e universais em todas as culturas.",
+            d: "São preferências individuais sem peso social, pois cada homem decide livremente como expressar emoções.",
+            e: "São normas exclusivas das classes populares ocidentais, ausentes em outras sociedades e períodos."
+        },
+        correta: "b",
+        explicacao: "A masculinidade tóxica prejudica homens (repressão emocional, dificuldade de pedir ajuda, maior taxa de suicídio) e mulheres (normalização da violência). Desconstruir essas normas é parte do combate ao patriarcado e da promoção de relações de gênero mais igualitárias e saudáveis."
+    }
+]
         },
         7: {
             titulo: "Estado e Cidadania",
@@ -1782,67 +1782,67 @@ const dadosAulas = {
                 { titulo: "José Murilo de Carvalho", link: "https://pt.wikipedia.org/wiki/Jos%C3%A9_Murilo_de_Carvalho", descricao: "Wikipedia - Historiador brasileiro" }
             ],
             quiz: [
-                {
-                    enunciado: "Os elementos constitutivos do Estado são:",
-                    alternativas: {
-                        a: "Exército, polícia e prisão.",
-                        b: "Soberania, território, povo e governo.",
-                        c: "Religião, cultura, língua e tradições.",
-                        d: "Capital, trabalho e tecnologia.",
-                        e: "Presidente, Congresso e Supremo Tribunal."
-                    },
-                    correta: "b",
-                    explicacao: "O Estado é composto por quatro elementos: soberania (poder supremo), território (base física), povo (comunidade humana) e governo (organização política). Sem esses elementos, não há Estado."
-                },
-                {
-                    enunciado: "T.H. Marshall identificou três dimensões da cidadania:",
-                    alternativas: {
-                        a: "Econômica, cultural e religiosa.",
-                        b: "Civil (liberdades individuais), política (direito de votar e ser votado) e social (direitos trabalhistas e previdenciários).",
-                        c: "Local, nacional e internacional.",
-                        d: "Individual, coletiva e universal.",
-                        e: "Antiga, moderna e contemporânea."
-                    },
-                    correta: "b",
-                    explicacao: "Marshall identificou três dimensões da cidadania: civil (liberdades individuais, século XVIII), política (direito de participação, século XIX) e social (direitos econômicos e sociais, século XX). Na Europa, seguiram essa ordem histórica."
-                },
-                {
-                    enunciado: "Segundo José Murilo de Carvalho, a cidadania no Brasil se caracterizou por:",
-                    alternativas: {
-                        a: "Seguir exatamente o modelo europeu, sem diferenças.",
-                        b: "Uma 'inversão da ordem': direitos sociais concedidos pelo Estado antes da plena cidadania política, gerando cidadania regulada/tutelada.",
-                        c: "Uma plena cidadania desde o período colonial.",
-                        d: "A ausência total de qualquer forma de cidadania ao longo da história.",
-                        e: "A prioridade absoluta aos direitos civis em detrimento dos sociais."
-                    },
-                    correta: "b",
-                    explicacao: "Carvalho mostra que no Brasil houve uma 'inversão da ordem': os direitos sociais (trabalhistas, na Era Vargas) foram concedidos pelo Estado antes da plena cidadania política, gerando uma cidadania 'regulada' ou 'tutelada', dependente do Estado."
-                },
-                {
-                    enunciado: "A 'cidadania regulada' no Brasil significa que:",
-                    alternativas: {
-                        a: "Todos os cidadãos têm os mesmos direitos, sem distinção.",
-                        b: "Os direitos de cidadania eram condicionados à profissão registrada, excluindo trabalhadores informais e marginais.",
-                        c: "A cidadania era plena e universal desde a independência.",
-                        d: "Apenas os proprietários de terra tinham direitos de cidadania.",
-                        e: "A cidadania era regulada exclusivamente pela religião."
-                    },
-                    correta: "b",
-                    explicacao: "A 'cidadania regulada' (ou tutelada) significava que os direitos sociais eram condicionados à profissão registrada em carteira, excluindo trabalhadores informais, rurais sem registro, etc. Era uma cidadania 'regulada' pelo Estado."
-                },
-                {
-                    enunciado: "A Constituição Brasileira de 1988 é conhecida como 'Constituição Cidadã' porque:",
-                    alternativas: {
-                        a: "Foi escrita exclusivamente por cidadãos comuns, sem participação de políticos.",
-                        b: "Ampliou significativamente os direitos civis, políticos e sociais, consolidando a democracia após a ditadura.",
-                        c: "Foi a primeira constituição do Brasil.",
-                        d: "Foi escrita por um cidadão chamado 'Cidadão'.",
-                        e: "Não tem qualquer relação com o conceito de cidadania."
-                    },
-                    correta: "b",
-                    explicacao: "A Constituição de 1988 é chamada de 'Cidadã' (expressão cunhada por Ulysses Guimarães) porque ampliou significativamente os direitos civis, políticos e sociais, consolidando a democracia após 21 anos de ditadura militar."
-                }
-            ]
+    {
+        enunciado: "O Estado é definido como a organização política que detém o monopólio do uso legítimo da força em um território. Seus elementos constitutivos são soberania, território, povo e governo. Diferenciando esses conceitos, é correto afirmar que:",
+        alternativas: {
+            a: "O Estado é idêntico à nação: ambos designam a comunidade cultural, linguística e histórica de um território.",
+            b: "O Estado é a organização político-jurídica (soberania, território, povo, governo), distinta de nação (comunidade cultural) e de país (território geográfico).",
+            c: "O Estado é o próprio território geográfico, com suas fronteiras, relevo e recursos naturais.",
+            d: "O Estado é o conjunto de tradições religiosas que dão identidade e coesão a um povo.",
+            e: "O Estado é a administração privada dos serviços públicos por empresas concessionárias."
+        },
+        correta: "b",
+        explicacao: "O Estado é a organização política e jurídica: soberania, território, povo e governo. 'Nação' é a comunidade cultural (língua, história, identidade). 'País' é o território geográfico. Os três conceitos são relacionados, mas distintos."
+    },
+    {
+        enunciado: "T.H. Marshall identificou três dimensões da cidadania: civil (séc. XVIII), política (séc. XIX) e social (séc. XX). No Brasil, segundo José Murilo de Carvalho, houve uma 'inversão da ordem': os direitos sociais foram concedidos pelo Estado (Era Vargas) antes da plena cidadania política. Isso significa que:",
+        alternativas: {
+            a: "O Brasil seguiu a sequência europeia: direitos civis, depois políticos, depois sociais, sem particularidades.",
+            b: "No Brasil, os direitos sociais foram concedidos pelo Estado antes da plena participação política, gerando uma cidadania 'regulada' ou tutelada, dependente da concessão estatal.",
+            c: "No Brasil, os direitos políticos precederam todos os demais, pois o voto universal foi estabelecido no período imperial.",
+            d: "A inversão brasileira produziu uma cidadania mais plena que a europeia, pois os direitos sociais garantem o exercício de todos os outros.",
+            e: "A ordem dos direitos é irrelevante para a análise sociológica da cidadania brasileira."
+        },
+        correta: "b",
+        explicacao: "Carvalho mostra que no Brasil houve uma 'inversão': os direitos sociais (trabalhistas, na Era Vargas) foram concedidos pelo Estado antes da plena cidadania política. Isso gerou uma 'cidadania tutelada': os direitos eram 'concedidos' pelo Estado paternalista, não conquistados pela participação política."
+    },
+    {
+        enunciado: "A 'cidadania regulada' no Brasil significava que os direitos sociais (trabalhistas) eram condicionados à profissão registrada em carteira. Trabalhadores informais, rurais sem registro e empregadas domésticas ficavam excluídos. Isso mostra que:",
+        alternativas: {
+            a: "A cidadania era plena e universal: todo trabalhador tinha acesso aos direitos, independentemente de sua inserção no mercado.",
+            b: "A cidadania era excludente: os direitos dependiam da inserção formal no mercado de trabalho, deixando milhões de brasileiros sem proteção.",
+            c: "A cidadania era igualitária: o critério da profissão garantia tratamento idêntico a todas as categorias profissionais.",
+            d: "A cidadania era temporária: os direitos valiam apenas durante o período de serviço militar obrigatório.",
+            e: "A cidadania era corporativa: apenas os trabalhadores sindicalizados tinham acesso à previdência social."
+        },
+        correta: "b",
+        explicacao: "A 'cidadania regulada' era excludente: os direitos sociais dependiam da profissão registrada. Trabalhadores informais, rurais sem registro, domésticas e outros ficavam excluídos. Isso mostra como a cidadania brasileira foi historicamente limitada e excludente."
+    },
+    {
+        enunciado: "A Constituição Brasileira de 1988 é chamada de 'Constituição Cidadã' porque:",
+        alternativas: {
+            a: "Foi redigida exclusivamente por juristas nomeados pelo regime militar, sem participação popular.",
+            b: "Ampliou significativamente os direitos civis, políticos e sociais, consolidando a democracia após 21 anos de ditadura e instituindo mecanismos de participação popular.",
+            c: "Foi o primeiro texto constitucional brasileiro, inaugurando a experiência republicana no país.",
+            d: "Restringiu a cidadania aos cidadãos alfabetizados, excluindo os analfabetos do direito ao voto.",
+            e: "Transferiu ao mercado a responsabilidade pela saúde e educação, reduzindo o papel do Estado."
+        },
+        correta: "b",
+        explicacao: "A Constituição de 1988 é chamada de 'Cidadã' porque ampliou direitos civis, políticos e sociais, consolidando a democracia após a ditadura. Estabeleceu a participação popular, os direitos sociais, a saúde e educação como direitos universais, e os mecanismos de democracia participativa."
+    },
+    {
+        enunciado: "A cidadania é o vínculo jurídico-político entre o indivíduo e o Estado, envolvendo direitos e deveres. A cidadania plena integra as dimensões civil, política e social. Um cidadão que exerce efetivamente essas três dimensões:",
+        alternativas: {
+            a: "Possui um status meramente formal: tem documentos e títulos, sem exercício efetivo de direitos.",
+            b: "Exerce a cidadania plena: integra direitos civis, políticos e sociais com participação efetiva na vida pública.",
+            c: "Desfruta de um privilégio natural de quem nasce em território nacional, sem construção histórica.",
+            d: "Submete-se integralmente ao Estado, com deveres sem direitos correspondentes.",
+            e: "Alcança uma condição econômica: a cidadania plena se mede pela renda e pelo consumo do indivíduo."
+        },
+        correta: "b",
+        explicacao: "A cidadania plena integra as três dimensões (civil, política e social) e inclui direitos e deveres. Não é apenas um status formal, mas a possibilidade real de exercer direitos e participar da vida política. A cidadania plena é um ideal a ser construído, não um dado natural."
+    }
+]
         },
         8: {
             titulo: "Democracia e Autoritarismo",
@@ -1879,67 +1879,67 @@ const dadosAulas = {
                 { titulo: "Populismo", link: "https://pt.wikipedia.org/wiki/Populismo", descricao: "Wikipedia - Fenômeno político" }
             ],
             quiz: [
-                {
-                    enunciado: "A democracia participativa se diferencia da representativa porque:",
-                    alternativas: {
-                        a: "Na participativa o povo não vota; na representativa o povo vota.",
-                        b: "Na participativa o povo participa diretamente das decisões (plebiscito, referendo, conselhos); na representativa elege representantes.",
-                        c: "São exatamente a mesma coisa, sem diferença.",
-                        d: "A participativa é exclusiva de regimes autoritários.",
-                        e: "A representativa não existe em nenhum país do mundo."
-                    },
-                    correta: "b",
-                    explicacao: "A democracia representativa elege representantes que decidem em nome do povo; a participativa permite que o povo participe diretamente das decisões através de plebiscitos, referendos, conselhos, orçamento participativo, etc."
-                },
-                {
-                    enunciado: "O conceito de 'poliarquia', desenvolvido por Robert Dahl, refere-se a:",
-                    alternativas: {
-                        a: "Um regime autoritário com múltiplos partidos fictícios.",
-                        b: "Uma democracia realmente existente, com eleições livres, múltiplos partidos, liberdade de expressão e sufrágio universal.",
-                        c: "Um regime onde apenas um partido pode governar.",
-                        d: "Uma ditadura militar disfarçada de democracia.",
-                        e: "Um sistema político sem qualquer forma de participação popular."
-                    },
-                    correta: "b",
-                    explicacao: "Dahl cunhou 'poliarquia' para descrever as democracias reais (não ideais): regime com eleições livres e justas, múltiplos partidos, liberdade de expressão, sufrágio universal, direito de competir por cargos públicos."
-                },
-                {
-                    enunciado: "O clientelismo é uma prática antidemocrática que se caracteriza por:",
-                    alternativas: {
-                        a: "Pela participação popular espontânea e desvinculada de partidos políticos.",
-                        b: "Pela troca de favores, bens ou empregos públicos por apoio eleitoral, subordinando o interesse público ao privado.",
-                        c: "Pela fiscalização rigorosa dos gastos públicos por órgãos independentes.",
-                        d: "Pela igualdade absoluta de recursos entre todos os candidatos nas eleições.",
-                        e: "Pelo fortalecimento das instituições de controle e transparência."
-                    },
-                    correta: "b",
-                    explicacao: "O clientelismo é a troca de favores (empregos, obras, benefícios) por apoio eleitoral, subordinando o interesse público ao privado. É uma prática antidemocrática que enfraquece as instituições e transforma o voto em mercadoria."
-                },
-                {
-                    enunciado: "O populismo, como prática política, se caracteriza por:",
-                    alternativas: {
-                        a: "Pela participação popular direta em todas as decisões do Estado.",
-                        b: "Por líderes que se apresentam como 'pais do povo', estabelecendo relação direta com as massas, sem mediação institucional.",
-                        c: "Pela valorização das instituições democráticas e do Estado de Direito.",
-                        d: "Pela distribuição igualitária de renda entre todos os cidadãos.",
-                        e: "Pela separação rigorosa entre os poderes Executivo, Legislativo e Judiciário."
-                    },
-                    correta: "b",
-                    explicacao: "O populismo é uma prática onde líderes carismáticos se apresentam como 'pais do povo', estabelecendo relação direta com as massas, sem mediação institucional. Enfraquece as instituições democráticas ao personalizar o poder."
-                },
-                {
-                    enunciado: "A dimensão deliberativa da democracia, proposta por Habermas, defende que:",
-                    alternativas: {
-                        a: "As decisões devem ser tomadas apenas pelo líder mais forte.",
-                        b: "As decisões legítimas são aquelas que emergem do diálogo racional e livre entre todos os afetados.",
-                        c: "As decisões devem ser impostas pela maioria, sem diálogo com a minoria.",
-                        d: "As decisões devem ser tomadas em segredo, sem participação popular.",
-                        e: "As decisões devem ser delegadas exclusivamente aos juízes."
-                    },
-                    correta: "b",
-                    explicacao: "A democracia deliberativa (Habermas) defende que as decisões legítimas emergem do diálogo racional e livre entre todos os afetados. Não é só votar: é argumentar, ouvir, convencer. É a dimensão mais profunda da democracia."
-                }
-            ]
+    {
+        enunciado: "Robert Dahl cunhou o termo 'poliarquia' para descrever as democracias reais: regimes com eleições livres, múltiplos partidos, liberdade de expressão, sufrágio universal e direito de competir por cargos públicos. Um país que realiza eleições regulares, mas persegue opositores e controla a mídia, é:",
+        alternativas: {
+            a: "Uma poliarquia plena, pois as eleições periódicas são o único requisito necessário do conceito de Dahl.",
+            b: "Uma democracia iliberal ou autoritarismo competitivo: realiza eleições, mas viola requisitos da poliarquia como liberdade de expressão e competição justa.",
+            c: "Uma democracia consolidada, pois a existência de eleições garante por si só o caráter democrático do regime.",
+            d: "Uma democracia direta, pois o líder consulta o povo sem mediações institucionais.",
+            e: "Uma monarquia parlamentarista, pois o poder é compartilhado entre executivo e legislativo."
+        },
+        correta: "b",
+        explicacao: "Para Dahl, a poliarquia exige não apenas eleições, mas também liberdade de expressão, competição justa, múltiplos partidos e sufrágio universal. Um país que realiza eleições mas persegue opositores e controla a mídia não é uma poliarquia plena; é uma democracia iliberal ou autoritarismo competitivo."
+    },
+    {
+        enunciado: "O clientelismo é uma prática antidemocrática que se caracteriza pela troca de favores, bens ou empregos públicos por apoio eleitoral. Um exemplo: um político promete asfaltar uma rua em troca de votos. O 'voto de cabresto' na República Velha é um exemplo histórico. O clientelismo:",
+        alternativas: {
+            a: "É uma prática democrática saudável, pois aproxima o representante das demandas concretas do eleitorado.",
+            b: "É uma prática antidemocrática que transforma o voto em mercadoria, subordina o interesse público ao privado e enfraquece as instituições.",
+            c: "É uma forma de democracia participativa, pois a comunidade delibera diretamente sobre as obras públicas.",
+            d: "É uma política pública regulatória, pois distribui recursos por critérios técnicos objetivos.",
+            e: "É um legado das organizações políticas indígenas, sem relação com a história eleitoral brasileira."
+        },
+        correta: "b",
+        explicacao: "O clientelismo transforma o voto em mercadoria: o político 'compra' apoio com favores, empregos ou bens públicos. Isso subordina o interesse público ao privado, enfraquece as instituições e corrói a democracia. O 'voto de cabresto' na República Velha é um exemplo histórico."
+    },
+    {
+        enunciado: "O populismo é uma prática política onde líderes carismáticos se apresentam como 'pais do povo', estabelecendo relação direta com as massas, sem mediação institucional. Getúlio Vargas no Brasil é frequentemente citado como exemplo. O populismo:",
+        alternativas: {
+            a: "Fortalece as instituições democráticas ao ampliar os canais institucionais de participação popular.",
+            b: "Enfraquece as instituições ao personalizar o poder, criar dependência do líder e contornar mecanismos de controle e mediação.",
+            c: "É idêntico à democracia participativa, pois ambos suprimem a representação institucional.",
+            d: "É exclusivo de regimes autoritários, nunca aparecendo em contextos democráticos.",
+            e: "É uma doutrina essencialmente econômica, sem implicações políticas ou institucionais."
+        },
+        correta: "b",
+        explicacao: "O populismo enfraquece as instituições: o líder se apresenta como 'pai do povo', criando relação direta e pessoal, contornando partidos, parlamentos e mecanismos de controle. A dependência do líder substitui a participação institucional. Isso enfraquece a democracia, mesmo que o líder seja popular."
+    },
+    {
+        enunciado: "A democracia participativa complementa a representativa com mecanismos de participação direta: plebiscito, referendo, iniciativa popular, conselhos, orçamento participativo. No Brasil, a Constituição de 1988 prevê esses mecanismos. A democracia participativa:",
+        alternativas: {
+            a: "Substitui completamente a democracia representativa, extinguindo eleições e mandatos parlamentares.",
+            b: "Complementa a democracia representativa, ampliando a participação popular na formulação, monitoramento e avaliação de políticas públicas.",
+            c: "Funciona apenas no nível municipal, sem aplicação nos estados e na federação.",
+            d: "É um instrumento meramente simbólico, sem previsão legal na ordem constitucional brasileira.",
+            e: "Transfere ao Judiciário a decisão sobre temas de grande repercussão social."
+        },
+        correta: "b",
+        explicacao: "A democracia participativa não substitui a representativa; a complementa. Mecanismos como plebiscito, referendo, conselhos e orçamento participativo ampliam a participação popular na formulação e avaliação de políticas. A Constituição de 1988 prevê esses mecanismos como parte da democracia brasileira."
+    },
+    {
+        enunciado: "O Brasil tem uma tradição autoritária que se manifesta em práticas antidemocráticas: coronelismo, populismo, clientelismo e golpes de Estado (1964). A consolidação da democracia brasileira exige:",
+        alternativas: {
+            a: "A eliminação dos partidos políticos e a concentração das decisões no Poder Executivo.",
+            b: "O fortalecimento das instituições democráticas, a participação popular, o combate às práticas autoritárias e a construção de uma cultura política democrática.",
+            c: "O retorno dos mecanismos tutelares, com direitos concedidos de cima para baixo sem luta social.",
+            d: "A restrição da participação aos setores tecnicamente qualificados da população.",
+            e: "A supressão dos movimentos sociais em nome da estabilidade governamental."
+        },
+        correta: "b",
+        explicacao: "A consolidação da democracia brasileira exige enfrentar a tradição autoritária: fortalecer instituições, ampliar a participação popular, combater clientelismo e populismo, e construir uma cultura política democrática. A democracia não é apenas um regime; é uma prática cotidiana que precisa ser cultivada."
+    }
+]
         },
         9: {
             titulo: "Movimentos Sociais",
@@ -1981,67 +1981,67 @@ const dadosAulas = {
                 { titulo: "Movimento feminista", link: "https://pt.wikipedia.org/wiki/Feminismo", descricao: "Wikipedia - Luta pela igualdade de gênero" }
             ],
             quiz: [
-                {
-                    enunciado: "Os movimentos sociais podem ser definidos como:",
-                    alternativas: {
-                        a: "Grupos que buscam substituir o Estado e assumir o poder governamental à força.",
-                        b: "Formas de ação coletiva organizada que buscam transformar a sociedade, defender direitos ou resistir a opressões.",
-                        c: "Apenas organizações partidárias que disputam eleições.",
-                        d: "Grupos que representam apenas interesses de minorias privilegiadas economicamente.",
-                        e: "Entidades totalmente desnecessárias em regimes democráticos."
-                    },
-                    correta: "b",
-                    explicacao: "Movimentos sociais são formas de ação coletiva organizada que buscam transformar a sociedade, defender direitos ou resistir a opressões. Não são 'quebra da ordem', mas parte fundamental da democracia, ampliando direitos."
-                },
-                {
-                    enunciado: "A expressão 'direito a ter direitos', associada a Hannah Arendt, significa que:",
-                    alternativas: {
-                        a: "Os direitos são dados naturalmente por Deus a todos os seres humanos.",
-                        b: "Os direitos não são dados naturalmente: são conquistados através da luta coletiva e da organização política.",
-                        c: "Apenas os cidadãos de países ricos têm direitos.",
-                        d: "Os direitos são concedidos pelo Estado conforme sua conveniência.",
-                        e: "Os direitos são exclusivos de determinadas classes sociais."
-                    },
-                    correta: "b",
-                    explicacao: "Arendt mostra que os direitos não são naturais: são conquistas históricas. O 'direito a ter direitos' significa que antes de tudo, é necessário ter o direito de participar da comunidade política onde os direitos existem."
-                },
-                {
-                    enunciado: "As políticas públicas redistributivas se caracterizam por:",
-                    alternativas: {
-                        a: "Beneficiar apenas os mais ricos da sociedade.",
-                        b: "Transferir recursos dos mais ricos para os mais pobres, reduzindo desigualdades.",
-                        c: "Criar regras que regulam comportamentos individuais.",
-                        d: "Criar novas instituições e órgãos públicos.",
-                        e: "Beneficiar grupos específicos sem qualquer critério de renda."
-                    },
-                    correta: "b",
-                    explicacao: "Políticas redistributivas transferem recursos dos mais ricos para os mais pobres, reduzindo desigualdades. Exemplos: impostos progressivos, programas de transferência de renda, cotas sociais em universidades."
-                },
-                {
-                    enunciado: "O papel dos movimentos sociais na democracia contemporânea é:",
-                    alternativas: {
-                        a: "Destruir as instituições democráticas e instalar uma ditadura.",
-                        b: "Ampliar direitos, dar voz a grupos excluídos, pressionar o Estado por políticas públicas.",
-                        c: "Representar apenas os interesses das elites econômicas.",
-                        d: "Substituir completamente os partidos políticos nas eleições.",
-                        e: "Impedir qualquer forma de participação popular nas decisões."
-                    },
-                    correta: "b",
-                    explicacao: "Movimentos sociais são fundamentais na democracia: ampliam direitos, dão voz a grupos excluídos, pressionam o Estado por políticas públicas, fiscalizam o poder. São parte essencial da democracia participativa."
-                },
-                {
-                    enunciado: "As políticas públicas regulatórias têm como função:",
-                    alternativas: {
-                        a: "Distribuir dinheiro diretamente para a população.",
-                        b: "Estabelecer regras que regulam comportamentos e atividades na sociedade.",
-                        c: "Transferir recursos dos mais ricos para os mais pobres.",
-                        d: "Criar novos ministérios e secretarias de governo.",
-                        e: "Beneficiar apenas empresas privadas."
-                    },
-                    correta: "b",
-                    explicacao: "Políticas regulatórias estabelecem regras que regulam comportamentos e atividades: código de trânsito, leis ambientais, regulamentação de medicamentos, regras de funcionamento de empresas, etc."
-                }
-            ]
+    {
+        enunciado: "O Movimento Negro brasileiro lutou contra a ditadura, pela redemocratização e pelas cotas raciais. Segundo Hannah Arendt, os movimentos sociais exercem o 'direito a ter direitos', que significa:",
+        alternativas: {
+            a: "Os direitos são dotações naturais, anteriores a qualquer organização política, que o Estado apenas reconhece.",
+            b: "Os direitos são conquistas históricas: resultam da luta coletiva e da organização política; antes dos direitos específicos, é necessário ter o direito de participar da comunidade que os decide.",
+            c: "Os direitos são concessões estatais, outorgados pela benevolência de governantes esclarecidos sem pressão social.",
+            d: "Os direitos são privilégios econômicos, acessíveis apenas aos grupos com recursos para litigar na justiça.",
+            e: "Os direitos são ficções retóricas, sem efeito prático na vida dos grupos subordinados."
+        },
+        correta: "b",
+        explicacao: "Arendt mostra que os direitos não são naturais: são conquistas históricas. O 'direito a ter direitos' significa que, antes de tudo, é necessário ter o direito de participar da comunidade política. Os movimentos sociais exercem esse direito: lutam coletivamente para conquistar e ampliar direitos."
+    },
+    {
+        enunciado: "As políticas públicas são ações práticas do Estado para resolver problemas sociais. Os tipos incluem: constitutivas (criam instituições), distributivas (benefícios para grupos), redistributivas (transferência de recursos) e regulatórias (regras). O programa Bolsa Família é um exemplo de política:",
+        alternativas: {
+            a: "Constitutiva, pois cria um novo órgão da administração pública federal.",
+            b: "Redistributiva, pois transfere recursos (via tributação) dos mais ricos para os mais pobres, reduzindo desigualdades estruturais.",
+            c: "Regulatória, pois estabelece normas de conduta para as famílias beneficiárias.",
+            d: "Distributiva em sentido estrito, pois beneficia um grupo específico sem alterar a distribuição de renda nacional.",
+            e: "Simbólica, pois não envolve transferência de recursos monetários às famílias."
+        },
+        correta: "b",
+        explicacao: "O Bolsa Família é uma política redistributiva: transfere recursos dos mais ricos (via impostos) para os mais pobres, reduzindo desigualdades. Políticas redistributivas visam corrigir desigualdades estruturais, diferentemente das distributivas (que beneficiam grupos específicos sem necessariamente redistribuir)."
+    },
+    {
+        enunciado: "O ciclo de políticas públicas inclui: formulação (identificar o problema e propor soluções), implementação (executar a política), monitoramento (acompanhar) e avaliação (verificar resultados). Sobre a participação popular nesse ciclo, é correto afirmar:",
+        alternativas: {
+            a: "A participação popular é desejável apenas no momento eleitoral, não no ciclo de políticas.",
+            b: "A participação popular é essencial em todas as etapas do ciclo: formulação, implementação, monitoramento e avaliação.",
+            c: "A participação deve restringir-se à formulação, pois a execução é matéria exclusivamente técnica.",
+            d: "A participação é dispensável em democracias maduras, onde órgãos técnicos decidem com neutralidade.",
+            e: "A participação ocorre apenas por meio do Judiciário, que avalia a legalidade de cada política."
+        },
+        correta: "b",
+        explicacao: "A participação popular é essencial em todas as etapas do ciclo de políticas públicas: na formulação (identificar necessidades), implementação (executar), monitoramento (acompanhar) e avaliação (verificar resultados). Sem participação, as políticas podem não atender às reais necessidades da população."
+    },
+    {
+        enunciado: "Movimentos sociais são fundamentais na democracia: ampliam direitos, dão voz a grupos excluídos, pressionam o Estado e fiscalizam o poder. Um aluno pergunta: 'Movimentos sociais não são uma ameaça à ordem?' A resposta sociológica adequada é:",
+        alternativas: {
+            a: "Sim, pois toda ação coletiva fora do Estado é, por definição, um atentado à legalidade.",
+            b: "Não: movimentos sociais são parte fundamental da democracia — ampliam direitos, dão voz a excluídos e fortalecem a participação popular.",
+            c: "Sim, mas apenas quando utilizam canais institucionais como petições e audiências públicas.",
+            d: "Não, mas seu papel se limita a eleger representantes, confundindo-se com os partidos políticos.",
+            e: "Sim, pois as democracias consolidadas dispensam formas de participação além do voto."
+        },
+        correta: "b",
+        explicacao: "Movimentos sociais não são 'quebra da ordem'; são parte fundamental da democracia. Eles ampliam direitos, dão voz a grupos excluídos, pressionam o Estado e fortalecem a participação popular. A democracia se fortalece com a pluralidade de vozes e a participação organizada da sociedade."
+    },
+    {
+        enunciado: "A expressão 'direito a ter direitos' (Arendt) mostra que os direitos não são dados, mas conquistados. Um exemplo histórico: o direito ao voto feminino no Brasil foi conquistado em 1932, após décadas de luta das mulheres. Isso mostra que:",
+        alternativas: {
+            a: "Os direitos são naturais: existem desde o nascimento e exigem apenas reconhecimento formal do Estado.",
+            b: "Os direitos são conquistas históricas: resultam da luta coletiva e da organização dos movimentos sociais.",
+            c: "Os direitos são concessões estatais: surgem da benevolência dos governantes, sem pressão social.",
+            d: "Os direitos são produtos de mercado: emergem de negociações entre interesses privados em competição.",
+            e: "Os direitos são construções acadêmicas: existem apenas nos textos jurídicos, sem efeito na realidade social."
+        },
+        correta: "b",
+        explicacao: "O voto feminino (1932) não foi 'dado'; foi conquistado após décadas de luta das mulheres. Isso mostra que os direitos não são naturais nem concedidos: são conquistas históricas resultantes da organização e da luta coletiva. Os movimentos sociais são os protagonistas dessas conquistas."
+    }
+]
         },
         10: {
             titulo: "Modernidade Líquida",
@@ -2079,67 +2079,67 @@ const dadosAulas = {
                 { titulo: "Obsolescência programada", link: "https://pt.wikipedia.org/wiki/Obsolesc%C3%AAncia_programada", descricao: "Wikipedia - Produtos feitos para durar pouco" }
             ],
             quiz: [
-                {
-                    enunciado: "A 'modernidade líquida', conceito de Zygmunt Bauman, se caracteriza por:",
-                    alternativas: {
-                        a: "Instituições duradouras, identidades estáveis e relações permanentes.",
-                        b: "Incerteza, flexibilidade, fragilidade dos laços sociais, relações temporárias e identidades fluidas.",
-                        c: "Ausência total de mudanças sociais e culturais.",
-                        d: "Retorno às formas tradicionais de organização social.",
-                        e: "Eliminação completa de qualquer forma de consumo."
-                    },
-                    correta: "b",
-                    explicacao: "Bauman descreve a modernidade líquida como marcada pela incerteza, flexibilidade, fragilidade dos laços sociais, relações temporárias e identidades fluidas. Tudo é líquido, nada é sólido e duradouro."
-                },
-                {
-                    enunciado: "Na modernidade líquida, a identidade do indivíduo se constrói principalmente através:",
-                    alternativas: {
-                        a: "Da religião e das tradições familiares.",
-                        b: "Do consumo e da posse de bens materiais, que funcionam como marcadores identitários.",
-                        c: "Da profissão exercida ao longo de toda a vida.",
-                        d: "Da nacionalidade e do local de nascimento.",
-                        e: "Da aparência física e da genética."
-                    },
-                    correta: "b",
-                    explicacao: "Na modernidade líquida, o indivíduo é definido principalmente pelo seu papel de consumidor. A identidade se constrói através do ato de comprar, dos bens que se possui, das marcas que se consome."
-                },
-                {
-                    enunciado: "A 'obsolescência programada' refere-se a:",
-                    alternativas: {
-                        a: "Produtos feitos para durar eternamente, sem necessidade de substituição.",
-                        b: "Produtos feitos para durar pouco, gerando necessidade constante de comprar novos.",
-                        c: "Produtos que melhoram com o tempo de uso.",
-                        d: "Produtos fabricados apenas com materiais recicláveis.",
-                        e: "Produtos que não podem ser comprados, apenas alugados."
-                    },
-                    correta: "b",
-                    explicacao: "Obsolescência programada é a estratégia de fabricar produtos com vida útil limitada, gerando necessidade constante de comprar novos. Isso se estende às relações humanas: tudo é tratado como descartável."
-                },
-                {
-                    enunciado: "Segundo Bauman, as relações humanas na modernidade líquida se tornaram:",
-                    alternativas: {
-                        a: "Mais duradouras e profundas que no passado.",
-                        b: "Frágeis, temporárias e descartáveis, tratadas como produtos de consumo.",
-                        c: "Completamente independentes do mercado e do consumo.",
-                        d: "Baseadas exclusivamente em compromissos religiosos.",
-                        e: "Reguladas por leis rígidas que impedem o divórcio."
-                    },
-                    correta: "b",
-                    explicacao: "Bauman argumenta que as relações humanas se tornaram 'líquidas': frágeis, temporárias, descartáveis. Amizades, amores, empregos são tratados como produtos de consumo, substituídos quando deixam de satisfazer."
-                },
-                {
-                    enunciado: "A principal diferença entre modernidade sólida e líquida está:",
-                    alternativas: {
-                        a: "No fato de que a sólida é boa; a líquida é ruim.",
-                        b: "No fato de que na sólida as instituições eram duradouras e as identidades estáveis; na líquida, tudo é fluido, temporário e incerto.",
-                        c: "No fato de que a sólida existiu apenas na Europa; a líquida existe apenas no Brasil.",
-                        d: "No fato de que a sólida rejeitava a tecnologia; a líquida a aceita integralmente.",
-                        e: "Não há diferença real entre os dois conceitos."
-                    },
-                    correta: "b",
-                    explicacao: "Modernidade sólida: instituições duradouras (família, emprego, religião), identidades estáveis. Modernidade líquida: tudo é fluido, temporário, incerto. A passagem de uma para outra marca as transformações da contemporaneidade."
-                }
-            ]
+    {
+        enunciado: "Um jovem troca de emprego a cada dois anos, muda de cidade frequentemente, tem relacionamentos breves e constrói sua identidade pelas redes sociais. Segundo Bauman, esse padrão ilustra:",
+        alternativas: {
+            a: "A modernidade sólida, pois as instituições que enquadram as trajetórias individuais permanecem estáveis.",
+            b: "A modernidade líquida: empregos, relações e identidades tornam-se fluidos, temporários e incertos, sem a durabilidade das instituições sólidas.",
+            c: "A pré-modernidade, pois a instabilidade dos vínculos reproduz a vida comunal das sociedades tradicionais.",
+            d: "A sociedade de risco, pois a trajetória do jovem é organizada em torno da gestão de perigos ambientais.",
+            e: "A sociedade disciplinar, pois cada mudança de emprego corresponde a uma nova instituição de enquadramento."
+        },
+        correta: "b",
+        explicacao: "Bauman descreve a modernidade líquida: tudo é fluido, temporário e incerto. Empregos, relações, identidades são instáveis. Diferente da modernidade sólida (instituições duradouras, empregos fixos, identidades estáveis), a líquida é marcada pela precariedade e pela mudança constante."
+    },
+    {
+        enunciado: "Na modernidade líquida, a identidade se constrói pelo consumo: somos definidos pelo que compramos, pelas marcas que usamos, pelos lugares que frequentamos. Um jovem diz: 'Sou o que compro.' Segundo Bauman, isso mostra que:",
+        alternativas: {
+            a: "A identidade é definida pela produção: o indivíduo é aquilo que produz no trabalho, não aquilo que consome.",
+            b: "Na sociedade de consumidores, a identidade se constrói pelo ato de comprar: marcas, estilos e lugares funcionam como marcadores identitários, e a lógica do descarte se estende às relações.",
+            c: "A identidade é independente do consumo, pois é fixada pela tradição familiar e pela religião.",
+            d: "O consumo apaga as identidades: na modernidade líquida, os indivíduos não constroem mais nenhum pertencimento.",
+            e: "A identidade é uma imposição estatal: o governo define o perfil de consumo de cada cidadão."
+        },
+        correta: "b",
+        explicacao: "Para Bauman, na modernidade líquida somos definidos como consumidores. A identidade se constrói pelo ato de comprar: marcas, estilos, lugares. A lógica do consumo (descarte, substituição) se estende às relações e à própria identidade. Somos 'consumidores' antes de ser 'cidadãos'."
+    },
+    {
+        enunciado: "A 'obsolescência programada' é a estratégia de fabricar produtos com vida útil limitada, gerando necessidade constante de comprar novos. Bauman argumenta que essa lógica:",
+        alternativas: {
+            a: "É restrita à esfera industrial, sem reverberações na vida afetiva dos indivíduos.",
+            b: "Se estende às relações humanas: amizades, amores e empregos são tratados como descartáveis, substituídos quando deixam de satisfazer.",
+            c: "Fortalece os vínculos duradouros, pois a escassez de bens duráveis valoriza as relações estáveis.",
+            d: "Aplica-se apenas aos eletrônicos, cuja vida útil é definida por normas técnicas internacionais.",
+            e: "É uma estratégia de resistência dos consumidores contra a publicidade e o mercado."
+        },
+        correta: "b",
+        explicacao: "Bauman argumenta que a lógica da obsolescência programada (produtos feitos para durar pouco) se estende às relações humanas: tudo é tratado como descartável. Amizades, amores, empregos são substituídos quando deixam de satisfazer. É a 'vida para uso' em vez da 'vida para sempre'."
+    },
+    {
+        enunciado: "Bauman contrasta a modernidade sólida (instituições duradouras, empregos fixos, casamentos vitalícios, identidades estáveis) com a líquida (incerteza, flexibilidade, relações temporárias, identidades fluidas). Um avô que trabalhou 40 anos na mesma empresa e foi casado por 50 anos viveu na:",
+        alternativas: {
+            a: "Modernidade líquida, pois mesmo os vínculos longos eram vividos sob o signo da incerteza e do descarte.",
+            b: "Modernidade sólida: instituições duradouras, emprego fixo, relações estáveis e identidades formadas no longo prazo.",
+            c: "Sociedade de risco, pois a estabilidade era um seguro coletivo contra os perigos industriais.",
+            d: "Sociedade de consumidores, pois a fidelidade à empresa e ao casamento eram formas de consumo ostentatório.",
+            e: "Sociedade digital, pois os vínculos eram mantidos por tecnologias de comunicação a distância."
+        },
+        correta: "b",
+        explicacao: "O avô que trabalhou 40 anos na mesma empresa e foi casado por 50 anos viveu na modernidade sólida: instituições duradouras (empresa, casamento), empregos fixos, relações estáveis. A modernidade líquida é marcada pela instabilidade: empregos temporários, relações fluidas, identidades em constante mudança."
+    },
+    {
+        enunciado: "Bauman argumenta que, na modernidade líquida, o indivíduo é definido como 'consumidor' antes de ser 'cidadão'. A política se transforma em marketing, e os cidadãos são tratados como consumidores de produtos políticos. Isso implica que:",
+        alternativas: {
+            a: "A política se fortalece, pois o marketing aproxima os candidatos das demandas reais do eleitorado.",
+            b: "A política se enfraquece: o cidadão é tratado como consumidor, as escolhas viram atos de compra e a deliberação sobre o bem comum é substituída pela lógica de mercado.",
+            c: "A cidadania se expande, pois o consumo se torna uma forma plena de participação política.",
+            d: "A democracia se aperfeiçoa, pois o marketing eleitoral elimina as disputas ideológicas e personaliza os programas.",
+            e: "O espaço público se consolida, pois a publicidade amplia a circulação plural de ideias."
+        },
+        correta: "b",
+        explicacao: "Bauman mostra que, na modernidade líquida, o cidadão é reduzido a consumidor: a política vira marketing, os partidos viram 'marcas', e a participação se reduz a 'escolher produtos' em vez de deliberar sobre o bem comum. Isso enfraquece a democracia e a cidadania."
+    }
+]
         },
         11: {
             titulo: "Sociedade de Risco",
@@ -2183,67 +2183,67 @@ const dadosAulas = {
                 { titulo: "Risco ambiental", link: "https://pt.wikipedia.org/wiki/Risco_ambiental", descricao: "Wikipedia - Riscos produzidos pela modernidade" }
             ],
             quiz: [
-                {
-                    enunciado: "Para Ulrich Beck, a 'sociedade de risco' contemporânea se diferencia das sociedades anteriores porque:",
-                    alternativas: {
-                        a: "Os riscos são exclusivamente naturais, como terremotos e vulcões.",
-                        b: "Os perigos são 'fabricados' pelas decisões humanas, tecnológicas e industriais, afetando a todos globalmente.",
-                        c: "A ciência conseguiu eliminar totalmente a possibilidade de catástrofes.",
-                        d: "Os riscos afetam apenas os países pobres, poupando as nações desenvolvidas.",
-                        e: "Não há necessidade de regulação política sobre as inovações tecnológicas."
-                    },
-                    correta: "b",
-                    explicacao: "Beck mostra que a modernidade produz 'riscos fabricados' (nucleares, químicos, climáticos, biotecnológicos) que não respeitam fronteiras de classe ou nação. A riqueza produz a sombra do risco."
-                },
-                {
-                    enunciado: "Os riscos fabricados pela modernidade se caracterizam por serem:",
-                    alternativas: {
-                        a: "Locais, visíveis e hierárquicos (afetam apenas os pobres).",
-                        b: "Globais, muitas vezes invisíveis e democráticos (afetam a todos, embora os pobres sofram mais).",
-                        c: "Exclusivamente econômicos, sem impacto ambiental.",
-                        d: "Fáceis de controlar pela ciência e pela tecnologia.",
-                        e: "Restritos às fronteiras nacionais de cada país."
-                    },
-                    correta: "b",
-                    explicacao: "Os riscos modernos são globais (não respeitam fronteiras), invisíveis (radiação, poluentes), democráticos (afetam a todos, embora os pobres sejam mais vulneráveis) e futuros (efeitos podem se manifestar décadas depois)."
-                },
-                {
-                    enunciado: "A frase 'a pobreza é hierárquica, a contaminação radioativa é democrática' de Beck significa que:",
-                    alternativas: {
-                        a: "A pobreza afeta a todos igualmente; a radiação afeta apenas os ricos.",
-                        b: "A pobreza se distribui de forma desigual (hierárquica); os riscos modernos como a radiação tendem a afetar a todos (democraticamente).",
-                        c: "A pobreza e a radiação são a mesma coisa.",
-                        d: "Apenas os ricos sofrem com a pobreza; apenas os pobres sofrem com a radiação.",
-                        e: "A pobreza é um risco moderno; a radiação é um problema antigo."
-                    },
-                    correta: "b",
-                    explicacao: "Beck mostra que a riqueza (e a pobreza) se distribui de forma desigual (hierárquica), mas os riscos modernos como a radiação nuclear tendem a afetar a todos (democraticamente), embora os mais pobres sejam sempre os mais vulneráveis."
-                },
-                {
-                    enunciado: "A 'reflexividade moderna', proposta por Beck, exige:",
-                    alternativas: {
-                        a: "A aceitação passiva de qualquer inovação tecnológica.",
-                        b: "A capacidade de questionar os próprios fundamentos da modernidade e refletir sobre os efeitos do progresso.",
-                        c: "A rejeição completa de qualquer forma de tecnologia.",
-                        d: "A volta às sociedades pré-modernas, sem ciência ou técnica.",
-                        e: "A delegação de todas as decisões sobre tecnologia aos cientistas, sem participação social."
-                    },
-                    correta: "b",
-                    explicacao: "A reflexividade moderna é a capacidade de questionar os próprios fundamentos da modernidade: não basta produzir mais, é necessário refletir sobre os efeitos do que produzimos. É uma modernidade que se volta sobre si mesma."
-                },
-                {
-                    enunciado: "Exemplos de riscos fabricados pela modernidade incluem:",
-                    alternativas: {
-                        a: "Terremotos, vulcões e tsunamis.",
-                        b: "Acidentes nucleares, mudanças climáticas, poluentes químicos persistentes e riscos biotecnológicos.",
-                        c: "Fomes naturais e epidemias de doenças antigas.",
-                        d: "Secas prolongadas e invernos rigorosos.",
-                        e: "Ataques de animais selvagens e pragas naturais."
-                    },
-                    correta: "b",
-                    explicacao: "Riscos fabricados pela modernidade: acidentes nucleares (Chernobyl, Fukushima), mudanças climáticas (aquecimento global), poluentes químicos persistentes (agrotóxicos, plásticos), riscos biotecnológicos (manipulação genética)."
-                }
-            ]
+    {
+        enunciado: "Ulrich Beck argumenta que a sociedade contemporânea é uma 'sociedade de risco': os perigos são 'fabricados' pelas decisões humanas, tecnológicas e industriais. Exemplos: mudanças climáticas, acidentes nucleares (Chernobyl, Fukushima), poluição química. Diferente dos riscos naturais (terremotos, furacões), os riscos fabricados:",
+        alternativas: {
+            a: "Reproduzem os perigos naturais que a humanidade sempre enfrentou, agora em escala maior.",
+            b: "São produzidos pela própria modernização: decisões tecnológicas, industriais e científicas geram perigos (nucleares, químicos, climáticos) desconhecidos das sociedades anteriores.",
+            c: "Resultam exclusivamente de desastres naturais agravados pelo crescimento populacional.",
+            d: "São construções midiáticas, sem base material, exploradas pelo discurso ambientalista.",
+            e: "Limitam-se aos ambientes de trabalho, sem alcançar a população geral ou o meio ambiente."
+        },
+        correta: "b",
+        explicacao: "Beck mostra que a modernidade produz 'riscos fabricados' (nucleares, químicos, climáticos, biotecnológicos) que não respeitam fronteiras de classe ou nação. A riqueza produz a sombra do risco."
+    },
+    {
+        enunciado: "Beck afirma: 'A pobreza é hierárquica, a contaminação radioativa é democrática.' Isso significa que:",
+        alternativas: {
+            a: "Os riscos e a riqueza se distribuem da mesma forma: ambos seguem rigorosamente a hierarquia de classes.",
+            b: "A riqueza se concentra (hierárquica), mas os riscos fabricados tendem a atingir a todos (democráticos), embora os mais pobres continuem mais vulneráveis para enfrentá-los.",
+            c: "Apenas os mais pobres são expostos aos riscos fabricados, pois os ricos podem comprar proteção absoluta.",
+            d: "A contaminação radioativa atinge apenas os ricos, pois as usinas nucleares são instaladas em regiões valorizadas.",
+            e: "A frase é uma figura de retórica sem conteúdo sociológico, pois os riscos não podem ser mensurados."
+        },
+        correta: "b",
+        explicacao: "Beck mostra que a riqueza (e a pobreza) se distribui de forma desigual (hierárquica), mas os riscos modernos (radiação, poluição, mudanças climáticas) tendem a afetar a todos, independentemente de classe. Porém, os mais pobres são sempre os mais vulneráveis (menos recursos para se proteger)."
+    },
+    {
+        enunciado: "Os riscos fabricados pela modernidade têm características específicas: são globais (não respeitam fronteiras), invisíveis (radiação, poluentes), democráticos (afetam a todos) e futuros (efeitos podem se manifestar décadas depois). Um exemplo: as mudanças climáticas. Isso implica que:",
+        alternativas: {
+            a: "Os riscos podem ser geridos por cada Estado nacional isoladamente, sem acordos internacionais.",
+            b: "Os riscos exigem cooperação global, regulação política e capacidade reflexiva: é preciso avaliar os efeitos do que se produz, além da lógica do crescimento.",
+            c: "Os riscos dispensam regulação política, pois o próprio mercado internaliza os custos ambientais.",
+            d: "Os riscos são controláveis por tecnologia individual, sendo desnecessárias decisões coletivas.",
+            e: "Os riscos pertencem à esfera privada: cada cidadão deve se segurar individualmente contra eles."
+        },
+        correta: "b",
+        explicacao: "Os riscos modernos são globais (mudanças climáticas não respeitam fronteiras), invisíveis (radiação, poluentes), democráticos (afetam a todos) e futuros (efeitos a longo prazo). Isso exige cooperação global, regulação política e reflexividade: questionar os efeitos do progresso, não apenas produzir mais."
+    },
+    {
+        enunciado: "Beck propõe a 'reflexividade moderna': a capacidade de questionar os próprios fundamentos da modernidade. Um exemplo: antes de construir uma usina nuclear, é necessário avaliar os riscos de acidente e os efeitos a longo prazo. A reflexividade é:",
+        alternativas: {
+            a: "A aceitação acrítica do progresso técnico, com delegação das decisões ao mercado.",
+            b: "A capacidade da sociedade de questionar seus próprios fundamentos: avaliar riscos, consequências e alternativas antes de decidir o que e como produzir.",
+            c: "A rejeição total da tecnologia, com retorno às formas pré-industriais de produção.",
+            d: "A transferência das decisões ambientais ao Judiciário, dispensando a sociedade de deliberar.",
+            e: "A fé na autocorreção da natureza, que dispensaria avaliações prévias."
+        },
+        correta: "b",
+        explicacao: "A reflexividade moderna é a capacidade de questionar os próprios fundamentos da modernidade: não basta produzir mais; é necessário avaliar riscos, consequências e alternativas. É uma modernidade que se volta sobre si mesma e pergunta: 'O que estamos fazendo? Quais os efeitos? Há alternativas?'"
+    },
+    {
+        enunciado: "Exemplos de riscos fabricados pela modernidade incluem: acidentes nucleares (Chernobyl, Fukushima), mudanças climáticas, poluentes químicos persistentes (agrotóxicos, plásticos) e riscos biotecnológicos (manipulação genética). Esses riscos mostram que:",
+        alternativas: {
+            a: "A tecnologia é intrinsecamente segura, e os acidentes resultam apenas de erro humano na operação.",
+            b: "A modernização produz perigos que superam a capacidade de controle e previsão, exigindo novas formas de regulação, ética e responsabilidade coletiva.",
+            c: "Os riscos ambientais são externalidades já resolvidas pela legislação ambiental contemporânea.",
+            d: "Os riscos nucleares e químicos afetam apenas as gerações que os produziram, sem alcance futuro.",
+            e: "A solução é interromper o desenvolvimento científico, pois toda inovação gera risco incontrolável."
+        },
+        correta: "b",
+        explicacao: "Os riscos fabricados (nucleares, climáticos, químicos, biotecnológicos) mostram que a modernidade produz perigos que superam nossa capacidade de controle. Isso exige novas formas de regulação, ética (princípio responsabilidade de Jonas) e responsabilidade coletiva. Não se trata de rejeitar a tecnologia, mas de governá-la democraticamente."
+    }
+]
         },
         12: {
             titulo: "Mundo do Trabalho",
@@ -2281,67 +2281,67 @@ const dadosAulas = {
                 { titulo: "Desemprego estrutural", link: "https://pt.wikipedia.org/wiki/Desemprego_estrutural", descricao: "Wikipedia - Desemprego por mudanças estruturais" }
             ],
             quiz: [
-                {
-                    enunciado: "O termo 'precariado', utilizado por sociólogos contemporâneos, refere-se a trabalhadores que:",
-                    alternativas: {
-                        a: "Possuem empregos estáveis, com altos salários e plena proteção previdenciária.",
-                        b: "Vivem em situação de instabilidade laboral, sem direitos trabalhistas garantidos e com renda flutuante.",
-                        c: "São donos dos meios de produção e não precisam vender sua força de trabalho.",
-                        d: "Recusam-se a trabalhar por princípio, vivendo apenas de subsídios estatais.",
-                        e: "Trabalham exclusivamente no setor público, com total segurança no emprego."
-                    },
-                    correta: "b",
-                    explicacao: "O precariado (Guy Standing) é uma nova classe social marcada pela instabilidade: trabalhadores sem direitos trabalhistas garantidos, com renda flutuante, sem proteção social. É a face contemporânea da precarização do trabalho."
-                },
-                {
-                    enunciado: "A 'uberização' do trabalho se caracteriza por:",
-                    alternativas: {
-                        a: "Pela ampliação dos direitos trabalhistas e da proteção social.",
-                        b: "Pela transformação de trabalhadores em 'empreendedores de si mesmos', sem vínculo empregatício, sem direitos trabalhistas.",
-                        c: "Pela garantia de emprego vitalício e estabilidade funcional.",
-                        d: "Pela redução da jornada de trabalho e aumento dos salários.",
-                        e: "Pela eliminação completa da tecnologia no ambiente de trabalho."
-                    },
-                    correta: "b",
-                    explicacao: "Uberização é a transformação de trabalhadores em 'empreendedores de si mesmos', sem vínculo empregatício, sem direitos trabalhistas, sem proteção social. O trabalhador assume todos os riscos, disfarçados de 'autonomia'."
-                },
-                {
-                    enunciado: "O desemprego estrutural se diferencia do desemprego cíclico porque:",
-                    alternativas: {
-                        a: "O estrutural é causado por crises econômicas temporárias; o cíclico é permanente.",
-                        b: "O estrutural é causado por mudanças na estrutura econômica (tecnologia, globalização); o cíclico é causado por crises econômicas temporárias.",
-                        c: "Ambos são a mesma coisa, sem diferença conceitual.",
-                        d: "O estrutural afeta apenas trabalhadores qualificados; o cíclico afeta apenas os não qualificados.",
-                        e: "O estrutural é exclusivo de países desenvolvidos; o cíclico de países subdesenvolvidos."
-                    },
-                    correta: "b",
-                    explicacao: "Desemprego estrutural: causado por mudanças na estrutura econômica (tecnologia substituindo humanos, globalização). Desemprego cíclico: causado por crises econômicas temporárias. O estrutural é mais grave porque não se resolve com a retomada do crescimento."
-                },
-                {
-                    enunciado: "Na uberização, o algoritmo funciona como:",
-                    alternativas: {
-                        a: "Um instrumento de liberdade total do trabalhador, sem qualquer controle.",
-                        b: "Um substituto do chefe, definindo preços, rotas e avaliações, exercendo controle rígido sobre o trabalhador.",
-                        c: "Um auxiliar que apenas ajuda o trabalhador a organizar seu tempo.",
-                        d: "Uma ferramenta exclusiva para trabalhadores autônomos tradicionais.",
-                        e: "Um sistema que garante todos os direitos trabalhistas ao trabalhador."
-                    },
-                    correta: "b",
-                    explicacao: "Na uberização, o algoritmo substitui o chefe: define preços, rotas, avaliações. O trabalhador tem 'liberdade' formal, mas está submetido a um controle algorítmico rígido. É uma forma de exploração disfarçada de autonomia."
-                },
-                {
-                    enunciado: "A flexibilização do trabalho contemporâneo traz como consequência:",
-                    alternativas: {
-                        a: "A separação clara entre tempo de trabalho e tempo de vida pessoal.",
-                        b: "A dificuldade de separar trabalho e vida pessoal, com horários estendidos e cobrança constante.",
-                        c: "A redução drástica da jornada de trabalho e aumento do lazer.",
-                        d: "A garantia de que todos os trabalhadores terão os mesmos direitos.",
-                        e: "A eliminação completa do trabalho remoto."
-                    },
-                    correta: "b",
-                    explicacao: "A flexibilização (trabalho remoto, horários flexíveis) traz como consequência a dificuldade de separar trabalho e vida pessoal: horários estendidos, cobrança constante por produtividade, dificuldade de 'desligar'. É a 'vida líquida' aplicada ao trabalho."
-                }
-            ]
+    {
+        enunciado: "Guy Standing cunhou o termo 'precariado' para designar uma nova classe social: trabalhadores em situação de instabilidade, sem direitos trabalhistas garantidos, com renda flutuante. Um exemplo: um entregador de aplicativo que trabalha 12 horas por dia, sem férias, sem seguro, sem direito a ficar doente. Segundo Standing, esse trabalhador:",
+        alternativas: {
+            a: "É um proletário tradicional, pois vende sua força de trabalho a um dono dos meios de produção sob contrato formal.",
+            b: "Pertence ao precariado: uma nova formação social marcada pela instabilidade, ausência de direitos trabalhistas garantidos e renda flutuante no trabalho por plataformas.",
+            c: "É um burguês clássico, pois possui os instrumentos de produção (moto e celular).",
+            d: "É um trabalhador informal rural, pois o trabalho por plataformas reproduz as relações do campo.",
+            e: "É um funcionário público, pois a plataforma opera sob concessão estatal com estabilidade."
+        },
+        correta: "b",
+        explicacao: "O precariado (Standing) é uma nova classe social: trabalhadores sem estabilidade, sem direitos trabalhistas garantidos, com renda flutuante. O entregador de aplicativo é um exemplo típico: trabalha longas horas, sem proteção social, sem direitos. É a face contemporânea da precarização do trabalho."
+    },
+    {
+        enunciado: "A 'uberização' do trabalho se caracteriza pela transformação de trabalhadores em 'empreendedores de si mesmos', sem vínculo empregatício, sem direitos trabalhistas. Um motorista de aplicativo ouve: 'Você é seu próprio patrão!' Segundo a Sociologia do trabalho, essa frase:",
+        alternativas: {
+            a: "Descreve uma autonomia plena: sem patrão, o trabalhador define livremente preços, rotas e ritmo.",
+            b: "Mascara um controle algorítmico: a plataforma define preços, rotas e avaliações, e o trabalhador assume todos os riscos sem proteção social.",
+            c: "Descreve um emprego formal: a plataforma assina a carteira e garante todos os direitos da CLT.",
+            d: "Indica uma associação cooperada: os lucros são divididos igualmente entre os motoristas.",
+            e: "Revela um trabalho voluntário: a remuneração é simbólica e a atividade não tem caráter econômico."
+        },
+        correta: "b",
+        explicacao: "A uberização transforma trabalhadores em 'empreendedores de si mesmos', mas o controle é real: o algoritmo define preços, rotas, avaliações. A 'liberdade' é formal; o controle é rígido. O trabalhador assume todos os riscos (sem férias, sem seguro) sem proteção social. É exploração disfarçada de autonomia."
+    },
+    {
+        enunciado: "O desemprego estrutural é causado por mudanças na estrutura econômica (tecnologia, globalização), não por crises cíclicas. Um exemplo: trabalhadores de uma fábrica substituídos por robôs. Diferente do desemprego cíclico (causado por crises econômicas temporárias), o estrutural:",
+        alternativas: {
+            a: "Se resolve com a retomada do crescimento, pois os postos de trabalho reabrem no ciclo seguinte.",
+            b: "Deriva de mudanças na estrutura produtiva (tecnologia, globalização): os postos são extintos de forma duradoura, exigindo requalificação e novas políticas.",
+            c: "É permanente e o cíclico é temporário, pois as crises destroem a base produtiva.",
+            d: "São expressões sinônimas do mesmo fenômeno conjuntural de recessão.",
+            e: "Afeta apenas economias em desenvolvimento, sendo inexistente nos países centrais."
+        },
+        correta: "b",
+        explicacao: "O desemprego estrutural não se resolve com a retomada do crescimento: os postos foram eliminados permanentemente (tecnologia, globalização). Exige requalificação, novas políticas de emprego e proteção social. Diferente do cíclico (temporário), o estrutural é permanente e exige respostas estruturais."
+    },
+    {
+        enunciado: "A flexibilização do trabalho (trabalho remoto, horários flexíveis, 'banco de horas') traz como consequência a dificuldade de separar trabalho e vida pessoal. Um funcionário em home office recebe mensagens do chefe às 22h e nos fins de semana. Isso ilustra:",
+        alternativas: {
+            a: "A redução efetiva da jornada de trabalho, pois o trabalho remoto elimina o tempo de deslocamento.",
+            b: "A flexibilização que borra as fronteiras entre trabalho e vida pessoal: disponibilidade permanente, jornadas estendidas e dificuldade de se desconectar.",
+            c: "A separação plena entre esfera profissional e privada, garantida pelas ferramentas digitais.",
+            d: "A extinção da subordinação hierárquica, pois o trabalho remoto abole o poder de comando do chefe.",
+            e: "A garantia automática do direito à desconexão, previsto em todo contrato de trabalho remoto."
+        },
+        correta: "b",
+        explicacao: "A flexibilização (home office, horários flexíveis) borra os limites entre trabalho e vida pessoal: o trabalhador está 'sempre disponível', recebe mensagens fora do horário, tem dificuldade de 'desligar'. A flexibilidade aparente esconde a extensão da jornada e a cobrança constante."
+    },
+    {
+        enunciado: "O trabalho assalariado foi central na organização do capitalismo moderno. Com as transformações contemporâneas (uberização, precarização, automação), o modelo tradicional está sendo substituído por formas mais flexíveis e precárias. Isso implica que:",
+        alternativas: {
+            a: "O fim do trabalho: a automação extinguirá toda forma de trabalho humano nas próximas décadas.",
+            b: "A transformação do trabalho: novas formas de organização (plataformas, remoto, automação) substituem o modelo assalariado tradicional, impondo desafios éticos, jurídicos e políticos.",
+            c: "O fortalecimento do trabalho assalariado: os contratos formais com plenos direitos tendem a se expandir na economia digital.",
+            d: "O retorno ao trabalho artesanal: a economia de plataformas reproduz as relações da oficina pré-industrial.",
+            e: "A irrelevância do trabalho: na sociedade de consumo, o emprego deixa de organizar a vida social e a identidade."
+        },
+        correta: "b",
+        explicacao: "O trabalho não está desaparecendo, mas se transformando: novas formas de organização (plataformas digitais, trabalho remoto, automação) estão substituindo o modelo assalariado tradicional. Isso gera novos desafios: proteção social, direitos trabalhistas, requalificação, regulação das plataformas."
+    }
+]
         }
     }
 };
