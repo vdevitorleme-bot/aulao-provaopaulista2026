@@ -394,7 +394,7 @@ const dadosAulas = {
         5: {
             titulo: "Hannah Arendt e a Violência",
             subtitulo: "Análises filosóficas do fenômeno da violência",
-            imagem: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=800",
+            imagem: "https://image.qwenlm.ai/public_source/7ecdf6d2-95b9-4c81-a65a-9658bbbc9782/162556199-aab1-45a0-9d91-52a4ce348d3b3415.png",
             conteudo: `
                 <h3>Hannah Arendt: Pensando o Século XX</h3>
                 <p><strong>Hannah Arendt</strong> (1906-1975) foi uma das mais importantes pensadoras políticas do século XX. Judeu-alemã que fugiu do nazismo, ela analisou os fenômenos do <strong>totalitarismo</strong>, da <strong>violência</strong> e da <strong>banalidade do mal</strong>.</p>
@@ -1177,67 +1177,67 @@ const dadosAulas = {
                 { titulo: "Imaginação sociológica", link: "https://pt.wikipedia.org/wiki/Imagina%C3%A7%C3%A3o_sociol%C3%B3gica", descricao: "Wikipedia - C. Wright Mills: conectar a experiência pessoal às estruturas sociais" }
             ],
             quiz: [
-                {
-                    enunciado: "A Sociologia diferencia-se do senso comum principalmente porque:",
-                    alternativas: {
-                        a: "Utiliza métodos científicos, pesquisa sistemática e análise crítica, enquanto o senso comum baseia-se em opiniões e experiências cotidianas não sistematizadas.",
-                        b: "É mais complicada e difícil de entender que o senso comum.",
-                        c: "Só pode ser compreendida por especialistas com doutorado.",
-                        d: "Ignora completamente a realidade vivida pelas pessoas.",
-                        e: "É sempre verdadeira, enquanto o senso comum é sempre falso."
-                    },
-                    correta: "a",
-                    explicacao: "A Sociologia utiliza métodos científicos, pesquisa sistemática, análise crítica e comprovação empírica. O senso comum baseia-se em opiniões, tradições, experiências pessoais não sistematizadas e 'achismos'."
-                },
-                {
-                    enunciado: "O conceito de 'estranhamento' em Sociologia refere-se a:",
-                    alternativas: {
-                        a: "Rejeitar completamente a sociedade em que se vive.",
-                        b: "Olhar o familiar como se fosse estranho, questionando o que parece natural.",
-                        c: "Estranhar apenas as culturas de outros países.",
-                        d: "Considerar tudo o que é estrangeiro como superior.",
-                        e: "Ignorar as diferenças culturais entre as sociedades."
-                    },
-                    correta: "b",
-                    explicacao: "O estranhamento é a capacidade de olhar o que nos é familiar (nossa própria sociedade, nossos costumes) como se fosse estranho, questionando o que parece 'natural' e buscando compreender suas causas históricas e sociais."
-                },
-                {
-                    enunciado: "A 'desnaturalização' da realidade social significa:",
-                    alternativas: {
-                        a: "Provar que a natureza é mais importante que a sociedade.",
-                        b: "Revelar que o que parece natural é, na verdade, uma construção histórica e social.",
-                        c: "Defender que tudo na sociedade é determinado pela biologia.",
-                        d: "Aceitar passivamente as desigualdades sociais como naturais.",
-                        e: "Negar a existência de qualquer forma de realidade social."
-                    },
-                    correta: "b",
-                    explicacao: "Desnaturalizar é mostrar que o que parece 'natural' (como papéis de gênero, desigualdades, costumes) é, na verdade, uma construção histórica e social. Nada na sociedade é eterno ou imutável; tudo tem uma história."
-                },
-                {
-                    enunciado: "A Sociologia surgiu no século XIX como resposta a quais transformações históricas?",
-                    alternativas: {
-                        a: "À queda do Império Romano e às invasões bárbaras.",
-                        b: "À Revolução Industrial e à Revolução Francesa, que transformaram profundamente a sociedade europeia.",
-                        c: "À descoberta da América e à colonização europeia.",
-                        d: "À Reforma Protestante e às guerras religiosas.",
-                        e: "À Revolução Russa e à formação da União Soviética."
-                    },
-                    correta: "b",
-                    explicacao: "A Sociologia surge no século XIX como resposta às profundas transformações da modernidade: a Revolução Industrial (urbanização, proletariado, novas relações de trabalho) e a Revolução Francesa (democracia, direitos individuais, fim do Antigo Regime)."
-                },
-                {
-                    enunciado: "Ao afirmar que 'pobre é pobre porque quer', o senso comum:",
-                    alternativas: {
-                        a: "Apresenta uma análise científica baseada em dados estatísticos.",
-                        b: "Naturaliza a pobreza, ignorando suas causas estruturais e históricas.",
-                        c: "Propõe soluções efetivas para o problema da pobreza.",
-                        d: "Reconhece a complexidade do fenômeno da desigualdade social.",
-                        e: "Utiliza conceitos sociológicos para explicar a realidade."
-                    },
-                    correta: "b",
-                    explicacao: "Essa afirmação do senso comum naturaliza a pobreza, atribuindo-a apenas à vontade individual, ignorando causas estruturais como desigualdade histórica, falta de oportunidades, discriminação, concentração de renda, etc. A Sociologia desnaturaliza essa visão."
-                }
-            ]
+    {
+        enunciado: "Uma aluna presencia um homem dormindo na rua e comenta: 'Ele está aí porque quis. Se trabalhasse, teria uma casa.' Seu colega, estudante de Sociologia, responde: 'Precisamos entender as causas estruturais: desemprego, falta de moradia acessível, problemas de saúde mental, ausência de políticas públicas.' A diferença entre as duas falas ilustra:",
+        alternativas: {
+            a: "A oposição entre um juízo moral e um juízo jurídico, pois a Sociologia se ocupa apenas das condutas tipificadas em lei e das sanções previstas para elas.",
+            b: "A diferença entre o senso comum (explicação individualizante, simplificada e sem análise crítica) e o olhar sociológico (análise das causas estruturais e históricas do fenômeno).",
+            c: "A diferença entre opinião subjetiva e dado estatístico, pois para a Sociologia apenas os números oficiais têm valor explicativo, não as interpretações.",
+            d: "O contraste entre uma visão conservadora e uma visão progressista, já que a Sociologia é, por definição, uma doutrina política partidária.",
+            e: "A distinção entre explicação religiosa e explicação científica, pois a primeira fala deriva da fé e a segunda do método experimental das ciências naturais."
+        },
+        correta: "b",
+        explicacao: "O senso comum tende a explicar fenômenos sociais por causas individuais ('ele quis'), simplificando e naturalizando. O olhar sociológico busca as causas estruturais: desemprego, desigualdade, políticas públicas, história. Não se trata de 'certo ou errado', mas de profundidade analítica e uso de métodos científicos."
+    },
+    {
+        enunciado: "C. Wright Mills propôs o conceito de 'imaginação sociológica': a capacidade de conectar experiências pessoais ('meu problema') às estruturas sociais ('o problema público'). Se uma pessoa está desempregada, isso pode ser um problema pessoal; mas se milhões estão desempregados, o problema é estrutural. A imaginação sociológica permite:",
+        alternativas: {
+            a: "Dissolver os problemas pessoais em questões puramente psicológicas, tratando os fenômenos sociais como assuntos de saúde mental individual.",
+            b: "Conectar a experiência pessoal às estruturas sociais, econômicas e históricas, transformando 'problemas privados' em 'questões públicas' compreensíveis em sua dimensão coletiva.",
+            c: "Substituir a pesquisa empírica pela teoria especulativa, pois para Mills os dados sociológicos importam menos que a intuição do intérprete.",
+            d: "Reduzir as estruturas sociais à soma das decisões individuais, pois para Mills a sociedade não passa do resultado agregado de escolhas privadas.",
+            e: "Separar a biografia dos indivíduos da história das sociedades, pois para Mills são planos de análise que não se comunicam."
+        },
+        correta: "b",
+        explicacao: "A imaginação sociológica (Mills) é a capacidade de ver o pessoal como social: conectar a experiência individual ('estou desempregado') às estruturas ('o desemprego é estrutural'). Isso permite superar a visão individualista e compreender que muitos 'problemas pessoais' são, na verdade, 'questões públicas' que exigem soluções coletivas."
+    },
+    {
+        enunciado: "Em uma sala de aula, o professor pergunta: 'Por que as mulheres ganham, em média, menos que os homens no Brasil?' Um aluno responde: 'Porque elas escolhem profissões que pagam menos.' Outro aluno, aplicando o estranhamento sociológico, questiona: 'Mas por que as mulheres são levadas a escolher essas profissões? Há fatores históricos, culturais e estruturais?' O segundo aluno está exercendo:",
+        alternativas: {
+            a: "Etnocentrismo, pois julga as escolhas das mulheres a partir dos valores de seu próprio grupo social.",
+            b: "Estranhamento e desnaturalização: questiona o que parece 'natural' ou 'escolha individual' e busca as causas sociais, históricas e culturais que produzem o fenômeno.",
+            c: "Senso comum, pois reproduz uma explicação cotidiana sem qualquer fundamentação metodológica sistemática.",
+            d: "Determinismo biológico, pois explica a diferença salarial por características naturais atribuídas aos sexos.",
+            e: "Darwinismo social, pois trata a desigualdade salarial como resultado de uma seleção natural dos mais capazes."
+        },
+        correta: "b",
+        explicacao: "O estranhamento sociológico é a capacidade de questionar o que parece 'natural' ou 'escolha individual'. Ao perguntar 'por que as mulheres são levadas a escolher essas profissões?', o aluno desnaturaliza a desigualdade e busca suas causas estruturais: socialização de gênero, divisão sexual do trabalho, discriminação."
+    },
+    {
+        enunciado: "A Sociologia surgiu no século XIX, em um contexto de profundas transformações: Revolução Industrial (urbanização, fábricas, proletariado) e Revolução Francesa (democracia, direitos individuais). Auguste Comte propôs o termo 'Sociologia' e a ideia de estudar a sociedade com métodos científicos. O surgimento da disciplina está ligado:",
+        alternativas: {
+            a: "À necessidade de preservar a ordem feudal ameaçada pelas revoltas urbanas e pela ascensão da burguesia industrial.",
+            b: "À necessidade de compreender cientificamente as transformações radicais da modernidade: urbanização, industrialização, novas formas de trabalho e desigualdade, emergência da política de massas.",
+            c: "Ao interesse em constituir uma ciência natural do indivíduo, inspirada nos métodos da anatomia e da fisiologia experimentais.",
+            d: "Ao desejo de substituir as religiões tradicionais por uma espiritualidade laica centrada na ideia de progresso técnico.",
+            e: "À necessidade de justificar a expansão colonial europeia por meio do estudo comparado dos povos ditos 'primitivos'."
+        },
+        correta: "b",
+        explicacao: "A Sociologia nasce da necessidade de compreender as transformações radicais da modernidade: a Revolução Industrial criou novas formas de trabalho e desigualdade; a Revolução Francesa criou novas formas de política. Comte, Durkheim, Marx e Weber buscaram entender cientificamente essa nova sociedade que emergia."
+    },
+    {
+        enunciado: "O conceito de 'desnaturalização' é central para o olhar sociológico. A frase 'sempre foi assim' (sobre desigualdade, papéis de gênero, racismo) é uma naturalização. Desnaturalizar significa:",
+        alternativas: {
+            a: "Demonstrar que os fenômenos sociais obedecem a leis naturais imutáveis, análogas às leis da física e da biologia.",
+            b: "Revelar que o que parece 'natural', 'eterno' ou 'inevitável' é uma construção histórica e social, com causas que podem ser investigadas e transformadas.",
+            c: "Provar que as diferenças biológicas entre os indivíduos explicam as hierarquias observadas em todas as sociedades.",
+            d: "Sustentar que os costumes e tradições desnaturalizados devem ser abolidos por carecerem de fundamento científico.",
+            e: "Argumentar que natureza e sociedade são domínios idênticos, regidos pelos mesmos princípios de seleção."
+        },
+        correta: "b",
+        explicacao: "Desnaturalizar é o gesto fundamental da Sociologia: mostrar que o que parece 'natural', 'eterno' ou 'inevitável' (desigualdade, racismo, papéis de gênero) é, na verdade, uma construção histórica e social. Se foi construído, pode ser desconstruído e transformado. A Sociologia revela a historicidade do que parece eterno."
+    }
+]
         },
         2: {
             titulo: "Marx, Durkheim e Weber",
@@ -1290,67 +1290,67 @@ const dadosAulas = {
                 { titulo: "Fato social", link: "https://pt.wikipedia.org/wiki/Fato_social", descricao: "Wikipedia - Conceito durkheimiano" }
             ],
             quiz: [
-                {
-                    enunciado: "Para Émile Durkheim, os 'fatos sociais' se caracterizam por serem:",
-                    alternativas: {
-                        a: "Exteriores aos indivíduos, anteriores a eles e coercitivos (exercem pressão sobre os indivíduos).",
-                        b: "Criados livremente por cada indivíduo sem nenhuma influência social.",
-                        c: "Exclusivamente biológicos e determinados geneticamente.",
-                        d: "Inexistentes, pois só existem indivíduos e suas escolhas pessoais.",
-                        e: "Sempre benéficos e positivos para todos os membros da sociedade."
-                    },
-                    correta: "a",
-                    explicacao: "Para Durkheim, os fatos sociais (leis, normas, costumes, língua) existem independentemente dos indivíduos (exterioridade), já existiam antes deles nascerem (anterioridade) e exercem pressão/coerção para que sejam seguidos (coercitividade)."
-                },
-                {
-                    enunciado: "Para Karl Marx, a história da humanidade é a história:",
-                    alternativas: {
-                        a: "Das grandes conquistas militares e dos impérios.",
-                        b: "Da luta de classes, do conflito entre exploradores e explorados.",
-                        c: "Das ideias dos grandes filósofos e pensadores.",
-                        d: "Da evolução pacífica e harmoniosa das sociedades.",
-                        e: "Da ação dos grandes heróis e líderes religiosos."
-                    },
-                    correta: "b",
-                    explicacao: "Marx afirma no Manifesto Comunista: 'A história de toda a sociedade até hoje existente é a história da luta de classes'. O motor da história é o conflito entre classes sociais (exploradores vs. explorados), não as ideias ou os heróis."
-                },
-                {
-                    enunciado: "O conceito de 'mais-valia' em Marx refere-se a:",
-                    alternativas: {
-                        a: "O salário justo pago ao trabalhador por seu trabalho.",
-                        b: "O valor do trabalho não pago ao trabalhador, apropriado pelo capitalista como lucro.",
-                        c: "O imposto pago pelos trabalhadores ao Estado.",
-                        d: "O lucro obtido pelo trabalhador em ações na bolsa de valores.",
-                        e: "O bônus pago aos gerentes das empresas."
-                    },
-                    correta: "b",
-                    explicacao: "A mais-valia é o valor produzido pelo trabalhador além do que recebe como salário. Esse valor excedente é apropriado pelo capitalista como lucro. É o fundamento da exploração capitalista segundo Marx."
-                },
-                {
-                    enunciado: "Para Max Weber, a 'ação social' se caracteriza por:",
-                    alternativas: {
-                        a: "Ser qualquer comportamento humano, mesmo isolado e sem sentido.",
-                        b: "Ser uma ação com sentido subjetivo orientada para o comportamento do outro.",
-                        c: "Ser apenas a ação política realizada em partidos e eleições.",
-                        d: "Ser exclusivamente a ação econômica motivada pelo lucro.",
-                        e: "Ser qualquer ação coletiva realizada por grupos organizados."
-                    },
-                    correta: "b",
-                    explicacao: "Para Weber, ação social é aquela que tem um sentido subjetivo para quem a pratica E é orientada pelo comportamento do outro. Ações puramente individuais, sem relação com o outro, não são 'sociais'."
-                },
-                {
-                    enunciado: "A principal diferença entre as abordagens de Durkheim, Marx e Weber pode ser resumida como:",
-                    alternativas: {
-                        a: "Durkheim foca no conflito; Marx foca na estrutura; Weber foca no indivíduo.",
-                        b: "Durkheim foca na estrutura que molda o indivíduo (fato social); Marx foca no conflito econômico (luta de classes); Weber foca no sentido que os indivíduos dão às suas ações (ação social).",
-                        c: "Todos os três têm exatamente a mesma abordagem, sem diferenças.",
-                        d: "Durkheim foca no indivíduo; Marx foca na religião; Weber foca na economia.",
-                        e: "Durkheim rejeita a Sociologia; Marx e Weber a fundam."
-                    },
-                    correta: "b",
-                    explicacao: "São as três matrizes da Sociologia clássica: Durkheim (fato social, estrutura que molda o indivíduo), Marx (luta de classes, conflito econômico), Weber (ação social, sentido subjetivo). Cada um destaca um aspecto diferente da realidade social."
-                }
-            ]
+    {
+        enunciado: "Durkheim afirma que os 'fatos sociais' são exteriores ao indivíduo, anteriores a ele e coercitivos. Pense na língua portuguesa: você não a criou, ela existia antes de você nascer, e você é 'obrigado' a segui-la para ser compreendido. O mesmo vale para as leis de trânsito. Segundo Durkheim, língua e leis são fatos sociais porque:",
+        alternativas: {
+            a: "São escolhas internas: cada indivíduo adere a elas por convicção íntima, sem qualquer pressão externa.",
+            b: "Existem fora das consciências individuais, precedem cada sujeito e exercem coerção sobre quem resiste a elas.",
+            c: "São fenômenos naturais: emergem espontaneamente da organização biológica da espécie humana.",
+            d: "São mercadorias simbólicas: funcionam como bens trocados no mercado conforme oferta e procura.",
+            e: "São contratos psicológicos: resultam de um acordo explícito assinado por cada membro da comunidade."
+        },
+        correta: "b",
+        explicacao: "Durkheim define o fato social por três características: exterioridade (existe fora de nós), anterioridade (já existia antes de nascermos) e coercitividade (exerce pressão para ser seguido). A língua, as leis, os costumes, a moda são fatos sociais: não os escolhemos, mas nos moldam."
+    },
+    {
+        enunciado: "Marx afirma que 'a história de toda a sociedade até hoje existente é a história da luta de classes'. Um exemplo contemporâneo: a tensão entre trabalhadores de aplicativos (que reivindicam direitos e remuneração mínima) e as empresas de plataforma (que buscam maximizar lucros e minimizar custos). Segundo Marx, essa tensão é:",
+        alternativas: {
+            a: "Um conflito conjuntural de preços, sem implicações para a estrutura da produção capitalista.",
+            b: "Uma expressão da luta de classes: o conflito entre quem controla os meios de produção e quem vende sua força de trabalho permanece como motor das dinâmicas sociais em novas formas de trabalho.",
+            c: "Um fenômeno de consumo simbólico, pois as plataformas mediam relações entre consumidores, não relações de produção.",
+            d: "Um exemplo de mobilidade social ascendente, já que a flexibilidade das plataformas permite ao trabalhador tornar-se empresário.",
+            e: "Um resíduo de relações pré-industriais, destinado a desaparecer com a digitalização completa da economia."
+        },
+        correta: "b",
+        explicacao: "Para Marx, a luta de classes é o motor da história: o conflito entre exploradores (donos dos meios de produção) e explorados (trabalhadores) impulsiona as transformações sociais. A tensão entre trabalhadores de aplicativos e empresas de plataforma é uma expressão contemporânea desse conflito estrutural."
+    },
+    {
+        enunciado: "Weber identifica quatro tipos de ação social: racional com relação a fins, racional com relação a valores, afetiva e tradicional. Um estudante que organiza sua rotina, escolhe cursinho e dedica horas diárias aos estudos para passar no vestibular e conseguir um bom emprego está realizando uma ação:",
+        alternativas: {
+            a: "Tradicional, pois reproduz um costume familiar de valorização dos estudos transmitido entre gerações.",
+            b: "Afetiva, pois a dedicação aos estudos expressa um impulso emocional imediato do estudante.",
+            c: "Racional com relação a valores, pois estudar é um fim em si mesmo, ditado por convicção ética incondicional.",
+            d: "Racional com relação a fins: o agente calcula os meios adequados (estudar) para atingir um objetivo previamente definido (aprovação, emprego).",
+            e: "Carismática, pois a conduta do estudante deriva da influência exemplar de um líder pessoal."
+        },
+        correta: "d",
+        explicacao: "A ação racional com relação a fins é aquela em que o agente calcula os meios mais adequados para atingir um objetivo. O estudante que estuda para passar no vestibular está calculando meios (estudar) para fins (aprovação, emprego). É a forma de ação mais característica da modernidade."
+    },
+    {
+        enunciado: "Marx desenvolveu o conceito de 'mais-valia'. Exemplo: um operário produz R$ 200 em mercadorias por dia, mas recebe R$ 50 de salário. Os R$ 150 restantes são apropriados pelo capitalista. Segundo Marx, a mais-valia é:",
+        alternativas: {
+            a: "A compensação justa pelo esforço do trabalhador, calculada pelo valor de mercado das mercadorias produzidas.",
+            b: "A parcela do valor produzido pelo trabalhador que excede o salário recebido, apropriada pelo capitalista como lucro.",
+            c: "O imposto sobre a produção, repassado pelo Estado ao salário do trabalhador.",
+            d: "O bônus de produtividade que o trabalhador pode negociar individualmente com o empregador.",
+            e: "O custo de manutenção de máquinas e insumos, descontado do valor final das mercadorias."
+        },
+        correta: "b",
+        explicacao: "A mais-valia é o conceito central da crítica marxista ao capitalismo: o trabalhador produz mais valor do que recebe como salário. Essa diferença (mais-valia) é apropriada pelo capitalista como lucro. É a base da exploração: a riqueza do capitalista vem do trabalho não pago do trabalhador."
+    },
+    {
+        enunciado: "Um sociólogo que estuda a evasão escolar poderia usar as três matrizes clássicas: Durkheim analisaria a função da escola na coesão social e a força dos fatos sociais; Marx analisaria como a desigualdade de classe condiciona o acesso e a permanência; Weber analisaria o sentido que os próprios alunos atribuem à escola. Essa diversidade mostra que:",
+        alternativas: {
+            a: "As três matrizes são mutuamente exclusivas: adotar uma implica necessariamente rejeitar as outras duas.",
+            b: "As três matrizes são complementares e oferecem ângulos diferentes para compreender a complexidade social: estrutura (Durkheim), conflito (Marx) e sentido (Weber).",
+            c: "Apenas a matriz durkheimiana é científica, pois Marx e Weber trabalham com categorias filosóficas não verificáveis.",
+            d: "As três matrizes coincidem em objeto e método, diferindo apenas no período histórico em que foram formuladas.",
+            e: "A matriz marxista substitui as demais, pois a dimensão econômica explica, sozinha, a totalidade do social."
+        },
+        correta: "b",
+        explicacao: "As três matrizes clássicas são complementares: Durkheim foca na estrutura que molda o indivíduo (fato social); Marx foca no conflito econômico (luta de classes); Weber foca no sentido que os indivíduos dão às suas ações (ação social). Cada uma ilumina um aspecto da complexidade social."
+    }
+]
         },
         3: {
             titulo: "Cultura e Identidade",
@@ -1385,67 +1385,67 @@ const dadosAulas = {
                 { titulo: "Edward Tylor", link: "https://pt.wikipedia.org/wiki/Edward_Burnett_Tylor", descricao: "Wikipedia - Antropólogo pioneiro" }
             ],
             quiz: [
-                {
-                    enunciado: "O etnocentrismo é uma atitude que leva um grupo cultural a:",
-                    alternativas: {
-                        a: "Valorizar igualmente todas as manifestações culturais do planeta.",
-                        b: "Considerar a sua própria cultura como a única verdadeira, correta e superior às demais.",
-                        c: "Promover o diálogo e a troca horizontal de saberes.",
-                        d: "Abandonar suas tradições em favor de uma cultura global homogênea.",
-                        e: "Estudar cientificamente os hábitos de outros povos sem julgamentos."
-                    },
-                    correta: "b",
-                    explicacao: "O etnocentrismo é a atitude de julgar outras culturas a partir dos valores da própria, considerando-a superior. Gera preconceito, discriminação e intolerância, sendo uma das principais fontes de conflitos étnicos e culturais."
-                },
-                {
-                    enunciado: "O relativismo cultural propõe que devemos:",
-                    alternativas: {
-                        a: "Julgar todas as culturas pela régua da nossa própria cultura.",
-                        b: "Compreender cada cultura dentro de seu próprio contexto lógico, sem julgá-la por outra.",
-                        c: "Rejeitar qualquer forma de contato entre culturas diferentes.",
-                        d: "Impor nossa cultura como superior às demais.",
-                        e: "Considerar todas as culturas exatamente iguais, sem diferenças."
-                    },
-                    correta: "b",
-                    explicacao: "O relativismo cultural propõe compreender cada cultura em seus próprios termos, sem julgá-la pela régua de outra. Não significa concordar com tudo, mas respeitar a diversidade e reconhecer que cada cultura tem sua lógica interna."
-                },
-                {
-                    enunciado: "A definição de cultura proposta por Edward Tylor inclui:",
-                    alternativas: {
-                        a: "Apenas as obras de arte e as manifestações eruditas.",
-                        b: "O conjunto de conhecimentos, crenças, artes, moral, leis, costumes e hábitos adquiridos pelo homem como membro da sociedade.",
-                        c: "Exclusivamente as tradições religiosas de cada povo.",
-                        d: "Apenas os aspectos materiais da vida humana (comida, roupas, moradia).",
-                        e: "Somente as manifestações culturais dos povos europeus."
-                    },
-                    correta: "b",
-                    explicacao: "Tylor (1871) definiu cultura como 'aquele todo complexo que inclui conhecimento, crença, arte, moral, lei, costumes e quaisquer outras capacidades e hábitos adquiridos pelo homem como membro da sociedade'. É uma definição ampla e inclusiva."
-                },
-                {
-                    enunciado: "A cultura se caracteriza por ser 'aprendida', o que significa que:",
-                    alternativas: {
-                        a: "É transmitida geneticamente de pais para filhos.",
-                        b: "É adquirida através da socialização, não sendo inata.",
-                        c: "Só pode ser aprendida na escola formal.",
-                        d: "É exclusiva dos seres humanos com alto QI.",
-                        e: "Depende exclusivamente da leitura de livros."
-                    },
-                    correta: "b",
-                    explicacao: "A cultura não é inata (não está nos genes), mas aprendida através do processo de socialização. Cada indivíduo aprende a cultura de seu grupo desde a infância, através da família, escola, mídia, etc."
-                },
-                {
-                    enunciado: "A principal diferença entre etnocentrismo e relativismo cultural está:",
-                    alternativas: {
-                        a: "No fato de que ambos são a mesma coisa, sem diferença.",
-                        b: "No fato de que o etnocentrismo julga outras culturas como inferiores; o relativismo cultural busca compreendê-las em seus próprios termos.",
-                        c: "No fato de que o etnocentrismo é científico; o relativismo é religioso.",
-                        d: "No fato de que o etnocentrismo é moderno; o relativismo é medieval.",
-                        e: "No fato de que ambos rejeitam qualquer forma de contato cultural."
-                    },
-                    correta: "b",
-                    explicacao: "O etnocentrismo julga outras culturas pela régua da própria, considerando-as inferiores; o relativismo cultural busca compreender cada cultura em seus próprios termos, respeitando a diversidade. São atitudes opostas diante da diferença cultural."
-                }
-            ]
+    {
+        enunciado: "Um turista brasileiro visita um país onde insetos fazem parte da culinária tradicional. Inicialmente sente nojo e pensa: 'Que povo estranho!' Depois reflete: 'Na minha cultura, achamos normal comer camarão, que também é um artrópode. Cada cultura tem suas práticas alimentares.' Essa reflexão ilustra a passagem:",
+        alternativas: {
+            a: "Do relativismo ao etnocentrismo, pois o turista termina julgando sua própria cultura pelos costumes estrangeiros.",
+            b: "Do etnocentrismo (julgar outra cultura pela régua da própria) ao relativismo cultural (compreender cada cultura em seus próprios termos).",
+            c: "Da assimilação à segregação, pois o turista primeiro incorpora e depois rejeita as práticas alimentares locais.",
+            d: "Do sincretismo ao hibridismo, pois o turista mistura elementos das duas culinárias em um único julgamento.",
+            e: "Da cultura à natureza, pois o turista reconhece que as preferências alimentares são biológicas, não sociais."
+        },
+        correta: "b",
+        explicacao: "O etnocentrismo é julgar outras culturas pela régua da própria ('isso é nojento'). O relativismo cultural é compreender cada cultura em seus próprios termos, reconhecendo que cada uma tem sua lógica interna. O turista passa do etnocentrismo (nojo, julgamento) ao relativismo (compreensão da diferença)."
+    },
+    {
+        enunciado: "Edward Tylor definiu cultura como 'aquele todo complexo que inclui conhecimento, crença, arte, moral, lei, costumes e quaisquer outras capacidades e hábitos adquiridos pelo homem como membro da sociedade'. Segundo essa definição, cultura é:",
+        alternativas: {
+            a: "O conjunto das produções artísticas e literárias consideradas eruditas pela tradição ocidental.",
+            b: "O todo complexo de conhecimentos, crenças, costumes e hábitos adquiridos socialmente, abrangendo todos os aspectos da vida humana.",
+            c: "A dimensão material da vida coletiva: ferramentas, moradias, vestuário e alimentação de um povo.",
+            d: "O conjunto de crenças religiosas que organizam a vida moral das comunidades tradicionais.",
+            e: "A herança biológica transmitida entre gerações de um mesmo grupo humano."
+        },
+        correta: "b",
+        explicacao: "A definição de Tylor é ampla e inclusiva: cultura não é apenas 'alta cultura' (arte erudita), mas todo o complexo de conhecimentos, crenças, costumes e hábitos adquiridos socialmente. Abrange desde a língua até a culinária, desde a religião até o direito."
+    },
+    {
+        enunciado: "Uma das características da cultura é ser 'aprendida'. Uma criança brasileira criada no Japão desde o nascimento falará japonês, usará hashi com naturalidade e seguirá as normas sociais japonesas. Esse exemplo mostra que:",
+        alternativas: {
+            a: "A cultura é inata: cada indivíduo carrega os traços de seu povo de origem, onde quer que viva.",
+            b: "A cultura é aprendida pela socialização: o indivíduo adquire os costumes, valores e práticas do grupo em que vive, não os de sua origem ancestral.",
+            c: "A cultura é genética: língua e costumes são transmitidos por hereditariedade, independentemente do meio social.",
+            d: "A cultura é opcional: cada indivíduo escolhe livremente, ao atingir a idade adulta, qual cultura adotar.",
+            e: "A cultura é universal: todos os grupos humanos compartilham os mesmos costumes, variando apenas detalhes superficiais."
+        },
+        correta: "b",
+        explicacao: "A cultura não é inata; é aprendida. Uma criança brasileira criada no Japão aprenderá a cultura japonesa, não a brasileira. Isso prova que a cultura é transmitida socialmente (socialização), não geneticamente. Cada indivíduo aprende os costumes, valores e práticas de seu grupo."
+    },
+    {
+        enunciado: "Em um mundo globalizado, muitas pessoas vivem entre duas ou mais culturas: filhos de imigrantes que celebram festas do país dos pais e do país onde nasceram, que falam duas línguas em casa e na rua. Esse processo de construção identitária é:",
+        alternativas: {
+            a: "Fixo: a identidade é definida no nascimento e permanece idêntica ao longo de toda a vida.",
+            b: "Dinâmico e social: a identidade se constrói nas relações com os outros, nas trocas culturais e nas experiências, podendo ser múltipla e híbrida.",
+            c: "Biológico: a identidade depende exclusivamente da herança genética de cada indivíduo.",
+            d: "Econômico: a identidade é definida apenas pela posição do indivíduo no mercado de consumo.",
+            e: "Residual: na globalização, as identidades particulares deixam de existir, restando uma cultura mundial única."
+        },
+        correta: "b",
+        explicacao: "A identidade cultural não é fixa nem inata: é um processo social, dinâmico e contínuo. Na globalização, as identidades podem ser múltiplas e híbridas (ex: alguém que se identifica com a cultura brasileira e japonesa). A identidade se constrói na relação com os outros e nas experiências de vida."
+    },
+    {
+        enunciado: "O contato entre culturas pode gerar aculturação, assimilação, segregação, sincretismo e hibridismo. No Brasil, práticas como o Candomblé e a Umbanda combinam elementos religiosos africanos, indígenas e católicos, criando algo que não existia em nenhuma dessas culturas isoladamente. Esse processo é um exemplo de:",
+        alternativas: {
+            a: "Segregação, pois cada tradição religiosa preservou seus ritos sem contato com as demais.",
+            b: "Sincretismo: a fusão de elementos de culturas diferentes, criando uma forma cultural nova a partir do contato.",
+            c: "Assimilação, pois as religiões africanas foram integralmente absorvidas e extintas pelo catolicismo oficial.",
+            d: "Etnocentrismo, pois a cultura dominante classificou os ritos africanos como inferiores e primitivos.",
+            e: "Difusão cultural, pois as práticas brasileiras foram simplesmente importadas, sem transformação local."
+        },
+        correta: "b",
+        explicacao: "O sincretismo é a fusão de elementos de culturas diferentes, criando algo novo. No Brasil, o Candomblé e a Umbanda são exemplos de sincretismo: combinam elementos religiosos africanos, indígenas e católicos, criando práticas religiosas novas que não existiam em nenhuma das culturas originais isoladamente."
+    }
+]
         },
         4: {
             titulo: "Estratificação Social",
@@ -1486,67 +1486,67 @@ const dadosAulas = {
                 { titulo: "Mobilidade social", link: "https://pt.wikipedia.org/wiki/Mobilidade_social", descricao: "Wikipedia - Movimento entre camadas sociais" }
             ],
             quiz: [
-                {
-                    enunciado: "A estratificação social refere-se a:",
-                    alternativas: {
-                        a: "Uma divisão natural e biológica da sociedade em camadas superiores e inferiores.",
-                        b: "A divisão da sociedade em camadas hierarquizadas, com diferentes níveis de acesso a recursos, poder e prestígio.",
-                        c: "A organização igualitária de todos os membros da sociedade.",
-                        d: "A separação dos indivíduos apenas por critérios religiosos.",
-                        e: "A classificação das pessoas exclusivamente por sua idade."
-                    },
-                    correta: "b",
-                    explicacao: "A estratificação social é a divisão da sociedade em camadas (estratos) hierarquizadas, com diferentes níveis de acesso a recursos, poder e prestígio. É uma construção social, não natural."
-                },
-                {
-                    enunciado: "Para Karl Marx, as classes sociais são definidas pela:",
-                    alternativas: {
-                        a: "Renda mensal de cada indivíduo.",
-                        b: "Relação com os meios de produção (burguesia = donos; proletariado = trabalhadores).",
-                        c: "Nível de escolaridade alcançado.",
-                        d: "Prestígio social adquirido pelo sobrenome.",
-                        e: "Cor da pele e origem étnica."
-                    },
-                    correta: "b",
-                    explicacao: "Para Marx, classes sociais são definidas pela relação com os meios de produção: burguesia (possui os meios de produção) e proletariado (vende sua força de trabalho). A desigualdade é estrutural do capitalismo."
-                },
-                {
-                    enunciado: "Para Max Weber, a estratificação social tem três dimensões:",
-                    alternativas: {
-                        a: "Raça, gênero e idade.",
-                        b: "Classe (econômica), status (prestígio) e partido (poder político).",
-                        c: "Religião, etnia e nacionalidade.",
-                        d: "Educação, saúde e moradia.",
-                        e: "Riqueza, beleza e inteligência."
-                    },
-                    correta: "b",
-                    explicacao: "Weber amplia a análise marxista: a estratificação tem três dimensões independentes - classe (econômica, riqueza), status (social, prestígio/honra) e partido (política, poder/influência). Uma pessoa pode ter alta posição em uma dimensão e baixa em outra."
-                },
-                {
-                    enunciado: "O 'capital cultural', conceito desenvolvido por Pierre Bourdieu, refere-se a:",
-                    alternativas: {
-                        a: "Apenas ao dinheiro acumulado em contas bancárias.",
-                        b: "Aos conhecimentos, diplomas, modos de falar e gostos que conferem status e vantagens sociais.",
-                        c: "À capacidade física de um indivíduo para realizar trabalhos manuais.",
-                        d: "Ao investimento do Estado em grandes obras de infraestrutura.",
-                        e: "À doação de recursos financeiros para instituições de caridade."
-                    },
-                    correta: "b",
-                    explicacao: "O capital cultural inclui conhecimentos, diplomas, modos de falar, gostos culturais, etc. É transmitido pelas famílias e pelas escolas, conferindo vantagens sociais. Bourdieu mostra que não é só dinheiro que mantém as posições sociais."
-                },
-                {
-                    enunciado: "A mobilidade social pode ser definida como:",
-                    alternativas: {
-                        a: "A capacidade física de uma pessoa se deslocar no espaço.",
-                        b: "O movimento dos indivíduos entre diferentes posições na hierarquia social.",
-                        c: "A migração de pessoas entre países diferentes.",
-                        d: "A mudança de residência dentro de uma mesma cidade.",
-                        e: "A rotação de cargos em uma empresa privada."
-                    },
-                    correta: "b",
-                    explicacao: "Mobilidade social é o movimento dos indivíduos entre diferentes posições na hierarquia social. Pode ser ascendente (subir) ou descendente (descer), e pode ser intergeracional (entre gerações) ou intrageracional (na mesma vida)."
-                }
-            ]
+    {
+        enunciado: "Em uma cidade, um bairro de mansões com condomínios fechados fica ao lado de uma comunidade com moradias precárias e sem saneamento. Um morador do bairro rico afirma: 'Cada um tem o que merece; eles são pobres porque não se esforçaram.' Segundo a Sociologia, essa afirmação:",
+        alternativas: {
+            a: "É uma análise sociologicamente correta, pois a posição social resulta da soma dos esforços individuais de cada um.",
+            b: "Naturaliza a desigualdade, ignorando causas estruturais: concentração de renda, acesso desigual à educação, discriminação e herança histórica.",
+            c: "Aplica corretamente o conceito de mobilidade social, ao sugerir que todos podem mudar de estrato pelo trabalho.",
+            d: "Descreve o status no sentido weberiano, pois o prestígio é o critério decisivo da hierarquia nesse caso.",
+            e: "Exerce o estranhamento sociológico, ao questionar as evidências cotidianas sobre a pobreza."
+        },
+        correta: "b",
+        explicacao: "A afirmação naturaliza a desigualdade, atribuindo-a ao 'mérito individual'. A Sociologia mostra que a desigualdade é estrutural: concentração de renda, acesso desigual à educação, discriminação racial e de gênero, herança histórica (ex: escravidão). A pobreza não é 'falta de esforço', mas produto de estruturas sociais."
+    },
+    {
+        enunciado: "Para Marx, as classes são definidas pela relação com os meios de produção. Para Weber, a estratificação tem três dimensões: classe (econômica), status (prestígio) e partido (poder). Um professor universitário com salário modesto, mas alto prestígio social e influência em sua área, ilustra:",
+        alternativas: {
+            a: "A teoria de Marx, pois o professor, não possuindo meios de produção, integra o proletariado independentemente do prestígio.",
+            b: "A teoria weberiana: classe, status e partido são dimensões relativamente independentes, e um indivíduo pode ocupar posições distintas em cada uma.",
+            c: "A teoria de Durkheim, pois o prestígio do professor é um fato social dotado de coerção sobre a comunidade.",
+            d: "A teoria de Bourdieu, pois o capital simbólico é a única forma de capital que determina a posição social.",
+            e: "A tese meritocrática, pois o prestígio é sempre a recompensa exata do esforço individual."
+        },
+        correta: "b",
+        explicacao: "Weber amplia a análise marxista: a estratificação tem três dimensões independentes. Um professor pode ter baixa renda (classe econômica modesta), mas alto prestígio social (status). Isso mostra que a estratificação não é apenas econômica; inclui também prestígio e poder político."
+    },
+    {
+        enunciado: "Bourdieu identificou diferentes tipos de capital: econômico, cultural, social e simbólico. Um jovem de família rica que estuda em escola particular de elite, faz cursos extracurriculares, viaja ao exterior e herda a rede de contatos profissionais dos pais acumula:",
+        alternativas: {
+            a: "Apenas capital econômico, pois as demais vantagens são simples consequências da renda familiar.",
+            b: "Capitais econômico, cultural, social e simbólico combinados, produzindo vantagens acumuladas que reproduzem sua posição na estrutura social.",
+            c: "Apenas capital cultural, pois a escolarização é o único fator decisivo da reprodução social.",
+            d: "Apenas capital social, pois os contatos são a verdadeira fonte de todos os privilégios econômicos.",
+            e: "Nenhum capital, pois Bourdieu restringe o conceito de capital ao patrimônio industrial."
+        },
+        correta: "b",
+        explicacao: "Bourdieu mostra que a reprodução das desigualdades não se dá apenas pelo dinheiro. O jovem rico acumula capital econômico (recursos), cultural (educação), social (contatos) e simbólico (prestígio). Essa acumulação de capitais lhe confere vantagens que vão muito além da renda."
+    },
+    {
+        enunciado: "Mobilidade social é o movimento entre posições na hierarquia social. Estudos mostram que, no Brasil, a mobilidade intergeracional é baixa: filhos de pais pobres tendem a permanecer pobres, e filhos de pais ricos tendem a permanecer ricos. Esse dado indica que:",
+        alternativas: {
+            a: "A meritocracia funciona plenamente: quem se esforça ascende, independentemente da origem.",
+            b: "A estrutura social reproduz desigualdades: o acesso desigual a educação, saúde e oportunidades dificulta a mudança de posição, transmitindo aos filhos a posição dos pais.",
+            c: "A mobilidade social é irrelevante nas sociedades contemporâneas, pois as hierarquias não organizam mais a vida social.",
+            d: "A legislação brasileira impede mudanças de classe, fixando cada cidadão no estrato em que nasceu.",
+            e: "A pobreza resulta de escolha individual, e a baixa mobilidade apenas expressa preferências pessoais distintas."
+        },
+        correta: "b",
+        explicacao: "A baixa mobilidade social intergeracional no Brasil indica que a estrutura social reproduz desigualdades: filhos de pais pobres têm menos acesso a educação de qualidade, saúde e oportunidades, dificultando a ascensão social. Isso desafia o mito da meritocracia e revela a reprodução estrutural das desigualdades."
+    },
+    {
+        enunciado: "Sociedades diferentes organizaram a hierarquia de formas diferentes: castas na Índia tradicional, estamentos na Europa feudal, classes no capitalismo. Comparando esses sistemas, conclui-se que:",
+        alternativas: {
+            a: "A estratificação é um dado biológico: toda sociedade hierarquiza seus membros por critérios inatos.",
+            b: "A estratificação é uma construção social e histórica: assume formas distintas conforme a sociedade e a época, podendo ser transformada.",
+            c: "A estratificação é idêntica em todas as sociedades: mudam os nomes dos estratos, mas não sua lógica.",
+            d: "A estratificação é uma invenção jurídica do Estado moderno, inexistente antes das codificações escritas.",
+            e: "A estratificação é uma lei natural da evolução humana, tendendo a desaparecer com o progresso econômico."
+        },
+        correta: "b",
+        explicacao: "A estratificação não é natural nem imutável: é uma construção social e histórica. Sociedades diferentes (castas, estamentos, classes) têm formas diferentes de organizar a hierarquia. Se é construção, pode ser transformada. A Sociologia revela a historicidade das estruturas de desigualdade."
+    }
+]
         },
         5: {
             titulo: "Racismo Estrutural",
@@ -1589,67 +1589,67 @@ const dadosAulas = {
                 { titulo: "Movimento negro", link: "https://pt.wikipedia.org/wiki/Movimento_negro", descricao: "Wikipedia - Luta contra o racismo" }
             ],
             quiz: [
-                {
-                    enunciado: "O conceito de racismo estrutural, discutido por pensadores contemporâneos, afirma que o racismo:",
-                    alternativas: {
-                        a: "É um fenômeno raro, restrito a indivíduos isolados e mal-intencionados.",
-                        b: "Foi completamente superado no Brasil com a abolição da escravatura em 1888.",
-                        c: "Está entranhado nas instituições, na cultura e na economia, reproduzindo desigualdades de forma sistemática.",
-                        d: "É uma invenção da sociologia para criar divisão entre os povos.",
-                        e: "Afeta apenas as relações interpessoais, sem impacto no mercado de trabalho."
-                    },
-                    correta: "c",
-                    explicacao: "O racismo estrutural (Silvio Almeida) não é apenas um ato individual, mas uma estrutura que organiza a sociedade, a economia, a política e as instituições de forma a reproduzir desigualdades raciais de forma sistemática."
-                },
-                {
-                    enunciado: "O racismo institucional se manifesta quando:",
-                    alternativas: {
-                        a: "Apenas indivíduos fazem comentários preconceituosos em redes sociais.",
-                        b: "Instituições como escola, polícia e justiça reproduzem discriminação racial em suas práticas.",
-                        c: "Pessoas negras conquistam espaços de poder na sociedade.",
-                        d: "O Estado promove políticas de igualdade racial.",
-                        e: "Empresas contratam funcionários de diferentes origens étnicas."
-                    },
-                    correta: "b",
-                    explicacao: "O racismo institucional ocorre quando as instituições (escola, polícia, justiça, saúde) reproduzem discriminação racial em suas práticas, mesmo sem intenção explícita. Ex: perfilamento racial pela polícia, menor investimento em escolas de periferia."
-                },
-                {
-                    enunciado: "O racismo recreativo se caracteriza por:",
-                    alternativas: {
-                        a: "Pela defesa aberta da superioridade de uma raça sobre outra.",
-                        b: "Por 'piadas', 'brincadeiras' e 'humor' que naturalizam o preconceito e a discriminação racial.",
-                        c: "Pela promoção de políticas públicas de igualdade racial.",
-                        d: "Pela valorização da cultura negra em espaços públicos.",
-                        e: "Pela pesquisa acadêmica sobre relações étnico-raciais."
-                    },
-                    correta: "b",
-                    explicacao: "O racismo recreativo se manifesta em 'piadas', 'brincadeiras' e 'humor' que naturalizam estereótipos raciais. É uma forma sutil de racismo que se esconde atrás do 'era só uma brincadeira', mas reforça preconceitos."
-                },
-                {
-                    enunciado: "O conceito de 'branquitude' analisa:",
-                    alternativas: {
-                        a: "A superioridade natural das pessoas brancas sobre as demais.",
-                        b: "O lugar de privilégio ocupado por pessoas brancas na sociedade, como estrutura a ser reconhecida e questionada.",
-                        c: "A necessidade de segregação racial entre brancos e negros.",
-                        d: "A exclusividade da cultura branca como padrão civilizatório.",
-                        e: "A impossibilidade de diálogo entre diferentes grupos étnicos."
-                    },
-                    correta: "b",
-                    explicacao: "Branquitude analisa o lugar de privilégio ocupado por pessoas brancas na sociedade. Não é sobre 'culpa individual', mas sobre reconhecer estruturas de privilégio que beneficiam brancos e prejudicam não-brancos, mesmo sem intenção consciente."
-                },
-                {
-                    enunciado: "Os dados sobre a população negra no Brasil (desemprego, renda, encarceramento, homicídios) demonstram que:",
-                    alternativas: {
-                        a: "São coincidências sem qualquer relação com a cor da pele.",
-                        b: "São frutos do racismo estrutural, que reproduz desigualdades de forma sistemática.",
-                        c: "Mostram que a população negra tem preferência por essas situações.",
-                        d: "Provam que a abolição da escravatura resolveu todos os problemas raciais.",
-                        e: "Indicam que não existe racismo no Brasil contemporâneo."
-                    },
-                    correta: "b",
-                    explicacao: "Esses dados não são coincidência: são frutos do racismo estrutural, que herdado da escravidão, continua reproduzindo desigualdades raciais em todas as esferas da vida social. Combater isso exige políticas estruturais, não apenas individuais."
-                }
-            ]
+    {
+        enunciado: "No Brasil, a população negra representa mais de 56% dos habitantes, mas compõe 67% da população carcerária e 75% das vítimas de homicídio; a renda média dos negros é significativamente inferior à dos brancos. Um comentarista afirma: 'Isso não é racismo, é coincidência.' Segundo o conceito de racismo estrutural, essa afirmação:",
+        alternativas: {
+            a: "É correta, pois correlações estatísticas não autorizam qualquer interpretação sociológica sobre fenômenos raciais.",
+            b: "É incorreta: os dados revelam o racismo estrutural — uma estrutura que organiza sociedade, economia, política e instituições reproduzindo desigualdades raciais de modo sistemático.",
+            c: "É correta, pois o racismo brasileiro se limita a casos individuais isolados, sem expressão institucional.",
+            d: "É incorreta, mas apenas porque os dados citados estão desatualizados; o racismo contemporâneo não produziria mais desigualdades mensuráveis.",
+            e: "É correta, pois as desigualdades observadas são exclusivamente econômicas e atingem todos os grupos da mesma forma."
+        },
+        correta: "b",
+        explicacao: "Os dados não são coincidência: revelam o racismo estrutural, uma estrutura herdada da escravidão que organiza a sociedade de forma a reproduzir desigualdades raciais em todas as esferas (educação, trabalho, justiça, violência). O racismo estrutural não é apenas 'preconceito individual'; é uma lógica institucional e sistêmica."
+    },
+    {
+        enunciado: "Estudos mostram que pessoas negras são abordadas pela polícia com muito mais frequência e recebem penas mais severas pelos mesmos crimes, comparadas a pessoas brancas. Mesmo quando nenhum agente tem intenção discriminatória consciente, esse padrão caracteriza:",
+        alternativas: {
+            a: "Coincidência estatística, sem relação com a composição racial dos abordados.",
+            b: "Racismo institucional: as instituições reproduzem discriminação racial em suas práticas, independentemente da intenção individual dos agentes.",
+            c: "Mérito policial, pois as abordagens respondem exclusivamente a indicadores objetivos de criminalidade.",
+            d: "Racismo reverso, pois a política protege grupos minoritários de violências maiores.",
+            e: "Eficiência judiciária, pois a disparidade de penas acelera o andamento dos processos."
+        },
+        correta: "b",
+        explicacao: "O racismo institucional ocorre quando instituições reproduzem discriminação racial em suas práticas, mesmo sem intenção explícita. O perfilamento racial pela polícia e a disparidade de penas são exemplos: a instituição opera com vieses raciais, independentemente da intenção individual de cada agente."
+    },
+    {
+        enunciado: "Um comediante faz 'piadas' baseadas em estereótipos raciais e, quando questionado, responde: 'É só uma brincadeira, não se pode mais fazer humor?' Segundo o conceito de racismo recreativo, essa resposta:",
+        alternativas: {
+            a: "É válida, pois o humor constitui um campo simbólico imune a efeitos sociais e a críticas éticas.",
+            b: "Ignora que o 'racismo recreativo' reforça estereótipos, naturaliza a discriminação e contribui para a manutenção do racismo estrutural.",
+            c: "É correta, pois a liberdade de expressão garante toda manifestação humorística, independentemente de seu conteúdo.",
+            d: "É válida, pois piadas sobre grupos funcionam como inclusão social e aproximação entre povos diferentes.",
+            e: "É incorreta, mas apenas quando a piada é contada em público; em ambiente privado o humor não tem alcance social."
+        },
+        correta: "b",
+        explicacao: "O racismo recreativo é uma forma sutil de racismo que se esconde atrás do 'humor'. 'Piadas' sobre grupos raciais reforçam estereótipos, naturalizam a discriminação e contribuem para a manutenção do racismo estrutural. O 'era só uma brincadeira' não anula o efeito: reproduz e normaliza o preconceito."
+    },
+    {
+        enunciado: "O conceito de 'branquitude' tem sido usado para analisar as relações raciais no Brasil. Ele não se refere a 'culpa individual', mas ao reconhecimento de que:",
+        alternativas: {
+            a: "Existe superioridade natural das pessoas brancas, comprovada por sua presença majoritária em posições de poder.",
+            b: "A sociedade está estruturada de modo a beneficiar pessoas brancas em múltiplas esferas (acesso, representação, tratamento institucional), independentemente da intenção individual.",
+            c: "Cada pessoa branca é pessoalmente responsável pelos atos de discriminação cometidos no passado colonial.",
+            d: "A identidade branca é uma categoria biológica, definida pela cor da pele e pela origem genética.",
+            e: "A cultura europeia deve ser celebrada como o padrão civilizatório universal a ser seguido por todos."
+        },
+        correta: "b",
+        explicacao: "Branquitude não é sobre 'culpa individual', mas sobre reconhecer estruturas de privilégio: a sociedade está organizada de forma a beneficiar pessoas brancas em múltiplas esferas (acesso, representação, tratamento). Reconhecer isso é o primeiro passo para transformar essas estruturas."
+    },
+    {
+        enunciado: "Cotas raciais em universidades e concursos, educação antirracista nas escolas, valorização da cultura afro-brasileira e enfrentamento da violência policial são exemplos de ações públicas. Elas expressam o entendimento de que:",
+        alternativas: {
+            a: "O racismo é um desvio individual, corrigível pela punição de cada agente preconceituoso.",
+            b: "O racismo é uma estrutura que organiza instituições e relações, exigindo políticas de reparação, acesso e reconhecimento para ser enfrentado.",
+            c: "O racismo já foi superado, e as medidas têm caráter apenas simbólico, como tributo a lutas passadas.",
+            d: "A igualdade racial se alcança espontaneamente pela dinâmica do mercado, sem intervenção do Estado.",
+            e: "As políticas antirracistas devem separar os grupos por cor, reproduzindo a lógica segregacionista que criticam."
+        },
+        correta: "b",
+        explicacao: "O racismo estrutural exige ações estruturais: cotas (reparação histórica e acesso), educação antirracista (transformação cultural), valorização da cultura afro-brasileira (reconhecimento), combate à violência policial (justiça), igualdade no trabalho (economia). Combater o racismo é transformar estruturas, não apenas punir indivíduos."
+    }
+]
         },
         6: {
             titulo: "Gênero e Patriarcado",
