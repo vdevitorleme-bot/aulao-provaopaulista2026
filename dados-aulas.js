@@ -42,15 +42,15 @@ const dadosAulas = {
                 { titulo: "Mito", link: "https://pt.wikipedia.org/wiki/Mito", descricao: "Wikipedia - Conceito de mito e narrativas míticas" },
                 { titulo: "Pré-socráticos", link: "https://pt.wikipedia.org/wiki/Pr%C3%A9-socr%C3%A1ticos", descricao: "Wikipedia - Os primeiros filósofos gregos" }
             ],
-            quiz: [
+           quiz: [
     {
         enunciado: "Em uma aula de Filosofia, o professor apresenta dois textos sobre a origem do mundo: o primeiro é um trecho da Teogonia de Hesíodo, que narra como Gaia (Terra) surgiu do Caos e gerou Urano (Céu); o segundo é um fragmento de Tales de Mileto, que afirma ser a água o princípio de todas as coisas. Um aluno pergunta: 'Mas professor, os dois não estão tentando explicar a mesma coisa?' Considerando a diferença entre narrativa mitológica e discurso filosófico, a resposta mais adequada seria:",
         alternativas: {
-            a: "Sim, são idênticos, pois ambos buscam explicar a origem do universo, sendo apenas estilos literários diferentes.",
+            a: "Sim, ambos buscam explicar a origem do cosmos, diferenciando-se apenas pelo estilo literário: Hesíodo escreve em versos e Tales em prosa, mas o conteúdo explicativo é equivalente.",
             b: "Embora ambos abordem a origem do cosmos, Hesíodo recorre a genealogias divinas e narrativas fantásticas, enquanto Tales busca um princípio natural (arché) explicável pela razão, sem apelar para a intervenção dos deuses.",
-            c: "Hesíodo é mais científico que Tales, pois a Teogonia apresenta uma explicação mais detalhada e completa sobre a formação do universo.",
-            d: "Tales apenas substituiu um mito por outro, pois dizer que tudo vem da água é tão fantástico quanto dizer que tudo vem de Gaia.",
-            e: "A diferença é apenas cronológica: Hesíodo escreveu antes de Tales, mas o conteúdo explicativo é essencialmente o mesmo."
+            c: "Sim, a diferença é apenas cronológica: Hesíodo escreveu antes de Tales, e a filosofia grega simplesmente atualizou o conteúdo mitológico com linguagem mais técnica e menos fantasiosa.",
+            d: "Não, porque Hesíodo busca explicar apenas o passado remoto, enquanto Tales se preocupa exclusivamente com os fenômenos naturais do presente, sem interesse pela origem do mundo.",
+            e: "Sim, mas a filosofia grega representa uma regressão em relação ao mito, pois abandonou a riqueza simbólica das narrativas religiosas em favor de explicações simplistas sobre a natureza."
         },
         correta: "b",
         explicacao: "A passagem do mythos ao logos representa uma mudança qualitativa, não apenas de tema. Hesíodo explica o mundo por narrativas de deuses e forças sobrenaturais (mythos); Tales busca um princípio natural e racional (logos) — a água como arché — sem recorrer a intervenções divinas. Ambos tratam da origem, mas o método e a natureza da explicação são radicalmente diferentes."
@@ -58,23 +58,23 @@ const dadosAulas = {
     {
         enunciado: "Uma jovem, ao observar uma tempestade, comenta: 'Os raios são a fúria de Zeus castigando os mortais.' Seu colega, estudante de Filosofia, responde: 'Na verdade, os raios são descargas elétricas atmosféricas causadas pela diferença de potencial entre nuvens.' Do ponto de vista da história do pensamento, a fala do colega representa:",
         alternativas: {
-            a: "Uma atitude religiosa, pois busca a causa dos fenômenos na vontade divina.",
-            b: "Uma atitude mítica, pois explica o fenômeno por meio de narrativas tradicionais.",
-            c: "A atitude filosófica e científica, que busca explicações racionais, naturais e verificáveis para os fenômenos, substituindo a narrativa sobrenatural pela investigação das causas.",
-            d: "Uma atitude de senso comum, pois qualquer pessoa sabe que raios são descargas elétricas.",
-            e: "Uma atitude autoritária, pois impõe uma verdade sem permitir o diálogo."
+            a: "Uma atitude religiosa, pois busca a causa dos fenômenos na vontade divina e nos desígnios sobrenaturais, embora com linguagem mais moderna.",
+            b: "A atitude filosófica e científica, que busca explicações racionais, naturais e verificáveis para os fenômenos, substituindo a narrativa sobrenatural pela investigação das causas.",
+            c: "Uma atitude mítica refinada, pois mesmo invocando a ciência, o colega preserva a ideia de que fenômenos naturais possuem intencionalidade oculta.",
+            d: "Uma atitude de senso comum, pois qualquer pessoa hoje sabe que raios são descargas elétricas, sem necessidade de formação filosófica para formular essa explicação.",
+            e: "Uma atitude autoritária, pois o colega impõe uma verdade científica sem permitir o diálogo com a interpretação religiosa apresentada pela jovem."
         },
-        correta: "c",
+        correta: "b",
         explicacao: "A atitude filosófica (e posteriormente científica) se caracteriza pela busca de explicações racionais, naturais e fundamentadas na argumentação. Ao explicar o raio como descarga elétrica, o colega substitui a narrativa sobrenatural (mythos) por uma explicação racional e natural (logos), que é a essência da passagem do mito à filosofia."
     },
     {
         enunciado: "Platão e Aristóteles afirmavam que a filosofia nasce da admiração (thaumazein). Imagine a seguinte situação: uma criança pergunta pela primeira vez 'por que o céu é azul?' e não se satisfaz com a resposta 'porque é assim mesmo', insistindo em buscar uma explicação. Segundo a concepção grega, essa atitude da criança:",
         alternativas: {
-            a: "É irrelevante para a filosofia, pois apenas filósofos profissionais podem filosofar.",
+            a: "É irrelevante para a filosofia, pois apenas filósofos profissionais com formação específica podem exercer genuinamente a atitude filosófica.",
             b: "Representa o thaumazein: o espanto diante do mundo que impulsiona o ser humano a questionar, buscar causas e não se contentar com explicações simplistas ou tradicionais.",
-            c: "É apenas curiosidade infantil sem valor filosófico, pois a filosofia exige conhecimento prévio de lógica formal.",
-            d: "Demonstra desrespeito às tradições, pois questionar o que 'sempre foi assim' é contrário ao espírito filosófico.",
-            e: "É idêntica à atitude religiosa, pois ambas buscam respostas absolutas e inquestionáveis."
+            c: "É apenas curiosidade infantil sem valor filosófico, pois a filosofia exige conhecimento prévio de lógica formal, algo que crianças ainda não dominam.",
+            d: "Demonstra desrespeito às tradições, pois questionar o que 'sempre foi assim' contraria o espírito conservador que caracteriza a verdadeira filosofia grega.",
+            e: "É idêntica à atitude religiosa, pois ambas as posturas buscam respostas absolutas, inquestionáveis e fundadas em verdades eternas sobre o mundo."
         },
         correta: "b",
         explicacao: "Para os gregos, a filosofia nasce do espanto (thaumazein) diante do mundo — a recusa em aceitar passivamente o que parece óbvio. A criança que insiste em perguntar 'por quê?' está exercendo exatamente essa atitude filosófica fundamental: não se contentar com o dado, buscar explicações, questionar o que parece natural."
@@ -82,11 +82,11 @@ const dadosAulas = {
     {
         enunciado: "Em um debate escolar, um aluno afirma: 'A filosofia não serve para nada, pois não produz resultados práticos como a ciência e a tecnologia.' Considerando as características do pensamento filosófico estudadas na aula, qual seria a resposta mais adequada?",
         alternativas: {
-            a: "O aluno está correto: a filosofia é inútil, pois não produz conhecimento verificável nem tecnologias.",
-            b: "A filosofia tem a mesma função da ciência experimental: produzir tecnologias e resultados mensuráveis em laboratório.",
-            c: "A filosofia exerce uma função crítica e reflexiva fundamental: questiona pressupostos, analisa argumentos, examina valores e conceitos (justiça, liberdade, verdade) que a ciência e a tecnologia não podem fundamentar por si mesmas. Sua utilidade não é técnica, mas formativa para a cidadania e o pensamento autônomo.",
-            d: "A filosofia serve apenas para preservar tradições religiosas e culturais.",
-            e: "A filosofia é uma forma de entretenimento intelectual sem qualquer aplicação prática ou teórica."
+            a: "O aluno está correto: a filosofia é inútil, pois não produz conhecimento verificável nem tecnologias, permanecendo restrita a debates abstratos sem aplicação no mundo real.",
+            b: "A filosofia tem a mesma função da ciência experimental: produzir tecnologias e resultados mensuráveis em laboratório, mas de forma mais conceitual e menos aplicada.",
+            c: "A filosofia exerce uma função crítica e reflexiva fundamental: questiona pressupostos, analisa argumentos, examina valores e conceitos (justiça, liberdade, verdade) que a ciência e a tecnologia não podem fundamentar por si mesmas.",
+            d: "A filosofia serve principalmente para preservar tradições religiosas e culturais, funcionando como guardiã dos costumes contra os avanços disruptivos da ciência moderna.",
+            e: "A filosofia é uma forma de entretenimento intelectual válido apenas para elites culturais, sem qualquer aplicação prática ou teórica para a maioria da população."
         },
         correta: "c",
         explicacao: "A filosofia não compete com a ciência em produzir tecnologias, mas exerce uma função insubstituível: o exame crítico dos fundamentos. Questões como 'O que é justo?', 'Quais os limites éticos da tecnologia?', 'O que é verdade?' não podem ser respondidas apenas empiricamente. A filosofia forma o pensamento autônomo e a cidadania crítica."
@@ -94,11 +94,11 @@ const dadosAulas = {
     {
         enunciado: "Heráclito afirmava que 'tudo flui' (panta rhei) e que não podemos entrar duas vezes no mesmo rio. Parmênides, por outro lado, defendia que o Ser é uno, imutável e eterno. Um estudante lê esses dois filósofos pré-socráticos e conclui que eles estão falando sobre assuntos completamente diferentes. Essa conclusão está:",
         alternativas: {
-            a: "Correta, pois Heráclito fala sobre rios e Parmênides fala sobre seres vivos.",
+            a: "Correta, pois Heráclito fala sobre rios e fenômenos naturais concretos, enquanto Parmênides trata exclusivamente de questões lógicas abstratas, sem relação com o mundo físico.",
             b: "Incorreta: ambos investigam o mesmo problema fundamental da filosofia nascente — a natureza (physis) e o princípio (arché) de todas as coisas — mas chegam a respostas opostas: Heráclito defende a mudança constante; Parmênides defende a permanência do Ser.",
-            c: "Correta, pois Heráclito era poeta e Parmênides era matemático, então não tinham interesses em comum.",
-            d: "Incorreta, pois ambos concordavam que a água era o princípio de tudo.",
-            e: "Correta, pois apenas Tales de Mileto se ocupava do problema da physis."
+            c: "Correta, pois Heráclito era poeta e tratava de temas literários, enquanto Parmênides era matemático e se ocupava apenas de problemas geométricos e aritméticos.",
+            d: "Incorreta, pois ambos concordavam plenamente que a água era o princípio de todas as coisas, diferindo apenas na forma literária de apresentar a mesma teoria.",
+            e: "Correta, pois apenas Tales de Mileto se ocupava do problema da physis, enquanto Heráclito e Parmênides se dedicavam exclusivamente à ética e à política."
         },
         correta: "b",
         explicacao: "Heráclito e Parmênides debatem o mesmo problema central dos pré-socráticos: a natureza última da realidade (physis). Heráclito responde que tudo é mudança e devir (fogo, fluxo); Parmênides responde que o verdadeiro Ser é imutável e que a mudança é ilusão. A oposição entre eles é uma das mais fundamentais da história da filosofia."
@@ -136,15 +136,15 @@ const dadosAulas = {
                 { titulo: "Mito da Caverna", link: "https://pt.wikipedia.org/wiki/Alegoria_da_caverna", descricao: "Wikipedia - A famosa alegoria platônica" },
                 { titulo: "A Escola de Atenas", link: "https://pt.wikipedia.org/wiki/A_Escola_de_Atenas", descricao: "Wikipedia - A pintura de Rafael Sanzio" }
             ],
-            quiz: [
+           quiz: [
     {
         enunciado: "Na pintura 'A Escola de Atenas', de Rafael, Platão aparece apontando para o alto, enquanto Aristóteles estende a mão para frente, em direção ao chão. Um estudante de arte pergunta ao professor: 'Por que Rafael pintou os dois filósofos com gestos tão diferentes?' A resposta que melhor reflete a diferença filosófica entre os dois pensadores é:",
         alternativas: {
-            a: "Rafael pintou Platão apontando para cima porque ele gostava de astronomia, e Aristóteles apontando para frente porque gostava de geografia.",
+            a: "Rafael pintou Platão apontando para cima porque ele se dedicava à astronomia, e Aristóteles apontando para frente porque era geógrafo; os gestos indicam suas áreas de especialização científica.",
             b: "Platão aponta para o alto porque sua filosofia busca a verdade no Mundo das Ideias (inteligível, transcendente); Aristóteles aponta para frente porque busca o conhecimento na experiência do mundo sensível, nas coisas concretas que nos cercam.",
-            c: "Os gestos são apenas decorativos, sem qualquer significado filosófico.",
-            d: "Platão aponta para o céu porque era religioso, e Aristóteles aponta para a terra porque era ateu.",
-            e: "Rafael quis mostrar que Platão era mais alto que Aristóteles."
+            c: "Os gestos são apenas composições decorativas da pintura renascentista, sem qualquer significado filosófico profundo; Rafael buscou apenas equilíbrio estético na composição.",
+            d: "Platão aponta para o céu porque defendia uma religião monoteísta platônica, e Aristóteles aponta para a terra porque era ateu convicto e materialista radical.",
+            e: "Rafael quis mostrar a diferença de altura física entre os dois filósofos, já que Platão era historicamente mais alto que Aristóteles segundo relatos antigos."
         },
         correta: "b",
         explicacao: "Os gestos na pintura simbolizam a diferença central: Platão (racionalista) acredita que a verdadeira realidade está no Mundo das Ideias, acessível apenas pela razão (por isso aponta para cima). Aristóteles (mais empirista) busca o conhecimento na observação do mundo sensível, nas formas presentes nas próprias coisas (por isso aponta para frente/para baixo)."
@@ -152,47 +152,47 @@ const dadosAulas = {
     {
         enunciado: "Um aluno está estudando geometria e percebe que nenhum triângulo desenhado no papel é perfeitamente triangular — sempre há pequenas imperfeições. No entanto, ele compreende perfeitamente o conceito de 'triângulo perfeito' (três lados, três ângulos internos somando 180°). Segundo a Teoria das Ideias de Platão, essa situação ilustra:",
         alternativas: {
-            a: "Que a geometria é uma ciência inútil, pois nenhum triângulo real existe.",
-            b: "Que o triângulo perfeito existe apenas no Mundo Sensível, e os triângulos desenhados são cópias no Mundo das Ideias.",
-            c: "A distinção platônica entre Mundo Sensível (os triângulos imperfeitos desenhados, percebidos pelos sentidos) e Mundo Inteligível (a Ideia perfeita de Triângulo, acessível apenas pela razão).",
-            d: "Que a matemática é uma invenção recente sem relação com a filosofia grega.",
-            e: "Que Platão considerava a geometria uma ciência inferior à poesia."
+            a: "Que a geometria é uma ciência inútil, pois nenhum triângulo real existe no mundo sensível, tornando desnecessário o estudo dessa disciplina.",
+            b: "A distinção platônica entre Mundo Sensível (os triângulos imperfeitos desenhados, percebidos pelos sentidos) e Mundo Inteligível (a Ideia perfeita de Triângulo, acessível apenas pela razão).",
+            c: "Que o triângulo perfeito existe apenas no Mundo Sensível, e os triângulos desenhados no papel são cópias mais elaboradas existentes no Mundo das Ideias.",
+            d: "Que a matemática é uma invenção moderna sem relação com a filosofia grega, sendo Platão alheio a qualquer debate sobre formas geométricas.",
+            e: "Que Platão considerava a geometria uma ciência inferior à poesia, pois as figuras geométricas não possuíam Ideias correspondentes no Mundo Inteligível."
         },
-        correta: "c",
+        correta: "b",
         explicacao: "Para Platão, os objetos sensíveis (triângulos desenhados) são cópias imperfeitas das Ideias perfeitas (a Forma/Ideia de Triângulo) que existem no Mundo Inteligível. O triângulo perfeito só é acessível pela razão, não pelos sentidos. Isso ilustra a dualidade platônica entre Mundo Sensível (imperfeito, mutável) e Mundo Inteligível (perfeito, eterno)."
     },
     {
         enunciado: "No Mito da Caverna, Platão descreve prisioneiros acorrentados desde a infância, que só veem sombras projetadas na parede. Um deles se liberta, sai da caverna e contempla o Sol. Ao voltar para contar aos outros, é ridicularizado. Em uma discussão em sala, um aluno diz: 'Isso é só uma historinha antiga, não tem nada a ver com a gente hoje.' Qual situação contemporânea melhor ilustraria a alegoria da caverna?",
         alternativas: {
-            a: "Uma pessoa que assiste apenas a um único canal de notícias, aceita tudo como verdade absoluta e ridiculariza quem apresenta informações diferentes ou questiona o que ela acredita.",
-            b: "Um estudante que lê muitos livros de filosofia e debate com os colegas.",
-            c: "Um cientista que publica artigos em revistas acadêmicas.",
-            d: "Uma pessoa que pratica esportes ao ar livre todos os dias.",
-            e: "Um artista que pinta quadros realistas."
+            a: "Uma pessoa que lê muitos livros de diferentes perspectivas, debate com os colegas e constantemente questiona suas próprias crenças e convicções.",
+            b: "Uma pessoa que assiste apenas a um único canal de notícias, aceita tudo como verdade absoluta e ridiculariza quem apresenta informações diferentes ou questiona o que ela acredita.",
+            c: "Um cientista que publica artigos em revistas acadêmicas e participa de congressos internacionais sobre sua área de pesquisa.",
+            d: "Uma pessoa que pratica esportes ao ar livre todos os dias e mantém uma rotina saudável de exercícios físicos e alimentação balanceada.",
+            e: "Um artista que pinta quadros realistas inspirados em paisagens naturais e objetos do cotidiano, buscando representar fielmente a realidade visível."
         },
-        correta: "a",
+        correta: "b",
         explicacao: "O Mito da Caverna é uma alegoria sobre o conhecimento e a educação: os prisioneiros somos nós, presos às aparências e opiniões não questionadas (sombras). Libertar-se é exercer o pensamento crítico, buscar a verdade (o Sol/Bem). A pessoa presa a uma única fonte de informação sem questionamento ilustra perfeitamente o prisioneiro que confunde sombras com realidade."
     },
     {
         enunciado: "Aristóteles discordou de Platão ao afirmar que a forma (morphe) não existe separada das coisas, mas nelas mesmas. Para explicar isso, ele usa o exemplo de uma estátua: o bronze é a matéria (hyle) e o formato da estátua é a forma (morphe) — não existe 'forma de estátua' flutuando em outro mundo. Essa teoria é chamada de:",
         alternativas: {
-            a: "Teoria das Ideias, pois defende que as formas existem em um mundo separado.",
-            b: "Hilemorfismo: a composição indissociável de matéria (hyle) e forma (morphe) em cada ser concreto.",
-            c: "Dualismo cartesiano, pois separa mente e corpo.",
-            d: "Atomismo, pois reduz tudo a partículas indivisíveis.",
-            e: "Idealismo absoluto, pois nega a existência da matéria."
+            a: "Teoria das Ideias, pois defende que as formas existem em um mundo separado e transcendente, como propunha Platão originalmente.",
+            b: "Dualismo cartesiano, pois separa mente e corpo como duas substâncias distintas e irredutíveis, uma espiritual e outra material.",
+            c: "Hilemorfismo: a composição indissociável de matéria (hyle) e forma (morphe) em cada ser concreto, unidas na própria coisa.",
+            d: "Atomismo, pois reduz toda a realidade a partículas indivisíveis (átomos) que se combinam de diferentes maneiras no vácuo.",
+            e: "Idealismo absoluto, pois nega a existência da matéria e afirma que apenas as formas puras e imateriais constituem a verdadeira realidade."
         },
-        correta: "b",
+        correta: "c",
         explicacao: "O hilemorfismo aristotélico afirma que todo ser é composto de matéria (hyle - o potencial, o 'de quê' é feito) e forma (morphe - o que atualiza esse potencial, o 'quê' é). Diferente de Platão, Aristóteles não separa a forma em outro mundo: ela está na própria coisa. A estátua não existe sem o bronze, e o bronze sem forma não é estátua."
     },
     {
         enunciado: "Uma professora propõe o seguinte exercício: 'Observem esta folha de árvore. Platão diria que ela é uma cópia imperfeita da Ideia de Folha. Aristóteles diria que nela já estão unidas matéria e forma.' Com base nessa distinção, é correto afirmar que a principal divergência entre Platão e Aristóteles no campo do conhecimento é:",
         alternativas: {
-            a: "Platão valoriza a observação empírica; Aristóteles valoriza apenas a razão pura.",
+            a: "Platão valoriza a observação empírica como fonte única do conhecimento; Aristóteles valoriza apenas a razão pura e desconfia dos sentidos enganosos.",
             b: "Platão é racionalista (o conhecimento verdadeiro vem da razão, do Mundo das Ideias); Aristóteles valoriza mais a experiência sensível e a observação como ponto de partida do conhecimento.",
-            c: "Ambos concordam plenamente; a diferença é apenas de vocabulário.",
-            d: "Platão nega a existência de qualquer conhecimento; Aristóteles afirma que tudo é conhecido pela fé.",
-            e: "Platão e Aristóteles defendem que o conhecimento vem exclusivamente dos sentidos."
+            c: "Ambos concordam plenamente em todas as questões epistemológicas; a diferença é apenas de vocabulário filosófico, não de conteúdo conceitual.",
+            d: "Platão nega a existência de qualquer conhecimento verdadeiro; Aristóteles afirma que todo conhecimento verdadeiro vem da fé religiosa e da revelação divina.",
+            e: "Platão e Aristóteles defendem que o conhecimento vem exclusivamente dos sentidos, sendo ambos empiristas radicais em suas teorias epistemológicas."
         },
         correta: "b",
         explicacao: "A divergência central é epistemológica: Platão (racionalista) acredita que o conhecimento verdadeiro vem da razão e contempla as Ideias eternas, sendo os sentidos enganosos. Aristóteles, embora não rejeite a razão, parte da experiência sensível e da observação dos seres concretos para chegar ao conhecimento. Essa oposição percorre toda a história da filosofia."
@@ -238,35 +238,35 @@ const dadosAulas = {
     {
         enunciado: "Em um museu, um visitante observa um urinol de porcelana assinado por Marcel Duchamp (a obra 'A Fonte', 1917) e diz indignado: 'Isso não é arte! É um objeto de banheiro!' Outro visitante responde: 'É arte porque o artista o escolheu, o deslocou de contexto e provocou uma reflexão sobre o que consideramos arte.' Esse diálogo ilustra um debate central da Estética filosófica, que é:",
         alternativas: {
-            a: "A questão de saber se a arte se define apenas pela beleza do objeto ou também pela produção de sentido, provocação e reflexão que ele gera.",
-            b: "A questão de saber se museus devem cobrar ingresso.",
-            c: "A questão de saber se objetos industriais são superiores aos artesanais.",
-            d: "A questão de saber se a porcelana é um material adequado para banheiros.",
-            e: "A questão de saber se Duchamp era um bom artesão."
+            a: "A questão de saber se museus devem cobrar ingresso alto para obras polêmicas e controversas, gerando debates sobre o acesso democrático à cultura.",
+            b: "A questão de saber se a arte se define apenas pela beleza do objeto ou também pela produção de sentido, provocação e reflexão que ele gera no espectador.",
+            c: "A questão de saber se objetos industriais de uso cotidiano são superiores artisticamente aos artesanais feitos manualmente por artistas tradicionais.",
+            d: "A questão de saber se a porcelana é um material adequado para banheiros públicos, considerando sua resistência e facilidade de limpeza.",
+            e: "A questão de saber se Duchamp era um bom artesão ou apenas um provocador que não dominava técnicas tradicionais de escultura."
         },
-        correta: "a",
+        correta: "b",
         explicacao: "O debate sobre 'A Fonte' de Duchamp é paradigmático na Estética: ele desloca um objeto comum para o contexto artístico, questionando os critérios tradicionais (beleza, técnica, originalidade). A Estética filosófica não se limita a classificar o 'bonito', mas investiga como a arte produz significados, provoca estranhamento e desafia convenções."
     },
     {
         enunciado: "Um estudante assiste a uma tragédia grega (como Édipo Rei de Sófocles) e, ao final, sente-se emocionalmente aliviado, como se tivesse 'descarregado' tensões. Ele comenta com o colega: 'É estranho, a peça é triste e angustiante, mas saí me sentindo mais leve.' Segundo Aristóteles, esse efeito da tragédia sobre o espectador é chamado de:",
         alternativas: {
-            a: "Mimese, pois o espectador imita os personagens.",
-            b: "Aura, pois a obra tem uma presença única.",
-            c: "Catarse: a purificação ou purgação das emoções (piedade e terror) experimentadas pelo espectador através da experiência estética da tragédia.",
-            d: "Sublime, pois a obra é grandiosa e terrível.",
-            e: "Alienação, pois o espectador se desconecta da realidade."
+            a: "Mimese, pois o espectador imita os personagens ao longo da peça, incorporando seus gestos e emoções de forma inconsciente e terapêutica.",
+            b: "Catarse: a purificação ou purgação das emoções (piedade e terror) experimentadas pelo espectador através da experiência estética da tragédia.",
+            c: "Aura, pois a obra trágica possui uma presença única e autêntica que não pode ser reproduzida nem experimentada fora do teatro grego.",
+            d: "Sublime, pois a obra é grandiosa e terrível ao mesmo tempo, provocando terror prazeroso no espectador que contempla sua magnitude.",
+            e: "Alienação, pois o espectador se desconecta da realidade durante a peça, vivendo temporariamente as emoções dos personagens em fuga."
         },
-        correta: "c",
+        correta: "b",
         explicacao: "Para Aristóteles (Poética), a tragédia provoca catarse: ao vivenciar piedade e terror de forma mediada pela arte, o espectador purifica (purge) essas emoções, saindo aliviado. A arte tem assim função terapêutica e cognitiva — não é apenas entretenimento, mas uma forma de elaborar emocionalmente a condição humana."
     },
     {
         enunciado: "Walter Benjamin argumentou que, na era da reprodutibilidade técnica (fotografia, cinema, impressão em massa), a obra de arte perde sua 'aura'. Um exemplo contemporâneo: a Mona Lisa original está no Louvre, atrás de vidro blindado, cercada de visitantes; mas sua imagem aparece em canecas, camisetas, memes e telas de celular. Segundo Benjamin, o que se perde quando a obra é reproduzida infinitamente?",
         alternativas: {
-            a: "O valor financeiro da obra, que diminui com as cópias.",
+            a: "O valor financeiro da obra, que diminui progressivamente conforme o número de cópias disponíveis no mercado aumenta.",
             b: "A 'aura': a singularidade, autenticidade e presença única da obra original, seu 'aqui e agora' histórico que não pode ser reproduzido.",
-            c: "A beleza da imagem, que fica borrada nas reproduções.",
-            d: "O nome do artista, que é esquecido.",
-            e: "A capacidade de pintar, que se torna obsoleta."
+            c: "A beleza da imagem, que fica progressivamente borrada e distorcida conforme as reproduções se multiplicam em diferentes formatos.",
+            d: "O nome do artista, que é gradualmente esquecido pelo público conforme a imagem se torna onipresente e desvinculada de sua autoria.",
+            e: "A capacidade de pintar, que se torna obsoleta na era técnica, pois qualquer pessoa pode reproduzir imagens sem habilidade artística."
         },
         correta: "b",
         explicacao: "Para Benjamin, a 'aura' é a existência única da obra: seu 'aqui e agora', sua autenticidade, sua presença histórica insubstituível. Quando a imagem é reproduzida em massa, perde-se essa singularidade. A Mona Lisa no Louvre tem uma presença que nenhuma reprodução digital pode capturar inteiramente."
@@ -274,23 +274,23 @@ const dadosAulas = {
     {
         enunciado: "Uma aluna de Filosofia visita uma exposição de arte contemporânea onde uma instalação mostra sapatos usados de trabalhadores rurais. Ela inicialmente pensa: 'Isso é feio, não é arte.' Mas, ao ler a descrição e refletir sobre as histórias de trabalho e sofrimento que os sapatos evocam, muda de opinião e se emociona. Esse processo de mudança de percepção ilustra:",
         alternativas: {
-            a: "Que a arte é sempre feia e desagradável.",
-            b: "Que a experiência estética pode transformar nossa percepção: a arte produz significados, provoca estranhamento e nos convida a ver o mundo de novas perspectivas, indo além da mera classificação de 'bonito' ou 'feio'.",
-            c: "Que a aluna não entende de arte e deveria ter mantido sua primeira opinião.",
-            d: "Que sapatos são sempre objetos artísticos.",
-            e: "Que a filosofia da arte é irrelevante para a apreciação estética."
+            a: "Que a arte é sempre feia e desagradável, buscando intencionalmente provocar rejeição inicial no espectador para depois conquistar sua admiração.",
+            b: "Que a aluna não entende de arte e deveria ter mantido sua primeira opinião, que era mais autêntica e menos influenciada por explicações externas.",
+            c: "Que a experiência estética pode transformar nossa percepção: a arte produz significados, provoca estranhamento e nos convida a ver o mundo de novas perspectivas, indo além da mera classificação de 'bonito' ou 'feio'.",
+            d: "Que sapatos são sempre objetos artísticos por natureza, independentemente de qualquer contexto ou intenção do artista que os expõe.",
+            e: "Que a filosofia da arte é irrelevante para a apreciação estética, pois as obras devem ser julgadas apenas pela primeira impressão sensorial imediata."
         },
-        correta: "b",
+        correta: "c",
         explicacao: "A experiência estética não se reduz ao prazer visual imediato. A arte pode provocar estranhamento, ressignificar objetos, evocar memórias e emoções. O processo da aluna — de rejeição inicial à compreensão e emoção — mostra como a reflexão filosófica e a experiência estética se complementam na produção de significados."
     },
     {
         enunciado: "Platão criticava a arte como mimese (imitação) porque, segundo ele, o artista apenas copia o Mundo Sensível, que já é cópia do Mundo das Ideias — o artista estaria 'três graus afastado da verdade'. Aristóteles, porém, reabilitou a mimese. Para Aristóteles, a imitação artística:",
         alternativas: {
-            a: "É inútil e deve ser banida da cidade, como defendia Platão.",
+            a: "É inútil e deve ser banida da cidade ideal, como defendia Platão, pois apenas reproduz aparências sem acrescentar conhecimento verdadeiro.",
             b: "É uma forma de conhecimento: ao imitar ações humanas, a arte (especialmente a tragédia) permite compreender o universal, o possível e o necessário, não apenas o particular.",
-            c: "É idêntica à ciência, pois ambas produzem leis universais da natureza.",
-            d: "É inferior à cópia mecânica, pois o artista é menos preciso que a máquina.",
-            e: "Deve imitar apenas a natureza, nunca as ações humanas."
+            c: "É idêntica à ciência empírica, pois ambas produzem leis universais da natureza através da observação sistemática dos fenômenos.",
+            d: "É inferior à cópia mecânica, pois o artista é menos preciso que a máquina fotográfica, que reproduz a realidade com fidelidade absoluta.",
+            e: "Deve imitar apenas a natureza em seus aspectos mais belos, nunca as ações humanas, que são imperfeitas e indignas de representação artística."
         },
         correta: "b",
         explicacao: "Aristóteles reabilita a mimese: ao imitar ações humanas, a arte não é mera cópia, mas uma forma de conhecimento que revela o universal (o que pode acontecer, o que é verossímil e necessário). A tragédia, ao imitar ações elevadas, nos faz compreender aspectos universais da condição humana — algo que a mera cópia não faria."
@@ -332,35 +332,35 @@ const dadosAulas = {
     {
         enunciado: "Em uma empresa, um funcionário é humilhado publicamente pelo chefe, que o chama de 'inútil' e o obriga a fazer tarefas degradantes como punição. Um colega intervém dizendo: 'Você não pode tratá-lo assim, ele é um ser humano e merece respeito independentemente de qualquer erro.' Do ponto de vista da ética kantiana, a fala do colega se fundamenta no princípio de que:",
         alternativas: {
-            a: "O funcionário deve ser respeitado apenas se for produtivo para a empresa.",
-            b: "Todo ser humano possui dignidade (valor absoluto e incondicional) e deve ser tratado sempre como fim em si mesmo, nunca apenas como meio ou instrumento.",
-            c: "O respeito depende da hierarquia: o chefe merece mais respeito que o subordinado.",
-            d: "A humilhação é aceitável se servir para motivar o funcionário a melhorar.",
-            e: "O respeito é um sentimento subjetivo, sem qualquer fundamento racional."
+            a: "O funcionário deve ser respeitado apenas se for produtivo para a empresa e contribuir efetivamente para os resultados financeiros da organização.",
+            b: "O respeito depende da hierarquia organizacional: o chefe merece mais respeito que o subordinado em virtude de sua posição de autoridade.",
+            c: "Todo ser humano possui dignidade (valor absoluto e incondicional) e deve ser tratado sempre como fim em si mesmo, nunca apenas como meio ou instrumento.",
+            d: "A humilhação é aceitável se servir para motivar o funcionário a melhorar seu desempenho e corrigir seus erros profissionais.",
+            e: "O respeito é um sentimento subjetivo, sem qualquer fundamento racional, variando conforme a cultura e as preferências individuais."
         },
-        correta: "b",
+        correta: "c",
         explicacao: "Para Kant, todo ser racional possui dignidade — um valor absoluto que não pode ser substituído nem condicionado. O Imperativo Categórico exige tratar a humanidade sempre como fim, nunca apenas como meio. Humilhar alguém é tratá-lo como objeto/instrumento, violando sua dignidade intrínseca."
     },
     {
         enunciado: "Pico della Mirandola, no 'Discurso sobre a Dignidade do Homem' (1486), coloca na boca de Deus as seguintes palavras dirigidas a Adão: 'Não te dei um lugar determinado, nem um aspecto próprio, para que tu mesmo, conforme tua vontade, obtenhas e conserves o lugar e a forma que desejares.' Um estudante interpreta isso como uma defesa do determinismo biológico. Essa interpretação está:",
         alternativas: {
-            a: "Correta, pois Pico defende que o ser humano é determinado pela natureza.",
-            b: "Incorreta: Pico defende exatamente o oposto — o livre-arbítrio. O ser humano não tem natureza fixa; é 'artífice de si mesmo', podendo elevar-se ou degenerar por suas próprias escolhas.",
-            c: "Correta, pois o texto fala de 'lugar determinado'.",
-            d: "Incorreta, pois Pico defende que apenas os anjos têm liberdade.",
-            e: "Correta, pois Adão representa a submissão total à vontade divina."
+            a: "Correta, pois Pico defende que o ser humano é determinado pela natureza e pelos instintos animais, sem qualquer margem para escolha livre.",
+            b: "Correta, pois o texto fala explicitamente de 'lugar determinado', o que indica que Pico aceita a ideia de destino fixo para cada criatura.",
+            c: "Incorreta: Pico defende exatamente o oposto — o livre-arbítrio. O ser humano não tem natureza fixa; é 'artífice de si mesmo', podendo elevar-se ou degenerar por suas próprias escolhas.",
+            d: "Incorreta, pois Pico defende que apenas os anjos têm liberdade, enquanto os seres humanos são necessariamente determinados por Deus.",
+            e: "Correta, pois Adão representa a submissão total à vontade divina, sem qualquer autonomia para escolher seu próprio destino."
         },
-        correta: "b",
+        correta: "c",
         explicacao: "Pico della Mirandola é o pensador da liberdade humana por excelência no Renascimento. Ao dizer que Adão não tem lugar nem forma determinados, Pico afirma que o ser humano é o único ser sem essência fixa: ele se constrói por suas escolhas. Isso é o livre-arbítrio, não o determinismo."
     },
     {
         enunciado: "Kant formula o Imperativo Categórico de diversas maneiras. Uma delas é: 'Age apenas segundo uma máxima tal que possas ao mesmo tempo querer que ela se torne lei universal.' Um aluno aplica esse teste à seguinte situação: 'Posso mentir para me livrar de um compromisso desagradável?' Aplicando o Imperativo Categórico, a conclusão é:",
         alternativas: {
-            a: "Sim, pode mentir, pois é uma mentira pequena e inofensiva.",
+            a: "Sim, pode mentir, pois é uma mentira pequena e inofensiva que não prejudica ninguém diretamente e serve apenas a um interesse pessoal legítimo.",
             b: "Não: se a mentira se tornasse lei universal (todos mentissem sempre), a própria possibilidade de comunicação e confiança se destruiria, tornando a mentira impossível. Logo, mentir não pode ser universalizado.",
-            c: "Sim, desde que ninguém descubra.",
-            d: "Não, mas apenas porque a religião proíbe a mentira.",
-            e: "Sim, pois a verdade é relativa e depende do contexto."
+            c: "Sim, desde que ninguém descubra a mentira, pois o Imperativo Categórico só se aplica a ações públicas e não a comportamentos privados sem consequências sociais.",
+            d: "Não, mas apenas porque a religião cristã proíbe a mentira, sendo essa a fundamentação moral última do Imperativo Categórico kantiano.",
+            e: "Sim, pois a verdade é relativa e depende do contexto; o Imperativo Categórico deve ser aplicado de forma flexível conforme as circunstâncias específicas."
         },
         correta: "b",
         explicacao: "O teste da universalização é o núcleo do Imperativo Categórico: uma ação é moralmente válida apenas se sua máxima puder ser universalizada sem contradição. Se todos mentissem, a confiança (condição da comunicação) se destruiria, tornando a própria mentira impossível. Logo, mentir falha no teste da universalização."
@@ -368,11 +368,11 @@ const dadosAulas = {
     {
         enunciado: "A Declaração Universal dos Direitos Humanos (1948) afirma em seu artigo 1°: 'Todos os seres humanos nascem livres e iguais em dignidade e direitos.' Um filósofo pergunta: 'Qual é o fundamento filosófico dessa dignidade universal?' Considerando as contribuições de Kant e Pico della Mirandola estudadas na aula, a resposta mais adequada é:",
         alternativas: {
-            a: "A dignidade se fundamenta na força física e na capacidade de sobrevivência.",
-            b: "A dignidade se fundamenta na riqueza material: quem tem mais dinheiro tem mais dignidade.",
+            a: "A dignidade se fundamenta na força física e na capacidade de sobrevivência, sendo maior quanto mais apto biologicamente for o indivíduo.",
+            b: "A dignidade se fundamenta na riqueza material: quem tem mais dinheiro tem mais dignidade, pois pode exercer seus direitos com mais efetividade.",
             c: "A dignidade se fundamenta na racionalidade e na autonomia (Kant) e no livre-arbítrio (Pico): todo ser humano, por ser capaz de razão, escolha moral e autodeterminação, possui valor absoluto e direitos inalienáveis.",
-            d: "A dignidade é um conceito religioso, sem qualquer fundamento filosófico.",
-            e: "A dignidade depende da nacionalidade: apenas cidadãos de países desenvolvidos possuem dignidade plena."
+            d: "A dignidade é um conceito exclusivamente religioso, sem qualquer fundamento filosófico racional, dependendo apenas da fé em Deus para existir.",
+            e: "A dignidade depende da nacionalidade: apenas cidadãos de países desenvolvidos ocidentais possuem dignidade plena reconhecida internacionalmente."
         },
         correta: "c",
         explicacao: "A dignidade humana, fundamento dos Direitos Humanos, tem base filosófica na racionalidade e autonomia (Kant: o ser humano como fim em si mesmo) e no livre-arbítrio (Pico: o ser humano como artífice de si mesmo). Esses fundamentos são universais e incondicionais, independentemente de qualquer condição particular."
@@ -380,11 +380,11 @@ const dadosAulas = {
     {
         enunciado: "Uma fábrica utiliza trabalhadores em condições degradantes, com jornadas de 16 horas, sem pausas e sem equipamentos de segurança, para maximizar o lucro. O dono justifica: 'Eles aceitaram o emprego livremente.' Segundo a ética kantiana, essa justificativa é:",
         alternativas: {
-            a: "Válida, pois se o trabalhador aceitou, não há violação de dignidade.",
+            a: "Válida, pois se o trabalhador aceitou voluntariamente, não há violação de dignidade, já que o consentimento formal legitima qualquer condição de trabalho.",
             b: "Inválida: mesmo com 'consentimento', condições degradantes tratam o ser humano como mero instrumento (meio) para o lucro, violando sua dignidade como fim em si mesmo. A dignidade é incondicional e não pode ser renunciada.",
-            c: "Válida, pois o mercado de trabalho é livre.",
-            d: "Inválida apenas se o salário for baixo; se for alto, as condições não importam.",
-            e: "Válida, pois o lucro é mais importante que a dignidade."
+            c: "Válida, pois o mercado de trabalho é livre e cada pessoa tem o direito de negociar suas condições conforme suas próprias conveniências e necessidades.",
+            d: "Inválida apenas se o salário for baixo; se for alto, as condições degradantes se tornam aceitáveis e eticamente justificáveis pela compensação financeira.",
+            e: "Válida, pois o lucro é mais importante que a dignidade no sistema capitalista, sendo essa a lógica racional e legítima da produção econômica moderna."
         },
         correta: "b",
         explicacao: "Para Kant, a dignidade é incondicional: não pode ser negociada, renunciada ou condicionada. Tratar alguém como mero instrumento (meio para lucro) — mesmo com 'consentimento' formal — viola o Imperativo Categórico. A dignidade não é um contrato; é um valor absoluto inerente a todo ser racional."
@@ -427,11 +427,11 @@ const dadosAulas = {
     {
         enunciado: "Em 1961, Hannah Arendt acompanhou o julgamento de Adolf Eichmann, burocrata nazista responsável pela logística do transporte de milhões de judeus para campos de extermínio. Arendt esperava encontrar um monstro sádico, mas encontrou um homem medíocre, que repetia: 'Eu apenas cumpria ordens.' Arendt cunhou a expressão 'banalidade do mal' para descrever esse fenômeno. Isso significa que:",
         alternativas: {
-            a: "O mal é banal porque não tem consequências graves.",
+            a: "O mal é banal porque não tem consequências graves na história humana, sendo apenas um fenômeno passageiro sem impacto duradouro nas sociedades.",
             b: "O mal radical pode ser cometido por pessoas comuns que renunciam ao pensamento crítico e à capacidade de julgamento moral, limitando-se a obedecer ordens burocraticamente.",
-            c: "Apenas pessoas com transtornos psicológicos são capazes de cometer o mal.",
-            d: "O mal é sempre praticado por líderes carismáticos e nunca por subordinados.",
-            e: "Eichmann era inocente, pois apenas cumpria ordens."
+            c: "Apenas pessoas com transtornos psicológicos diagnosticados são capazes de cometer o mal, pois a normalidade psíquica impede qualquer participação em atrocidades.",
+            d: "O mal é sempre praticado por líderes carismáticos e nunca por subordinados, que apenas executam tarefas sem qualquer responsabilidade moral individual.",
+            e: "Eichmann era inocente, pois apenas cumpria ordens de superiores hierárquicos, não podendo ser responsabilizado moralmente por atos que não decidiu praticar."
         },
         correta: "b",
         explicacao: "A 'banalidade do mal' não significa que o mal é trivial ou sem consequências, mas que ele pode ser perpetrado por pessoas comuns que param de pensar, de julgar e de se responsabilizar moralmente, reduzindo-se a engrenagens burocráticas. O perigo está na ausência de pensamento crítico, não na monstruosidade."
@@ -439,11 +439,11 @@ const dadosAulas = {
     {
         enunciado: "Em uma reunião de condomínio, os moradores discutem a instalação de câmeras de segurança. Um morador propõe: 'Devemos instalar câmeras em todos os corredores e contratar um vigia armado para controlar quem entra e sai.' Outro morador, inspirado em Arendt, responde: 'O verdadeiro poder desta comunidade não está na vigilância ou na força, mas na nossa capacidade de agir em conjunto e deliberar.' Segundo Arendt, a diferença entre poder e violência é:",
         alternativas: {
-            a: "Poder e violência são sinônimos.",
+            a: "Poder e violência são sinônimos, pois ambos implicam o uso de força para impor decisões e manter a ordem em qualquer contexto social.",
             b: "Poder surge da ação conjunta e do consenso entre cidadãos; violência é instrumental (uso de meios para dominar) e destrói o espaço político do diálogo.",
-            c: "Poder é sempre ilegítimo; violência é sempre legítima.",
-            d: "Poder pertence apenas ao Estado; violência pertence apenas aos cidadãos.",
-            e: "Poder é físico; violência é psicológica."
+            c: "Poder é sempre ilegítimo, pois implica dominação; violência é sempre legítima, pois é o único meio eficaz de resolver conflitos sociais.",
+            d: "Poder pertence apenas ao Estado através de suas instituições oficiais; violência pertence apenas aos cidadãos que agem fora das estruturas legais.",
+            e: "Poder é físico e se manifesta pela força muscular; violência é psicológica e se manifesta pela manipulação das mentes e das emoções."
         },
         correta: "b",
         explicacao: "Para Arendt, poder é a capacidade humana de agir em concerto (em conjunto), de deliberar e construir consenso. Violência é instrumental: usa meios (armas, força) para dominar. Quando um governo ou grupo recorre à violência, está admitindo que perdeu o poder verdadeiro (a capacidade de convencer e agir em conjunto)."
@@ -451,11 +451,11 @@ const dadosAulas = {
     {
         enunciado: "Um estudante lê sobre o totalitarismo nazista e pergunta: 'Como foi possível que um povo inteiro aceitasse o extermínio de milhões de pessoas?' Considerando a análise de Arendt sobre o totalitarismo, a resposta mais adequada seria:",
         alternativas: {
-            a: "O povo alemão era naturalmente cruel e violento.",
+            a: "O povo alemão era naturalmente cruel e violento, tendo características biológicas ou culturais que explicam sua participação no extermínio em massa.",
             b: "O totalitarismo destrói a esfera pública, isola os indivíduos, elimina o pensamento crítico e substitui a realidade por uma ideologia totalizante, tornando as pessoas incapazes de julgar moralmente.",
-            c: "Apenas Hitler era responsável; o povo não teve qualquer papel.",
-            d: "O totalitarismo é um fenômeno exclusivo do século XX e não pode se repetir.",
-            e: "O extermínio foi aceito porque a economia alemã estava em crise."
+            c: "Apenas Hitler era responsável pelo Holocausto; o povo alemão não teve qualquer papel ativo ou passivo nos acontecimentos, sendo mera vítima das circunstâncias.",
+            d: "O totalitarismo é um fenômeno exclusivo do século XX e não pode se repetir em nenhuma circunstância histórica futura, dada a evolução moral da humanidade.",
+            e: "O extermínio foi aceito exclusivamente porque a economia alemã estava em crise, sendo a causa econômica a única explicação possível para a aceitação popular."
         },
         correta: "b",
         explicacao: "Arendt analisa como o totalitarismo funciona: destrói o espaço público de debate, isola os indivíduos (atomização), substitui o pensamento crítico pela ideologia e usa o terror para eliminar a capacidade de julgamento. Não é uma questão de 'natureza cruel', mas de condições políticas que anulam a capacidade de pensar e julgar."
@@ -463,11 +463,11 @@ const dadosAulas = {
     {
         enunciado: "Em uma escola, um grupo de alunos organiza uma assembleia para discutir as regras do recreio. A diretora, irritada, cancela a assembleia e impõe novas regras por decreto, ameaçando punir quem discordar. Segundo a perspectiva arendtiana, a atitude da diretora:",
         alternativas: {
-            a: "É um exercício legítimo de poder, pois ela é a autoridade máxima.",
+            a: "É um exercício legítimo de poder, pois ela é a autoridade máxima da escola e tem o direito de tomar decisões unilaterais sem consultar a comunidade.",
             b: "É um ato de violência política: ao suprimir o espaço de diálogo e ação conjunta (a assembleia) e recorrer à imposição e ameaça, a diretora destrói o poder verdadeiro (a capacidade de agir em conjunto) e substitui a política pela dominação.",
-            c: "É indiferente, pois assembleias escolares não têm valor.",
-            d: "É um exemplo de democracia participativa.",
-            e: "É um exercício de poder no sentido arendtiano, pois a diretora age em conjunto com os professores."
+            c: "É indiferente do ponto de vista filosófico, pois assembleias escolares não têm valor político real e não constituem espaço legítimo de deliberação.",
+            d: "É um exemplo paradigmático de democracia participativa, pois a diretora age em nome do bem comum e toma decisões que beneficiam a maioria dos alunos.",
+            e: "É um exercício de poder no sentido arendtiano, pois a diretora age em conjunto com os professores e funcionários, formando um consenso coletivo legítimo."
         },
         correta: "b",
         explicacao: "Para Arendt, a política autêntica é o espaço de deliberação e ação conjunta. Ao cancelar a assembleia (espaço de diálogo) e impor regras por ameaça, a diretora recorre à violência (instrumental, coercitiva) e destrói o poder verdadeiro (a capacidade de agir em concerto). A violência é sinal de impotência política."
@@ -475,11 +475,11 @@ const dadosAulas = {
     {
         enunciado: "Arendt afirma que 'a manifestação da violência é sinal de impotência'. Um governo, enfrentando protestos populares massivos, responde com repressão policial brutal em vez de negociar. Segundo Arendt, essa reação indica que:",
         alternativas: {
-            a: "O governo está forte e no controle da situação.",
+            a: "O governo está forte e no controle da situação, demonstrando capacidade de impor sua vontade pela força contra os opositores políticos.",
             b: "O governo perdeu o poder (a capacidade de convencer e agir em conjunto com os cidadãos) e recorre à violência como último recurso, o que é sinal de sua impotência política.",
-            c: "A violência é a forma mais eficaz de governar.",
-            d: "Os protestos são ilegítimos por definição.",
-            e: "A repressão é um exercício legítimo de poder no sentido arendtiano."
+            c: "A violência é a forma mais eficaz de governar, pois impõe ordem rapidamente e elimina qualquer possibilidade de contestação popular.",
+            d: "Os protestos são ilegítimos por definição, pois qualquer manifestação contra o governo constituído é uma violação da ordem democrática.",
+            e: "A repressão é um exercício legítimo de poder no sentido arendtiano, pois o governo age em conjunto com as forças de segurança para manter a estabilidade social."
         },
         correta: "b",
         explicacao: "Para Arendt, poder é a capacidade de agir em conjunto e obter consenso. Quando um governo recorre à violência, está admitindo que perdeu essa capacidade — não consegue mais convencer, deliberar ou agir em concerto. A violência substitui o poder perdido, mas é sinal de fraqueza política, não de força."
@@ -522,11 +522,11 @@ const dadosAulas = {
     {
         enunciado: "Imagine uma ilha deserta onde dez náufragos chegam após um naufrágio. Não há leis, polícia nem governo. Após alguns dias, surgem conflitos pela comida e pelo abrigo. Um deles propõe: 'Vamos criar regras comuns e eleger um líder para garantir a ordem.' Segundo a teoria de Hobbes, essa situação ilustra:",
         alternativas: {
-            a: "O estado de felicidade natural, onde os homens vivem em harmonia.",
+            a: "O estado de felicidade natural, onde os homens vivem em harmonia até serem corrompidos pela instituição da propriedade privada e do governo.",
             b: "O estado de natureza hobbesiano: sem um poder comum que os mantenha em respeito, os indivíduos vivem em conflito ('guerra de todos contra todos'), e o contrato social surge para garantir segurança e ordem.",
-            c: "A democracia ateniense em sua forma pura.",
-            d: "O estado de natureza rousseauniano, onde o homem é naturalmente bom.",
-            e: "Uma situação irrelevante para a filosofia política."
+            c: "A democracia ateniense em sua forma pura, com participação direta de todos os cidadãos nas decisões coletivas, sem necessidade de representantes.",
+            d: "O estado de natureza rousseauniano, onde o homem é naturalmente bom e só se corrompe quando a sociedade introduz desigualdade e propriedade.",
+            e: "Uma situação irrelevante para a filosofia política, pois estados de natureza são ficções teóricas sem qualquer aplicação ao pensamento sobre a organização social."
         },
         correta: "b",
         explicacao: "Hobbes descreve o estado de natureza como uma situação de conflito permanente ('o homem é o lobo do homem') onde a vida é 'solitária, pobre, sórdida, brutal e curta'. Para escapar desse caos, os indivíduos celebram um contrato: cedem parte de sua liberdade a um soberano (Leviatã) em troca de segurança e ordem."
@@ -534,11 +534,11 @@ const dadosAulas = {
     {
         enunciado: "John Locke imagina o estado de natureza de forma diferente de Hobbes: os indivíduos já possuem direitos naturais (vida, liberdade, propriedade) e vivem relativamente em paz, mas sem um juiz imparcial para resolver disputas. O contrato social lockiano, portanto, cria o Estado com a função de:",
         alternativas: {
-            a: "Suprimir todos os direitos individuais em favor do soberano absoluto.",
+            a: "Suprimir todos os direitos individuais em favor do soberano absoluto, que concentrará todo o poder para garantir a ordem e a segurança coletiva.",
             b: "Proteger os direitos naturais já existentes (vida, liberdade, propriedade) e resolver disputas de forma imparcial; o Estado é limitado e, se violar esses direitos, o povo tem direito de resistência.",
-            c: "Eliminar a propriedade privada e instaurar a igualdade absoluta.",
-            d: "Garantir a supremacia da Igreja sobre o Estado.",
-            e: "Substituir a lei natural pela lei divina."
+            c: "Eliminar a propriedade privada e instaurar a igualdade absoluta entre todos os cidadãos, abolindo as diferenças econômicas que geram conflitos.",
+            d: "Garantir a supremacia da Igreja sobre o Estado, subordinando o poder político à autoridade religiosa e às leis divinas reveladas.",
+            e: "Substituir a lei natural pela lei divina, fazendo com que as normas humanas se baseiem exclusivamente em princípios religiosos e não na razão."
         },
         correta: "b",
         explicacao: "Para Locke, o Estado não cria os direitos naturais — eles já existem no estado de natureza. O contrato social cria o Estado como protetor desses direitos. Se o governo os viola, perde a legitimidade e o povo tem direito de resistência. Isso fundamenta o liberalismo político e a limitação do poder estatal."
@@ -546,11 +546,11 @@ const dadosAulas = {
     {
         enunciado: "Rousseau abre 'O Contrato Social' com a frase célebre: 'O homem nasce livre, e por toda a parte encontra-se a ferros.' Para Rousseau, o problema da sociedade não é a maldade natural do homem (como em Hobbes), mas a corrupção social. O contrato social rousseauniano propõe:",
         alternativas: {
-            a: "A submissão total a um monarca absoluto que garanta a ordem.",
+            a: "A submissão total a um monarca absoluto que garanta a ordem pela força, sacrificando todas as liberdades individuais em troca de segurança.",
             b: "A criação de uma comunidade política onde a soberania pertence ao povo e as leis expressam a vontade geral (o bem comum), não a soma dos interesses particulares.",
-            c: "A eliminação de qualquer forma de governo, instaurando a anarquia.",
-            d: "A divisão da sociedade em classes fixas e imutáveis.",
-            e: "A transferência de todos os direitos individuais para a Igreja."
+            c: "A eliminação de qualquer forma de governo, instaurando a anarquia como forma ideal de organização social baseada na bondade natural.",
+            d: "A divisão da sociedade em classes fixas e imutáveis, com cada grupo ocupando seu lugar natural segundo suas capacidades e virtudes.",
+            e: "A transferência de todos os direitos individuais para a Igreja, que governaria segundo a vontade divina revelada nas escrituras sagradas."
         },
         correta: "b",
         explicacao: "Rousseau critica a sociedade que corrompe o homem naturalmente bom. Seu contrato social propõe uma comunidade onde a soberania é popular e as leis expressam a vontade geral (o bem comum), não a 'vontade de todos' (soma de interesses particulares). A liberdade é recuperada pela participação coletiva na vida política."
@@ -558,11 +558,11 @@ const dadosAulas = {
     {
         enunciado: "Um debate em sala de aula apresenta a seguinte questão: 'Hobbes, Locke e Rousseau usam o mesmo conceito (contrato social) mas chegam a conclusões políticas diferentes.' Qual alternativa resume corretamente essas diferenças?",
         alternativas: {
-            a: "Hobbes defende a democracia; Locke defende o absolutismo; Rousseau defende a anarquia.",
+            a: "Hobbes defende a democracia direta; Locke defende o absolutismo monárquico; Rousseau defende a anarquia sem qualquer forma de governo constituído.",
             b: "Hobbes justifica o absolutismo (soberano total para garantir a ordem); Locke justifica o liberalismo (Estado limitado que protege direitos naturais); Rousseau justifica a democracia popular (soberania do povo e vontade geral).",
-            c: "Todos os três defendem o absolutismo monárquico.",
-            d: "Todos os três defendem a eliminação do Estado.",
-            e: "Hobbes e Rousseau concordam plenamente; Locke discorda de ambos."
+            c: "Todos os três defendem o absolutismo monárquico, diferindo apenas na intensidade do poder real e nas justificativas religiosas para a autoridade soberana.",
+            d: "Todos os três defendem a eliminação do Estado e a volta ao estado de natureza, divergindo apenas sobre as condições necessárias para essa transição.",
+            e: "Hobbes e Rousseau concordam plenamente sobre a natureza do contrato; Locke discorda de ambos ao defender exclusivamente a supremacia religiosa sobre o poder político."
         },
         correta: "b",
         explicacao: "Os três contratualistas partem do mesmo recurso teórico (o contrato social), mas divergem nas conclusões: Hobbes → absolutismo (medo exige soberano total); Locke → liberalismo (direitos naturais exigem Estado limitado); Rousseau → democracia (vontade geral exige soberania popular). A diferença está na concepção de estado de natureza e nos objetivos do contrato."
@@ -570,11 +570,11 @@ const dadosAulas = {
     {
         enunciado: "Em um país fictício, o governo começa a confiscar propriedades sem justificativa legal e a prender opositores sem julgamento. Os cidadãos, inspirados em Locke, organizam protestos e exigem a renúncia do governante. Segundo a teoria lockiana, essa reação é:",
         alternativas: {
-            a: "Ilegítima, pois o soberano é absoluto e não pode ser questionado.",
+            a: "Ilegítima, pois o soberano é absoluto e não pode ser questionado, tendo recebido seu poder diretamente de Deus por direito divino.",
             b: "Legítima: quando o governo viola os direitos naturais (vida, liberdade, propriedade) para os quais foi criado, perde a legitimidade e o povo tem o direito (e até o dever) de resistir e substituí-lo.",
-            c: "Ilegítima, pois a propriedade privada não é um direito natural.",
-            d: "Legítima apenas se aprovada pela Igreja.",
-            e: "Ilegítima, pois protestos são sempre atos de violência."
+            c: "Ilegítima, pois a propriedade privada não é um direito natural, mas uma convenção social que o governo pode revogar a qualquer momento.",
+            d: "Legítima apenas se aprovada pela Igreja, pois somente a autoridade religiosa pode autorizar a resistência contra governantes constituídos.",
+            e: "Ilegítima, pois protestos são sempre atos de violência que perturbam a ordem pública e devem ser reprimidos pelo Estado em nome da paz social."
         },
         correta: "b",
         explicacao: "Locke fundamenta o direito de resistência: o Estado existe para proteger direitos naturais preexistentes. Se os viola, rompe o contrato e perde legitimidade. O povo, então, tem o direito de depor o governo e criar um novo. Essa ideia influenciou diretamente as revoluções liberais (Inglesa, Americana, Francesa)."
@@ -616,11 +616,11 @@ const dadosAulas = {
     {
         enunciado: "Hume observa que, ao ver uma bola de bilhar bater em outra e a segunda se mover, nós vemos apenas dois eventos em sequência (a primeira bola se move, depois a segunda se move). Nunca 'vemos' a conexão necessária entre eles. Hume conclui que a ideia de 'causa e efeito' vem:",
         alternativas: {
-            a: "Da razão pura, que deduz as leis necessárias da natureza.",
+            a: "Da razão pura, que deduz as leis necessárias da natureza através de demonstrações lógicas e matemáticas independentes da experiência.",
             b: "Do hábito: a repetição constante de eventos associados (fogo queima, sol aquece) cria em nós a expectativa psicológica de que sempre será assim, mas não há conhecimento racional de uma conexão necessária.",
-            c: "Da revelação divina, que nos mostra as causas ocultas.",
-            d: "Da observação direta da conexão causal nos objetos.",
-            e: "Da tradição filosófica, que nos ensina a causalidade."
+            c: "Da revelação divina, que nos mostra as causas ocultas dos fenômenos naturais através das escrituras e da tradição religiosa.",
+            d: "Da observação direta da conexão causal nos objetos, que pode ser percebida pelos sentidos quando prestamos atenção suficiente aos fenômenos.",
+            e: "Da tradição filosófica, que nos ensina a causalidade como um princípio indemonstrável mas aceito universalmente desde a Antiguidade."
         },
         correta: "b",
         explicacao: "Hume argumenta que nunca percebemos a 'conexão necessária' entre causa e efeito — apenas a sucessão constante de eventos. A ideia de causalidade é um hábito psicológico (costume), não um conhecimento racional. Isso é o ceticismo humeano: não podemos ter certeza de que o futuro repetirá o passado."
@@ -628,11 +628,11 @@ const dadosAulas = {
     {
         enunciado: "Um aluno pergunta: 'Se Hume está certo e a causalidade é apenas hábito, então a ciência é impossível?' Kant, que foi 'despertado do sono dogmático' por Hume, responde com sua 'Revolução Copernicana'. Para Kant, a solução é:",
         alternativas: {
-            a: "Concordar plenamente com Hume: a ciência é impossível e devemos aceitar o ceticismo.",
+            a: "Concordar plenamente com Hume: a ciência é impossível e devemos aceitar o ceticismo radical como a única postura filosófica honesta.",
             b: "A causalidade não está nos objetos, mas é uma categoria a priori do entendimento humano: uma estrutura da mente que organiza a experiência. Assim, a ciência é possível, mas limitada ao mundo dos fenômenos (aparências), não das coisas em si.",
-            c: "Negar a experiência sensível e afirmar que só a fé fornece conhecimento.",
-            d: "Voltar à filosofia medieval e aceitar a autoridade da Igreja.",
-            e: "Afirmar que a ciência é infalível e que Hume estava completamente errado."
+            c: "Negar a experiência sensível e afirmar que só a fé religiosa fornece conhecimento verdadeiro, abandonando definitivamente a pretensão científica.",
+            d: "Voltar à filosofia medieval escolástica e aceitar a autoridade da Igreja e dos Padres da Igreja como fonte única de conhecimento válido.",
+            e: "Afirmar que a ciência é infalível e que Hume estava completamente errado em todos os seus argumentos sobre a causalidade."
         },
         correta: "b",
         explicacao: "Kant concorda com Hume que o conhecimento começa com a experiência, mas argumenta que a mente não é passiva: ela possui estruturas a priori (espaço, tempo, categorias como causalidade) que organizam a experiência. A causalidade é uma dessas categorias. Assim, a ciência é possível, mas conhecemos apenas os fenômenos (como as coisas aparecem para nós), não as coisas em si."
@@ -640,11 +640,11 @@ const dadosAulas = {
     {
         enunciado: "O empirismo de Hume afirma que todo conhecimento vem da experiência sensível. O racionalismo de Descartes afirma que a razão é a fonte do conhecimento verdadeiro. Kant, com sua filosofia crítica, propõe uma síntese. Qual alternativa melhor resume essa síntese kantiana?",
         alternativas: {
-            a: "Kant é puramente empirista: todo conhecimento vem dos sentidos.",
-            b: "Kant é puramente racionalista: todo conhecimento vem da razão, independente da experiência.",
+            a: "Kant é puramente empirista: todo conhecimento vem dos sentidos, não havendo qualquer estrutura mental inata que organize a experiência.",
+            b: "Kant é puramente racionalista: todo conhecimento vem da razão, independente da experiência, que é considerada enganosa e secundária.",
             c: "Kant sintetiza: o conhecimento começa com a experiência (sensibilidade), mas é organizado pelas estruturas a priori da mente (entendimento). Sem sensibilidade, nenhum objeto nos seria dado; sem entendimento, nenhum objeto seria pensado.",
-            d: "Kant rejeita tanto o empirismo quanto o racionalismo e propõe o misticismo.",
-            e: "Kant defende que o conhecimento é impossível."
+            d: "Kant rejeita tanto o empirismo quanto o racionalismo e propõe o misticismo como única via de acesso ao conhecimento verdadeiro e absoluto.",
+            e: "Kant defende que o conhecimento é impossível, pois nem os sentidos nem a razão podem nos dar acesso confiável à realidade."
         },
         correta: "c",
         explicacao: "A famosa síntese kantiana: 'Pensamentos sem conteúdo são vazios; intuições sem conceitos são cegas.' O conhecimento exige tanto a experiência sensível (que fornece o conteúdo) quanto as estruturas a priori do entendimento (que organizam esse conteúdo). É a superação do empirismo e do racionalismo puros."
@@ -652,11 +652,11 @@ const dadosAulas = {
     {
         enunciado: "Kant afirma que conhecemos apenas os fenômenos (como as coisas aparecem para nós, organizadas pelas estruturas da mente), não os númenos (as coisas em si mesmas). Um aluno pergunta: 'Então nunca saberemos como as coisas realmente são?' Segundo Kant, a resposta é:",
         alternativas: {
-            a: "Sim, conhecemos as coisas em si perfeitamente.",
+            a: "Sim, conhecemos as coisas em si perfeitamente através da razão pura, que nos dá acesso direto à realidade última independente de nossas estruturas mentais.",
             b: "Correto: nosso conhecimento se limita aos fenômenos (a realidade como aparece para nós, estruturada por espaço, tempo e categorias). As coisas em si (númenos) são inacessíveis ao conhecimento teórico, embora possamos pensá-las.",
-            c: "Não, pois a ciência pode acessar as coisas em si através de instrumentos.",
-            d: "Sim, mas apenas os filósofos podem conhecer os númenos.",
-            e: "Não, pois os númenos não existem."
+            c: "Não, pois a ciência pode acessar as coisas em si através de instrumentos cada vez mais sofisticados, como microscópios e telescópios de última geração.",
+            d: "Sim, mas apenas os filósofos profissionais com formação especializada podem conhecer os númenos através de treinamento rigoroso e prolongado.",
+            e: "Não, pois os númenos não existem; tudo o que há são fenômenos, e a distinção entre aparência e coisa em si é uma ilusão sem fundamento."
         },
         correta: "b",
         explicacao: "Para Kant, o conhecimento humano é limitado ao mundo fenomênico: conhecemos as coisas como aparecem para nós, estruturadas pelas formas a priori da sensibilidade (espaço e tempo) e pelas categorias do entendimento. As coisas em si (númenos) são pensáveis mas não cognoscíveis. Isso é o 'idealismo transcendental' kantiano."
@@ -664,11 +664,11 @@ const dadosAulas = {
     {
         enunciado: "As consequências ético-políticas do ceticismo de Hume preocuparam Kant. Se não podemos ter certeza de verdades universais, como fundamentar a moral e a política? Kant responde que a moral não depende da experiência, mas:",
         alternativas: {
-            a: "Dos costumes de cada sociedade, que variam conforme a cultura.",
+            a: "Dos costumes de cada sociedade, que variam conforme a cultura e a tradição histórica, sendo relativos a cada contexto específico.",
             b: "Da razão prática: o Imperativo Categórico é um princípio a priori da razão que prescreve ações universalmente válidas, independentemente das consequências ou das inclinações sensíveis.",
-            c: "Da vontade de Deus, revelada nas escrituras.",
-            d: "Do prazer e da dor, como defendem os utilitaristas.",
-            e: "Da tradição e dos costumes ancestrais."
+            c: "Da vontade de Deus, revelada nas escrituras sagradas e transmitida pela tradição religiosa como fundamento último da moralidade.",
+            d: "Do prazer e da dor, como defendem os utilitaristas, sendo a moralidade calculada pelas consequências das ações para o bem-estar coletivo.",
+            e: "Da tradição e dos costumes ancestrais, que devem ser seguidos por respeito à sabedoria acumulada pelas gerações anteriores."
         },
         correta: "b",
         explicacao: "Kant responde ao ceticismo de Hume também no campo prático: a moral não vem da experiência (que é contingente), mas da razão prática. O Imperativo Categórico ('Age de modo que tua máxima possa ser lei universal') é um princípio a priori da razão, válido universalmente, independentemente das consequências ou inclinações."
@@ -714,11 +714,11 @@ const dadosAulas = {
     {
         enunciado: "Em uma comunidade rural brasileira, os moradores se reúnem para construir uma casa para uma família que perdeu tudo em uma enchente. Ninguém é pago; todos contribuem com trabalho, materiais ou comida. Um visitante urbano comenta: 'Mas por que vocês fazem isso? Cada um deveria cuidar de si.' Um morador responde: 'Porque eu sou porque nós somos.' Essa resposta expressa a filosofia africana chamada:",
         alternativas: {
-            a: "Existencialismo, pois cada indivíduo é responsável por si mesmo.",
+            a: "Existencialismo, pois cada indivíduo é responsável por si mesmo e deve criar seu próprio sentido na vida sem depender dos outros.",
             b: "Ubuntu: a ideia de que a humanidade de cada pessoa se constrói na relação com os outros, que o indivíduo se realiza na comunidade e que a interdependência é constitutiva do ser humano.",
-            c: "Utilitarismo, pois o objetivo é maximizar o prazer coletivo.",
-            d: "Liberalismo, pois cada um busca seu interesse individual.",
-            e: "Niilismo, pois nada tem valor intrínseco."
+            c: "Utilitarismo, pois o objetivo é maximizar o prazer coletivo através da soma das satisfações individuais de cada participante da comunidade.",
+            d: "Liberalismo, pois cada um busca seu interesse individual e, por uma mão invisível, o bem coletivo acaba sendo alcançado naturalmente.",
+            e: "Niilismo, pois nada tem valor intrínseco e todas as ações são igualmente válidas ou inválidas, sem fundamento último para a moralidade."
         },
         correta: "b",
         explicacao: "Ubuntu ('Eu sou porque nós somos') é uma filosofia africana que afirma a interdependência constitutiva dos seres humanos. Diferente do individualismo ocidental moderno, Ubuntu entende que a identidade, a dignidade e a humanidade de cada pessoa se constroem na relação com a comunidade."
@@ -726,11 +726,11 @@ const dadosAulas = {
     {
         enunciado: "Descartes afirma 'Penso, logo existo' (Cogito, ergo sum), fundamentando o conhecimento e a existência no indivíduo racional isolado. A filosofia Ubuntu propõe 'Sou porque somos'. A principal diferença entre essas duas perspectivas é:",
         alternativas: {
-            a: "Descartes valoriza o comunitarismo; Ubuntu valoriza o individualismo.",
+            a: "Descartes valoriza o comunitarismo e a vida coletiva; Ubuntu valoriza o individualismo e a autonomia absoluta do sujeito pensante.",
             b: "Descartes fundamenta a existência no indivíduo racional autônomo (individualismo); Ubuntu fundamenta a existência na relação comunitária e na interdependência (comunitarismo).",
-            c: "Ambas são idênticas, pois ambas afirmam a existência.",
-            d: "Descartes é uma filosofia africana; Ubuntu é uma filosofia europeia.",
-            e: "Descartes nega a existência humana; Ubuntu afirma a existência divina."
+            c: "Ambas são idênticas, pois ambas afirmam a existência humana, diferindo apenas na forma linguística de expressar a mesma ideia filosófica.",
+            d: "Descartes é uma filosofia africana tradicional; Ubuntu é uma filosofia europeia moderna que apenas atualizou o pensamento cartesiano.",
+            e: "Descartes nega a existência humana como ficção filosófica; Ubuntu afirma a existência divina como fundamento último de toda a realidade."
         },
         correta: "b",
         explicacao: "O Cogito cartesiano é o fundamento do individualismo moderno: a existência se ancora no sujeito racional isolado. Ubuntu inverte essa lógica: o ser humano só existe na relação com outros. Não sou um 'eu' antes de ser um 'nós'. São perspectivas ontológicas e éticas radicalmente diferentes."
@@ -738,11 +738,11 @@ const dadosAulas = {
     {
         enunciado: "Lélia Gonzalez, intelectual negra brasileira, cunhou o conceito de 'racismo à brasileira' e analisou como raça e gênero se interseccionam na opressão das mulheres negras. Ela também destacou o papel das mulheres negras na preservação da cultura afro-brasileira. Sua contribuição é importante porque:",
         alternativas: {
-            a: "Mostra que o racismo no Brasil não existe, pois somos uma democracia racial.",
+            a: "Mostra que o racismo no Brasil não existe, pois somos uma democracia racial onde todos têm as mesmas oportunidades independentemente da cor.",
             b: "Revela como o racismo brasileiro opera de forma específica (muitas vezes velada) e como as opressões de raça e gênero se articulam, tornando invisível a experiência das mulheres negras.",
-            c: "Defende que apenas homens brancos podem produzir conhecimento filosófico.",
-            d: "Afirma que a cultura afro-brasileira é inferior à cultura europeia.",
-            e: "Nega a existência de qualquer forma de cultura negra no Brasil."
+            c: "Defende que apenas homens brancos podem produzir conhecimento filosófico legítimo, pois são os únicos com formação acadêmica adequada.",
+            d: "Afirma que a cultura afro-brasileira é inferior à cultura europeia, devendo ser abandonada em favor de uma assimilação civilizatória total.",
+            e: "Nega a existência de qualquer forma de cultura negra no Brasil, considerando-a uma invenção recente sem raízes históricas reais."
         },
         correta: "b",
         explicacao: "Lélia Gonzalez é pioneira na análise interseccional no Brasil: mostrou como o racismo 'à brasileira' opera de forma dissimulada (negando-se enquanto tal) e como as mulheres negras sofrem uma dupla opressão (raça + gênero). Seu trabalho é fundamental para descolonizar o pensamento e reconhecer o protagonismo intelectual negro."
@@ -750,11 +750,11 @@ const dadosAulas = {
     {
         enunciado: "Ailton Krenak, pensador indígena brasileiro, em 'Ideias para adiar o fim do mundo', critica a separação ocidental entre natureza e cultura. Para Krenak, os povos indígenas:",
         alternativas: {
-            a: "Devem abandonar suas tradições e se integrar à modernidade ocidental.",
+            a: "Devem abandonar suas tradições e se integrar completamente à modernidade ocidental, adotando o modo de vida urbano e capitalista.",
             b: "Possuem saberes fundamentais que questionam a separação entre humanos e natureza, propondo uma relação de pertencimento e cuidado com o planeta, em contraste com a lógica exploratória do capitalismo.",
-            c: "São responsáveis pela destruição ambiental.",
-            d: "Não possuem qualquer forma de conhecimento ou filosofia.",
-            e: "Devem ser estudados apenas como objetos de museu."
+            c: "São responsáveis pela destruição ambiental, pois suas práticas tradicionais de caça e agricultura são insustentáveis e predatórias.",
+            d: "Não possuem qualquer forma de conhecimento ou filosofia, sendo suas cosmologias apenas superstições primitivas sem valor epistemológico.",
+            e: "Devem ser estudados apenas como objetos de museu, preservando sua cultura como peça histórica sem relevância para o presente."
         },
         correta: "b",
         explicacao: "Krenak critica a visão ocidental que separa natureza e cultura, tratando a natureza como recurso a ser explorado. Os povos indígenas, em suas cosmologias, entendem os humanos como parte da natureza (não donos dela). Esse saber é crucial diante da crise ambiental e do esgotamento do modelo de desenvolvimento capitalista."
@@ -762,11 +762,11 @@ const dadosAulas = {
     {
         enunciado: "O conceito de 'descolonização do pensamento' tem sido cada vez mais discutido na filosofia contemporânea. Um aluno pergunta: 'Isso significa que devemos rejeitar todo o conhecimento europeu?' A resposta mais adequada, segundo as perspectivas estudadas, é:",
         alternativas: {
-            a: "Sim, todo conhecimento europeu deve ser banido.",
+            a: "Sim, todo conhecimento europeu deve ser banido das universidades e escolas, pois é intrinsecamente opressor e colonialista por natureza.",
             b: "Não: descolonizar o pensamento não é rejeitar a tradição europeia, mas reconhecer que há outras formas válidas de conhecimento (africanas, indígenas, asiáticas) que foram historicamente silenciadas, e colocá-las em diálogo em pé de igualdade.",
-            c: "Sim, pois a Europa nunca produziu conhecimento relevante.",
-            d: "Não, pois a descolonização é um conceito ultrapassado.",
-            e: "Sim, mas apenas nas ciências humanas; nas ciências exatas o conhecimento europeu é válido."
+            c: "Sim, pois a Europa nunca produziu conhecimento relevante em nenhuma área do saber, sendo sua tradição filosófica e científica completamente irrelevante.",
+            d: "Não, pois a descolonização é um conceito ultrapassado que já perdeu sua relevância na era da globalização e da integração cultural mundial.",
+            e: "Sim, mas apenas nas ciências humanas e sociais; nas ciências exatas e naturais o conhecimento europeu permanece válido e universalmente aplicável."
         },
         correta: "b",
         explicacao: "Descolonizar o pensamento não é negar a contribuição europeia, mas questionar a hierarquia que coloca o saber europeu como único válido. É reconhecer e valorizar saberes negros, indígenas, africanos e de outras matrizes, promovendo um diálogo epistêmico plural. Trata-se de ampliar o cânone, não de substituí-lo por outro."
@@ -805,11 +805,11 @@ const dadosAulas = {
     {
         enunciado: "Lévinas conta que, ao encontrar o rosto de outra pessoa — especialmente do vulnerável, do pobre, do estrangeiro —, sinto uma exigência ética que me precede: 'Não matarás.' Não é uma escolha minha ser responsável pelo Outro; a responsabilidade me é imposta pela própria presença do Outro. Um aluno pergunta: 'Mas por que eu seria responsável por alguém que não conheço?' Segundo Lévinas, a resposta é:",
         alternativas: {
-            a: "Você não é responsável por desconhecidos; a ética só se aplica a amigos e familiares.",
+            a: "Você não é responsável por desconhecidos; a ética só se aplica a amigos e familiares com quem você mantém vínculos afetivos estabelecidos.",
             b: "A responsabilidade pelo Outro é anterior a qualquer escolha ou contrato: o rosto do Outro (sua vulnerabilidade e alteridade) me interpela e me exige resposta antes que eu decida. A ética é filosofia primeira, anterior à ontologia.",
-            c: "A responsabilidade é um sentimento subjetivo sem qualquer obrigação real.",
-            d: "A responsabilidade só existe se houver um contrato assinado entre as partes.",
-            e: "A responsabilidade é uma invenção religiosa sem fundamento filosófico."
+            c: "A responsabilidade é um sentimento subjetivo sem qualquer obrigação real, dependendo apenas da disposição emocional de cada indivíduo em cada situação.",
+            d: "A responsabilidade só existe se houver um contrato assinado entre as partes, estabelecendo formalmente os deveres mútuos de cada um.",
+            e: "A responsabilidade é uma invenção religiosa sem fundamento filosófico, sendo um conceito que a filosofia secular deve abandonar definitivamente."
         },
         correta: "b",
         explicacao: "Para Lévinas, a ética não é um contrato entre iguais nem uma escolha voluntária: o rosto do Outro me convoca à responsabilidade antes de qualquer decisão. Essa responsabilidade é assimétrica e infinita. A ética é 'filosofia primeira' — anterior à pergunta pelo ser (ontologia). É a base de toda relação humana genuína."
@@ -817,11 +817,11 @@ const dadosAulas = {
     {
         enunciado: "Habermas propõe a 'ética do discurso': uma norma só é válida se todos os afetados por ela pudessem concordar com ela em um diálogo racional e livre de coerção. Em uma escola, a direção quer proibir o uso de celulares. Segundo Habermas, a forma legítima de decidir seria:",
         alternativas: {
-            a: "A direção decide sozinha e impõe a regra.",
+            a: "A direção decide sozinha e impõe a regra, pois é a autoridade legítima da instituição e não precisa consultar ninguém para tomar decisões administrativas.",
             b: "Todos os afetados (alunos, professores, funcionários) participam de um diálogo racional e livre, apresentam argumentos e buscam um consenso fundamentado.",
-            c: "Os alunos mais populares decidem pelos demais.",
-            d: "A regra é copiada de outra escola sem adaptação.",
-            e: "A decisão é tomada por sorteio."
+            c: "Os alunos mais populares decidem pelos demais, pois a maioria numérica deve prevalecer em qualquer decisão democrática sobre regras escolares.",
+            d: "A regra é copiada de outra escola sem adaptação, pois a uniformização de procedimentos garante eficiência e coerência institucional.",
+            e: "A decisão é tomada por sorteio, pois a aleatoriedade garante imparcialidade e evita que interesses particulares prevaleçam sobre o bem comum."
         },
         correta: "b",
         explicacao: "Para Habermas, a legitimidade de uma norma depende do procedimento discursivo: todos os afetados devem poder participar do diálogo, apresentar argumentos, questionar e buscar consenso racional. A legitimidade não vem da autoridade ou da força, mas da qualidade do processo deliberativo."
@@ -829,11 +829,11 @@ const dadosAulas = {
     {
         enunciado: "Lévinas e Habermas, apesar de abordagens diferentes, convergem em um ponto fundamental para a vida democrática. Ambos valorizam:",
         alternativas: {
-            a: "O individualismo radical e a autonomia absoluta do sujeito.",
+            a: "O individualismo radical e a autonomia absoluta do sujeito, que deve decidir por si mesmo sem considerar os outros ou a comunidade.",
             b: "O respeito à alteridade (o Outro), a inclusão de todas as vozes e a responsabilidade ética como fundamentos da vida em comum.",
-            c: "A imposição de uma única verdade pelo mais forte.",
-            d: "A eliminação do diálogo em favor da eficiência.",
-            e: "A separação completa entre ética e política."
+            c: "A imposição de uma única verdade pelo mais forte, pois a força é o único critério legítimo para resolver disputas e organizar a sociedade.",
+            d: "A eliminação do diálogo em favor da eficiência técnica, que deve guiar todas as decisões sociais com base em critérios objetivos e mensuráveis.",
+            e: "A separação completa entre ética e política, que devem permanecer em esferas distintas sem qualquer interferência mútua ou articulação."
         },
         correta: "b",
         explicacao: "Lévinas (ética da alteridade: o rosto do Outro me exige responsabilidade) e Habermas (ética do discurso: a norma legítima nasce do diálogo entre todos os afetados) convergem na valorização do Outro, da inclusão e da responsabilidade. Ambos fundamentam a vida democrática no respeito à diversidade e na escuta."
@@ -841,11 +841,11 @@ const dadosAulas = {
     {
         enunciado: "Em uma sociedade multicultural como a brasileira, conflitos entre diferentes visões de mundo são frequentes. Um grupo religioso quer impor seus valores a toda a sociedade; um grupo minoritário reivindica o direito de manter suas tradições. Segundo Habermas, a solução democrática para esse conflito seria:",
         alternativas: {
-            a: "O grupo mais numeroso impõe seus valores ao grupo minoritário.",
-            b: "O Estado proíbe todas as religiões e tradições para evitar conflitos.",
+            a: "O grupo mais numeroso impõe seus valores ao grupo minoritário, pois a maioria numérica tem sempre razão em sociedades democráticas.",
+            b: "O Estado proíbe todas as religiões e tradições para evitar conflitos, impondo uma cultura secular uniforme e homogênea a todos os cidadãos.",
             c: "Um diálogo racional e inclusivo onde todos os afetados possam apresentar suas razões, buscar entendimento mútuo e construir normas que respeitem a diversidade sem impor uma visão particular.",
-            d: "O grupo minoritário deve se submeter ao grupo majoritário.",
-            e: "A solução é a separação física dos grupos."
+            d: "O grupo minoritário deve se submeter ao grupo majoritário, pois a coesão social exige uniformidade cultural e religiosa entre todos os cidadãos.",
+            e: "A solução é a separação física dos grupos em territórios distintos, evitando qualquer contato que possa gerar conflitos culturais ou religiosos."
         },
         correta: "c",
         explicacao: "Para Habermas, a democracia deliberativa é o procedimento para resolver conflitos em sociedades plurais: o diálogo racional e inclusivo, onde todos apresentam razões e buscam entendimento mútuo. Nenhuma visão particular pode ser imposta; a norma legítima é a que emerge do discurso entre todos os afetados."
@@ -853,11 +853,11 @@ const dadosAulas = {
     {
         enunciado: "Lévinas afirma que a ética é 'filosofia primeira', anterior à ontologia (o estudo do ser). Um aluno de filosofia pergunta: 'Mas não deveríamos primeiro saber o que existe (ontologia) para depois saber como agir (ética)?' Segundo Lévinas, a resposta é:",
         alternativas: {
-            a: "Sim, a ontologia vem antes da ética.",
+            a: "Sim, a ontologia vem antes da ética, pois precisamos saber o que existe para poder agir moralmente de forma fundamentada e racional.",
             b: "Não: antes de qualquer pergunta sobre o ser, já estou em relação com o Outro que me interpela. A responsabilidade ética me constitui como sujeito antes de qualquer reflexão teórica. O rosto do Outro me precede.",
-            c: "A ética e a ontologia são a mesma coisa.",
-            d: "A ética é uma parte da física.",
-            e: "A ontologia é irrelevante para a filosofia."
+            c: "A ética e a ontologia são a mesma coisa, pois o ser e o dever ser se identificam na filosofia contemporânea sem qualquer distinção real.",
+            d: "A ética é uma parte da física, pois os valores morais derivam das leis naturais e dos processos biológicos que regem o universo.",
+            e: "A ontologia é irrelevante para a filosofia, que deve se ocupar exclusivamente de questões práticas e abandonar a especulação teórica."
         },
         correta: "b",
         explicacao: "Lévinas inverte a tradição filosófica ocidental (que privilegia a ontologia desde Parmênides): antes de perguntar 'o que é o ser?', já estou em relação ética com o Outro. O rosto do Outro me interpela e me constitui como sujeito responsável antes de qualquer reflexão. A ética não é derivada da ontologia; ela a precede e a fundamenta."
@@ -897,11 +897,11 @@ const dadosAulas = {
     {
         enunciado: "Günther Anders cunhou o conceito de 'vergonha prometeica': o sentimento de inferioridade que o ser humano experimenta diante das máquinas que ele mesmo criou. Um exemplo contemporâneo: muitas pessoas sentem que seus celulares são 'mais inteligentes' que elas, confiam mais nos algoritmos do que no próprio julgamento e se sentem obsoletas diante da tecnologia. Esse sentimento, segundo Anders:",
         alternativas: {
-            a: "É irracional e não merece reflexão filosófica.",
+            a: "É irracional e não merece reflexão filosófica, pois as máquinas são apenas ferramentas e não podem superar os seres humanos em nada essencial.",
             b: "Revela um descompasso fundamental: o ser humano criou máquinas que superam suas capacidades em muitas áreas, mas não consegue imaginar plenamente as consequências de suas criações. Somos 'menores' que nossas obras.",
-            c: "É positivo, pois mostra que a tecnologia é sempre benéfica.",
-            d: "É exclusivo das pessoas idosas.",
-            e: "É um sentimento religioso sem relação com a tecnologia."
+            c: "É positivo, pois mostra que a tecnologia é sempre benéfica e que devemos nos submeter alegremente às máquinas que criamos para nosso próprio bem.",
+            d: "É exclusivo das pessoas idosas, que não cresceram com a tecnologia digital e por isso não conseguem se adaptar às inovações contemporâneas.",
+            e: "É um sentimento religioso sem relação com a tecnologia, manifestando apenas o medo humano de ser substituído por forças sobrenaturais."
         },
         correta: "b",
         explicacao: "Anders identifica na 'vergonha prometeica' o descompasso entre nossa capacidade de produzir (imensa, graças à técnica) e nossa capacidade de imaginar as consequências (limitada). Criamos bombas nucleares, IA, algoritmos que nos superam, mas não temos a capacidade moral e imaginativa de prever e controlar seus efeitos."
@@ -909,11 +909,11 @@ const dadosAulas = {
     {
         enunciado: "Hans Jonas propôs o 'princípio responsabilidade' para a era tecnológica: 'Age de modo que os efeitos de tua ação sejam compatíveis com a permanência de uma vida humana autêntica na Terra.' Um exemplo: uma empresa quer despejar resíduos químicos em um rio para reduzir custos. Aplicando o princípio de Jonas, essa ação é:",
         alternativas: {
-            a: "Permissível, pois maximiza o lucro da empresa.",
+            a: "Permissível, pois maximiza o lucro da empresa e gera empregos, beneficiando a economia local e o desenvolvimento regional.",
             b: "Inadmissível: a contaminação do rio compromete a vida das gerações futuras e do ecossistema, violando o imperativo de preservar as condições de uma vida autêntica na Terra.",
-            c: "Permissível, pois a natureza se regenera sozinha.",
-            d: "Inadmissível apenas se houver multa; se não houver, é aceitável.",
-            e: "Permissível, pois o progresso econômico justifica qualquer custo ambiental."
+            c: "Permissível, pois a natureza se regenera sozinha com o tempo, não havendo necessidade de preocupação excessiva com resíduos químicos.",
+            d: "Inadmissível apenas se houver multa aplicada pelo governo; se não houver fiscalização nem punição, a ação se torna aceitável economicamente.",
+            e: "Permissível, pois o progresso econômico justifica qualquer custo ambiental, sendo o desenvolvimento industrial prioridade absoluta."
         },
         correta: "b",
         explicacao: "O princípio responsabilidade de Jonas estende a ética ao futuro e à natureza: devemos agir de modo que as futuras gerações possam viver. A contaminação do rio compromete irreversivelmente as condições de vida, violando o imperativo de preservar a permanência da vida humana autêntica. A ética tecnológica pensa em longo prazo."
@@ -921,11 +921,11 @@ const dadosAulas = {
     {
         enunciado: "A bioética estuda dilemas como: edição genética de embriões, eutanásia, uso de IA em diagnósticos médicos. Um comitê de bioética discute se é ético usar a técnica CRISPR para 'melhorar' geneticamente bebês (não apenas curar doenças). O debate bioético envolve:",
         alternativas: {
-            a: "Apenas aspectos técnicos: se a técnica funciona ou não.",
+            a: "Apenas aspectos técnicos: se a técnica funciona ou não, se é segura do ponto de vista médico e se produz os resultados desejados.",
             b: "Aspectos éticos, políticos e existenciais: os limites da intervenção humana sobre a vida, a justiça (quem terá acesso?), os riscos imprevisíveis, a dignidade humana e as consequências para as futuras gerações.",
-            c: "Apenas aspectos religiosos.",
-            d: "Apenas aspectos econômicos: quanto custa a técnica.",
-            e: "Nenhum aspecto ético, pois a ciência é neutra."
+            c: "Apenas aspectos religiosos, pois a bioética é uma disciplina teológica que busca respostas nas escrituras e nas tradições de cada fé.",
+            d: "Apenas aspectos econômicos: quanto custa a técnica, quem vai pagar por ela e qual será o retorno financeiro do investimento biotecnológico.",
+            e: "Nenhum aspecto ético, pois a ciência é neutra e seus avanços devem ser aceitos sem questionamento moral de qualquer natureza."
         },
         correta: "b",
         explicacao: "A bioética é um campo interdisciplinar que estuda os dilemas éticos das ciências da vida. Questões como edição genética envolvem: limites da intervenção humana, justiça distributiva (quem acessa?), dignidade, riscos imprevisíveis e consequências para futuras gerações. A ciência não é neutra: suas aplicações têm dimensões éticas e políticas."
@@ -933,11 +933,11 @@ const dadosAulas = {
     {
         enunciado: "O 'mito da neutralidade científica' é a crença de que a ciência é isenta de valores e que seus resultados são sempre benéficos. Anders e Jonas criticam esse mito. Um exemplo histórico: a mesma física que permite a energia nuclear também permitiu a bomba atômica. Isso mostra que:",
         alternativas: {
-            a: "A ciência é sempre neutra; o problema está apenas nos políticos.",
+            a: "A ciência é sempre neutra; o problema está apenas nos políticos que decidem como aplicar os descobrimentos científicos para fins bélicos.",
             b: "A ciência e a tecnologia não são neutras: suas aplicações têm consequências éticas, políticas e existenciais que devem ser refletidas e reguladas pela sociedade.",
-            c: "A física não deveria ter sido desenvolvida.",
-            d: "A bomba atômica é um progresso científico sem qualquer dimensão ética.",
-            e: "A neutralidade científica é um fato comprovado."
+            c: "A física não deveria ter sido desenvolvida, pois todos os seus desdobramentos tecnológicos são necessariamente destrutivos e prejudiciais à humanidade.",
+            d: "A bomba atômica é um progresso científico sem qualquer dimensão ética, sendo apenas um avanço técnico que deve ser celebrado como conquista da razão.",
+            e: "A neutralidade científica é um fato comprovado empiricamente, pois os cientistas apenas descobrem leis naturais sem qualquer envolvimento valorativo."
         },
         correta: "b",
         explicacao: "A crítica ao mito da neutralidade mostra que a ciência não existe no vácuo: suas aplicações dependem de escolhas humanas, interesses econômicos e políticos, e têm consequências que devem ser avaliadas eticamente. A tecnologia é ambivalente: pode curar ou destruir. Por isso, exige responsabilidade e regulação."
@@ -945,11 +945,11 @@ const dadosAulas = {
     {
         enunciado: "Anders argumenta que a 'obsolescência do homem' não é apenas tecnológica (máquinas nos substituem), mas também moral: nossos sentimentos e nossa capacidade de imaginar não acompanham o poder de nossas ações. Um piloto que lança uma bomba a 10.000 metros de altitude não 'sente' a destruição que causa. Segundo Anders, isso revela:",
         alternativas: {
-            a: "Que a guerra é sempre justificável.",
+            a: "Que a guerra é sempre justificável quando executada com tecnologia avançada, pois a distância elimina o sofrimento desnecessário dos combatentes.",
             b: "O descompasso entre o poder técnico (imensa capacidade de destruição) e a capacidade moral/imaginativa (limitada): podemos fazer muito mais do que podemos sentir, imaginar ou responsabilizar.",
-            c: "Que os pilotos são naturalmente cruéis.",
-            d: "Que a altitude é a causa da destruição.",
-            e: "Que a tecnologia não afeta a moralidade."
+            c: "Que os pilotos são naturalmente cruéis e sádicos, sendo essa a explicação psicológica para sua capacidade de causar destruição em larga escala.",
+            d: "Que a altitude é a causa da destruição, pois quanto mais alto se está, maior é o poder destrutivo das armas utilizadas no ataque.",
+            e: "Que a tecnologia não afeta a moralidade, pois os seres humanos mantêm as mesmas capacidades éticas independentemente dos instrumentos que utilizam."
         },
         correta: "b",
         explicacao: "Anders identifica o 'descompasso prometeico': nossa capacidade técnica de agir (bombas, IA, engenharia genética) supera enormemente nossa capacidade de sentir, imaginar e responsabilizar. O piloto que não 'sente' a destruição exemplifica essa cegueira moral: podemos fazer muito mais do que podemos compreender eticamente."
@@ -989,11 +989,11 @@ const dadosAulas = {
     {
         enunciado: "Foucault descreve o Panóptico de Bentham: uma prisão circular com uma torre central de onde o vigia pode ver todas as celas, mas os presos não sabem se estão sendo observados. Resultado: os presos se comportam bem mesmo quando ninguém está vigiando, pois internalizaram a vigilância. Qual situação contemporânea melhor ilustra esse mecanismo?",
         alternativas: {
-            a: "Uma pessoa que lê um livro em sua casa.",
+            a: "Uma pessoa que lê um livro em sua casa, em total privacidade, sem qualquer preocupação com a opinião alheia ou com a possibilidade de ser observada.",
             b: "As redes sociais: sabemos que podemos estar sendo observados (seguidores, algoritmos, empregadores) e, por isso, nos autocontrolamos, editamos nossas postagens e nos comportamos conforme normas — mesmo sem um vigia físico.",
-            c: "Uma criança brincando livremente em um parque.",
-            d: "Um artista pintando um quadro sozinho.",
-            e: "Um agricultor colhendo sua plantação."
+            c: "Uma criança brincando livremente em um parque, sem qualquer supervisão de adultos e sem consciência de estar sendo observada por outras pessoas.",
+            d: "Um artista pintando um quadro sozinho em seu ateliê, completamente absorto em sua criação sem preocupação com o julgamento externo.",
+            e: "Um agricultor colhendo sua plantação em uma propriedade rural isolada, longe de qualquer forma de vigilância ou controle social."
         },
         correta: "b",
         explicacao: "As redes sociais funcionam como um Panóptico digital: a possibilidade constante de ser observado (por seguidores, algoritmos, empregadores) nos leva a internalizar a vigilância e nos autocontrolar. Não precisamos de um vigia físico; a mera possibilidade de ser visto já disciplina nosso comportamento."
@@ -1001,11 +1001,11 @@ const dadosAulas = {
     {
         enunciado: "Foucault afirma que o poder na modernidade não é apenas repressivo ('não pode'), mas produtivo: produz subjetividades, comportamentos, saberes e verdades. Um exemplo: a escola não apenas pune alunos indisciplinados, mas também produz um tipo de sujeito (o 'bom aluno') através de normas, avaliações, rankings e expectativas. Isso mostra que:",
         alternativas: {
-            a: "O poder é sempre negativo e deve ser eliminado.",
+            a: "O poder é sempre negativo e deve ser eliminado completamente, pois toda forma de poder é necessariamente opressiva e limitante da liberdade humana.",
             b: "O poder é produtivo: ele não apenas reprime, mas forma sujeitos, define o que é 'normal' e 'anormal', produz verdades e molda comportamentos.",
-            c: "A escola não exerce qualquer forma de poder.",
-            d: "O poder é exercido apenas pelo Estado e nunca por instituições como escolas.",
-            e: "A produção de subjetividades é irrelevante para a análise do poder."
+            c: "A escola não exerce qualquer forma de poder, pois é um espaço neutro dedicado exclusivamente à transmissão de conhecimentos objetivos.",
+            d: "O poder é exercido apenas pelo Estado através de suas instituições oficiais, nunca por organizações privadas como escolas ou empresas.",
+            e: "A produção de subjetividades é irrelevante para a análise do poder, pois o que importa são apenas as leis e as instituições formais do Estado."
         },
         correta: "b",
         explicacao: "Foucault revoluciona a análise do poder: ele não é apenas repressivo (proibir, punir), mas produtivo (produzir sujeitos, saberes, verdades). A escola, o hospital, a fábrica não apenas reprimem; eles formam sujeitos 'dóceis', definem normalidade e anormalidade, produzem verdades sobre o que é 'bom' e 'ruim'."
@@ -1013,11 +1013,11 @@ const dadosAulas = {
     {
         enunciado: "Foucault usa a expressão 'corpos dóceis' para descrever o efeito das instituições disciplinares (escola, quartel, fábrica, hospital). Um operário de fábrica, por exemplo, é treinado para repetir movimentos precisos, obedecer horários rígidos e maximizar a produtividade. Segundo Foucault, isso:",
         alternativas: {
-            a: "É apenas uma escolha individual do operário.",
+            a: "É apenas uma escolha individual do operário, que decide voluntariamente submeter-se à disciplina fabril em troca de um salário.",
             b: "É um efeito do poder disciplinar: as instituições moldam os corpos para a obediência e a produtividade, tornando-os 'dóceis' — úteis economicamente e submissos politicamente.",
-            c: "É irrelevante para a análise filosófica.",
-            d: "É uma característica natural dos seres humanos.",
-            e: "É um fenômeno exclusivo das sociedades pré-modernas."
+            c: "É irrelevante para a análise filosófica, pois o corpo é um objeto biológico que não tem qualquer relação com as estruturas de poder social.",
+            d: "É uma característica natural dos seres humanos, que têm tendência inata à obediência e à disciplina desde a infância.",
+            e: "É um fenômeno exclusivo das sociedades pré-modernas, tendo desaparecido completamente com a modernidade e suas formas mais flexíveis de organização."
         },
         correta: "b",
         explicacao: "Para Foucault, as instituições disciplinares não apenas reprimem; elas treinam os corpos. A escola ensina a ficar sentado, o quartel a marchar, a fábrica a repetir movimentos. O resultado são 'corpos dóceis': disciplinados, produtivos, submissos. O poder disciplinar é uma tecnologia de produção de subjetividades."
@@ -1025,11 +1025,11 @@ const dadosAulas = {
     {
         enunciado: "Além do poder disciplinar (sobre corpos individuais), Foucault analisa o biopoder: o poder sobre a vida da população (natalidade, mortalidade, saúde, higiene). Um exemplo: campanhas de vacinação, políticas de controle de natalidade, estatísticas de saúde pública. O biopoder:",
         alternativas: {
-            a: "É o poder de matar, típico do soberano medieval.",
+            a: "É o poder de matar, típico do soberano medieval que decidia quem vivia e quem moria segundo sua vontade pessoal e arbitrária.",
             b: "É o poder de 'fazer viver e deixar morrer': administrar a vida da população (saúde, natalidade, longevidade), não mais apenas punir indivíduos.",
-            c: "É irrelevante para a filosofia política.",
-            d: "É um poder exclusivo das religiões.",
-            e: "É idêntico ao poder disciplinar, sem diferença."
+            c: "É irrelevante para a filosofia política, pois a gestão da saúde é uma questão técnica a ser resolvida por especialistas sem dimensão política.",
+            d: "É um poder exclusivo das religiões, que regulam a vida dos fiéis através de preceitos morais e práticas rituais de purificação.",
+            e: "É idêntico ao poder disciplinar, sem qualquer diferença conceitual entre as duas formas de exercício do poder na modernidade."
         },
         correta: "b",
         explicacao: "Foucault distingue o poder soberano ('fazer morrer e deixar viver') do biopoder ('fazer viver e deixar morrer'): o Estado moderno administra a vida da população — saúde, natalidade, higiene, estatísticas. O biopoder é uma tecnologia de governo que opera sobre a vida coletiva, não apenas sobre corpos individuais."
@@ -1037,11 +1037,11 @@ const dadosAulas = {
     {
         enunciado: "Foucault afirma que o poder não está concentrado apenas no Estado, mas circula em todas as relações sociais: família, escola, trabalho, mídia, medicina. Um aluno pergunta: 'Se o poder está em todo lugar, como resistir?' Segundo Foucault, a resposta é:",
         alternativas: {
-            a: "Não é possível resistir; o poder é absoluto.",
+            a: "Não é possível resistir; o poder é absoluto e onipresente, tornando qualquer forma de oposição inevitavelmente fadada ao fracasso.",
             b: "Onde há poder, há resistência: a resistência é imanente ao poder. Resistir é questionar as verdades produzidas, desnaturalizar as normas, criar novas formas de subjetividade e novos modos de existir.",
-            c: "A resistência deve vir apenas de fora do sistema.",
-            d: "A resistência é inútil e deve ser abandonada.",
-            e: "A resistência só é possível através da violência armada."
+            c: "A resistência deve vir apenas de fora do sistema, através de movimentos externos que não foram contaminados pelas relações de poder existentes.",
+            d: "A resistência é inútil e deve ser abandonada, pois toda oposição acaba sendo cooptada e transformada em mais uma forma de exercício do poder.",
+            e: "A resistência só é possível através da violência armada, sendo a revolução violenta o único meio legítimo de enfrentar o poder estabelecido."
         },
         correta: "b",
         explicacao: "Para Foucault, poder e resistência são inseparáveis: 'Onde há poder, há resistência.' Resistir não é destruir o poder, mas questionar as verdades que ele produz, desnaturalizar o que parece 'normal', criar novas possibilidades de existência. A resistência é criativa, não apenas negativa."
@@ -1081,11 +1081,11 @@ const dadosAulas = {
     {
         enunciado: "Byung-Chul Han argumenta que saímos da sociedade disciplinar (Foucault: 'você deve', com proibições e instituições como fábrica e prisão) para a sociedade do desempenho ('você pode', com positividade, auto-otimização e empreendedorismo de si). Um exemplo: em vez de um chefe gritando 'trabalhe!', o indivíduo diz a si mesmo 'eu posso mais, preciso me superar, ser mais produtivo'. Essa mudança gera:",
         alternativas: {
-            a: "Mais liberdade e felicidade para todos.",
+            a: "Mais liberdade e felicidade para todos, pois a ausência de proibições externas permite que cada pessoa realize plenamente seu potencial criativo.",
             b: "Autoexploração voluntária: o indivíduo se torna seu próprio patrão e seu próprio explorado, gerando burnout, depressão e cansaço crônico.",
-            c: "O fim de qualquer forma de trabalho.",
-            d: "A eliminação de todas as doenças mentais.",
-            e: "O retorno à sociedade feudal."
+            c: "O fim de qualquer forma de trabalho, pois a positividade elimina a necessidade de esforço e torna toda atividade automaticamente prazerosa.",
+            d: "A eliminação de todas as doenças mentais, pois a sociedade do desempenho promove saúde psicológica e bem-estar emocional para todos.",
+            e: "O retorno à sociedade feudal, pois a autoexploração reproduz as relações de servidão características do período medieval europeu."
         },
         correta: "b",
         explicacao: "Na sociedade do desempenho, não há mais um patrão externo impondo ordens; o indivíduo se autoexplora voluntariamente em nome da produtividade e do sucesso. Essa 'liberdade' aparente é mais eficaz que a disciplina: gera burnout, depressão e cansaço crônico, pois não há limite para a cobrança interna."
@@ -1093,11 +1093,11 @@ const dadosAulas = {
     {
         enunciado: "Han critica a 'positividade tóxica' da sociedade contemporânea: a obrigação de ser sempre positivo, produtivo, feliz, resiliente. Frases como 'não reclame, seja grato', 'transforme obstáculos em oportunidades' e 'se não está feliz, mude de atitude' exemplificam essa lógica. Segundo Han, essa positividade:",
         alternativas: {
-            a: "É genuinamente benéfica e deve ser incentivada.",
+            a: "É genuinamente benéfica e deve ser incentivada em todas as esferas da vida, pois promove otimismo, produtividade e saúde mental generalizada.",
             b: "Patologiza a negatividade (tristeza, fracasso, cansaço) e esconde as causas estruturais do sofrimento, culpabilizando o indivíduo por não ser 'positivo' o suficiente.",
-            c: "É irrelevante para a saúde mental.",
-            d: "É exclusiva das redes sociais.",
-            e: "É uma forma de resistência ao capitalismo."
+            c: "É irrelevante para a saúde mental, pois as emoções humanas são determinadas biologicamente e não podem ser influenciadas por discursos culturais.",
+            d: "É exclusiva das redes sociais, não tendo qualquer impacto na vida cotidiana fora do ambiente digital e das interações virtuais.",
+            e: "É uma forma de resistência ao capitalismo, pois o otimismo permanente subverte a lógica da exploração e da produção incessante."
         },
         correta: "b",
         explicacao: "Han critica a positividade tóxica: ela transforma problemas estruturais (exploração, desigualdade) em falhas individuais ('você não é positivo o suficiente'). A tristeza, o cansaço e o fracasso são patologizados, e o indivíduo é culpabilizado por não se adequar. A positividade obrigatória esconde as causas reais do sofrimento."
@@ -1105,11 +1105,11 @@ const dadosAulas = {
     {
         enunciado: "Han analisa a 'sociedade da transparência': tudo deve ser visível, compartilhado, exposto (redes sociais, reality shows, selfies). A privacidade, o mistério e a profundidade são vistos com desconfiança. O 'like' substitui o julgamento crítico. Segundo Han, essa transparência:",
         alternativas: {
-            a: "É sempre positiva, pois promove a honestidade.",
+            a: "É sempre positiva, pois promove a honestidade, a autenticidade e a verdade, eliminando qualquer possibilidade de engano ou manipulação.",
             b: "Elimina a profundidade e o mistério, transforma tudo em mercadoria visível e gera uma sociedade de exibição onde o valor é medido por curtidas, não por reflexão crítica.",
-            c: "É irrelevante para a filosofia contemporânea.",
-            d: "É exclusiva das ditaduras.",
-            e: "Promove a reflexão filosófica profunda."
+            c: "É irrelevante para a filosofia contemporânea, pois a privacidade é um conceito ultrapassado que não tem mais significado na era digital.",
+            d: "É exclusiva das ditaduras, que usam a vigilância para controlar a população, não tendo relação com as democracias liberais contemporâneas.",
+            e: "Promove a reflexão filosófica profunda, pois a exposição constante incentiva o pensamento crítico e a análise cuidadosa das próprias ações."
         },
         correta: "b",
         explicacao: "Han critica a sociedade da transparência: a obrigação de expor tudo elimina o mistério, a profundidade e a privacidade. Tudo se torna visível e, portanto, mercadoria. O 'like' substitui o julgamento; a exibição substitui a reflexão. A transparência total não é liberdade; é uma nova forma de controle e alienação."
@@ -1117,23 +1117,23 @@ const dadosAulas = {
     {
         enunciado: "Han identifica como patologias típicas da sociedade contemporânea: burnout (esgotamento profissional), depressão e cansaço crônico. Um jovem trabalhador de aplicativo relata: 'Trabalho 12 horas por dia, não tenho férias, nem seguro, nem direito a ficar doente. Mas me dizem que sou um empreendedor de mim mesmo.' Segundo Han, esse relato ilustra:",
         alternativas: {
-            a: "O sucesso do empreendedorismo moderno.",
+            a: "O sucesso do empreendedorismo moderno, pois o trabalhador de aplicativo é realmente um empresário independente que gerencia seu próprio negócio com autonomia plena.",
             b: "A autoexploração na sociedade do desempenho: o trabalhador se vê como 'empreendedor', mas está submetido a condições precárias sem proteção, e a ideologia do 'você pode' esconde a exploração.",
-            c: "A satisfação plena com o trabalho.",
-            d: "A ausência de qualquer forma de exploração.",
-            e: "O retorno ao trabalho escravo tradicional."
+            c: "A satisfação plena com o trabalho, pois o jovem escolheu livremente essa ocupação e se sente realizado profissionalmente como empreendedor individual.",
+            d: "A ausência de qualquer forma de exploração, pois o trabalhador de aplicativo é verdadeiramente livre e não está subordinado a nenhum patrão externo.",
+            e: "O retorno ao trabalho escravo tradicional, pois as condições descritas são idênticas às do período colonial brasileiro sem qualquer diferença estrutural."
         },
         correta: "b",
         explicacao: "O relato ilustra a autoexploração: o trabalhador internaliza a ideologia do 'empreendedorismo de si' e não se reconhece como explorado. A precarização (sem férias, sem seguro, sem direitos) é mascarada pela retórica da liberdade e do 'você pode'. O resultado é exaustão sem a consciência de ser explorado."
     },
     {
-        enunciado: "Han propõe que, diante da sociedade do cansaço, precisamos recuperar a capacidade de contemplação, de tédio, de silêncio — formas de negatividade que resistem à lógica da produtividade. Um aluno pergunta: 'Mas ficar entediado não é perda de tempo?' Segundo Han, a resposta é:",
+        enunciado: "Han propõe que, diante da sociedade do cansaço, precisamos recuperar a capacidade de contemplação, de tédio, de silêncio — formas de negatividade que resistem à lógica da produtividade incessante. Um aluno pergunta: 'Mas ficar entediado não é perda de tempo?' Segundo Han, a resposta é:",
         alternativas: {
-            a: "Sim, o tédio é sempre negativo e deve ser evitado.",
+            a: "Sim, o tédio é sempre negativo e deve ser evitado a todo custo, pois representa tempo desperdiçado que poderia ser aproveitado de forma produtiva.",
             b: "Não: o tédio, o silêncio e a contemplação são formas de negatividade necessárias para a criatividade, a reflexão e a resistência à lógica da produtividade incessante. Sem eles, somos apenas máquinas de produção e consumo.",
-            c: "O tédio é uma doença mental.",
-            d: "A contemplação é uma perda de tempo na era digital.",
-            e: "O silêncio é impossível na sociedade contemporânea."
+            c: "O tédio é uma doença mental que deve ser tratada com medicamentos, pois representa uma falha neuroquímica no cérebro humano moderno.",
+            d: "A contemplação é uma perda de tempo na era digital, pois a informação flui rapidamente e exige atenção constante às múltiplas demandas do cotidiano.",
+            e: "O silêncio é impossível na sociedade contemporânea, pois estamos permanentemente conectados e bombardeados por estímulos de todas as naturezas."
         },
         correta: "b",
         explicacao: "Han defende a recuperação da 'negatividade' (tédio, silêncio, contemplação) como resistência à positividade tóxica da produtividade incessante. O tédio criativo, o silêncio reflexivo e a contemplação são antídotos contra o burnout e a alienação. Sem eles, somos reduzidos a máquinas de produção e consumo."
