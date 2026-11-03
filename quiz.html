@@ -6,135 +6,269 @@
     <title>Quiz - Provão Paulista 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; min-height: 100vh; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 20px; text-align: center; }
-        header.sociologia { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header.sociologia {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+        }
         header h1 { font-size: 1.8em; margin-bottom: 10px; }
-        .header-btns { margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-        .header-btn { display: inline-block; padding: 10px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s; }
+        header p { font-size: 1em; opacity: 0.95; }
+        .header-btns {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .header-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
         .header-btn.sociologia { color: #56ab2f; }
         .header-btn:hover { transform: scale(1.05); }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        .form-container, .quiz-container, .result-container { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        h2 { color: #667eea; margin-bottom: 25px; font-size: 1.6em; }
-        .form-group { margin-bottom: 25px; }
-        label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
-        input, select { width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; }
-        input:focus, select:focus { outline: none; border-color: #667eea; }
-        .btn { display: block; width: 100%; padding: 18px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-container, .quiz-container, .result-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .form-group { margin-bottom: 20px; }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
         .btn.sociologia { background: #56ab2f; }
         .btn:hover { background: #5568d3; }
         .btn.sociologia:hover { background: #4a9528; }
         .btn:disabled { background: #999; cursor: not-allowed; }
         .btn-secondary { background: #95a5a6; }
         .btn-secondary:hover { background: #7f8c8d; }
-        .error-msg { background: #ffebee; color: #c62828; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #c62828; display: none; }
+        .error-msg {
+            background: #ffebee;
+            color: #c62828;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #c62828;
+            display: none;
+        }
         .error-msg.show { display: block; }
-        .success-msg { background: #e8f5e9; color: #2e7d32; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2e7d32; display: none; }
+        .success-msg {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #2e7d32;
+            display: none;
+        }
         .success-msg.show { display: block; }
-        .question { margin-bottom: 35px; padding-bottom: 25px; border-bottom: 2px solid #eee; }
+        .warning-msg {
+            background: #fff3cd;
+            color: #856404;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffc107;
+            display: none;
+        }
+        .warning-msg.show { display: block; }
+        .question {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
         .question:last-of-type { border-bottom: none; }
-        .question-text { font-size: 1.1em; color: #333; margin-bottom: 20px; font-weight: 600; line-height: 1.5; }
-        .options label { display: block; padding: 15px; background: #f8f9ff; border: 2px solid #e8ecff; border-radius: 8px; margin-bottom: 12px; cursor: pointer; transition: all 0.3s; font-weight: normal; }
-        .options label:hover { background: #e8ecff; border-color: #667eea; }
-        .options input[type="radio"] { margin-right: 12px; width: auto; }
+        .question-text {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        .options label {
+            display: block;
+            padding: 12px;
+            background: #f8f9ff;
+            border: 2px solid #e8ecff;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: normal;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+        .options label:hover {
+            background: #e8ecff;
+            border-color: #667eea;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+            width: auto;
+        }
         .hidden { display: none; }
-        .result-box { text-align: center; padding: 30px; }
-        .score { font-size: 4em; color: #667eea; font-weight: bold; margin: 20px 0; }
+        .result-box { text-align: center; padding: 20px; }
+        .score {
+            font-size: 3em;
+            color: #667eea;
+            font-weight: bold;
+            margin: 15px 0;
+        }
         .score.sociologia { color: #56ab2f; }
-        .message { font-size: 1.3em; color: #444; margin-bottom: 30px; }
-        .correction { text-align: left; margin-top: 30px; padding: 25px; background: #f8f9ff; border-radius: 10px; }
-        .correction h3 { color: #667eea; margin-bottom: 20px; }
-        .question-correction { margin-bottom: 25px; padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #667eea; }
+        .message {
+            font-size: 1.1em;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .correction {
+            text-align: left;
+            margin-top: 20px;
+            padding: 20px 15px;
+            background: #f8f9ff;
+            border-radius: 10px;
+        }
+        .correction h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .question-correction {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
         .question-correction.correct { border-left-color: #56ab2f; }
         .question-correction.incorrect { border-left-color: #e74c3c; }
-        .question-correction strong { color: #333; display: block; margin-bottom: 10px; }
-        .correct-answer { color: #56ab2f; font-weight: 600; }
-        .user-answer { color: #e74c3c; font-weight: 600; }
-        .explanation { margin-top: 10px; padding: 12px; background: #f5f7fa; border-radius: 5px; font-size: 0.95em; color: #555; }
-        .loading { display: inline-block; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; }
+        .question-correction strong {
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        .question-correction p {
+            font-size: 0.85em;
+            line-height: 1.4;
+            margin-bottom: 5px;
+        }
+        .correct-answer { color: #56ab2f; font-weight: 600; font-size: 0.85em; }
+        .user-answer { color: #e74c3c; font-weight: 600; font-size: 0.85em; }
+        .explanation {
+            margin-top: 8px;
+            padding: 8px;
+            background: #f5f7fa;
+            border-radius: 5px;
+            font-size: 0.8em !important;
+            color: #555;
+            line-height: 1.4;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .btn-group .btn {
+            flex: 1;
+            min-width: 150px;
+        }
+        .loading {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            vertical-align: middle;
+        }
         @keyframes spin { to { transform: rotate(360deg); } }
-   /* ===== COMPACTAR TELA DE CORREÇÃO NO MOBILE ===== */
-@media (max-width: 768px) {
-    /* Container de resultado */
-    .result-container { padding: 20px 15px; }
-    .result-box { padding: 10px 5px; }
-    .result-box h2 { font-size: 1.2em; margin-bottom: 10px; }
-    
-    /* Pontuação menor */
-    .score { font-size: 2.2em; margin: 10px 0; }
-    .message { font-size: 0.95em; margin-bottom: 15px; }
-    
-    /* Caixa de correção */
-    .correction { padding: 15px 10px; margin-top: 15px; }
-    .correction h3 { font-size: 1em; margin-bottom: 12px; }
-    
-    /* Cada questão na correção - MUITO mais compacta */
-    .question-correction { 
-        margin-bottom: 12px; 
-        padding: 10px; 
-    }
-    .question-correction strong { 
-        font-size: 0.85em; 
-        margin-bottom: 5px; 
-    }
-    .question-correction p { 
-        font-size: 0.82em; 
-        line-height: 1.3; 
-        margin-bottom: 5px;
-    }
-    
-    /* Enunciado da questão em itálico - menor */
-    .question-correction p[style*="italic"],
-    .question-correction p:nth-of-type(1) { 
-        font-size: 0.82em !important;
-        margin-bottom: 6px !important;
-    }
-    
-    /* Respostas do usuário e corretas */
-    .correct-answer, .user-answer { 
-        font-size: 0.82em; 
-        line-height: 1.3;
-    }
-    
-    /* Explicação - mais compacta */
-    .explanation { 
-        margin-top: 6px; 
-        padding: 8px; 
-        font-size: 0.8em !important; 
-        line-height: 1.3;
-    }
-    
-    /* Botões no final - empilhados no celular */
-    .btn-group { 
-        flex-direction: column; 
-        gap: 8px; 
-    }
-    .btn-group .btn { 
-        min-width: 100%; 
-        margin: 0 !important;
-        padding: 12px;
-        font-size: 0.9em;
-    }
-    
-    /* Mensagens de status */
-    .success-msg, .error-msg { 
-        padding: 10px; 
-        font-size: 0.85em; 
-        margin-bottom: 10px; 
-    }
-}
 
-/* Celular muito pequeno */
-@media (max-width: 400px) {
-    .result-container { padding: 15px 10px; }
-    .score { font-size: 2em; }
-    .correction { padding: 12px 8px; }
-    .question-correction { padding: 8px; margin-bottom: 10px; }
-    .question-correction strong { font-size: 0.8em; }
-    .question-correction p { font-size: 0.78em; }
-    .explanation { font-size: 0.75em !important; padding: 6px; }
-}
+        /* ===== RESPONSIVIDADE MOBILE ===== */
+        @media (max-width: 768px) {
+            header { padding: 20px 15px; }
+            header h1 { font-size: 1.3em; }
+            header p { font-size: 0.85em; }
+            .header-btn { padding: 8px 15px; font-size: 0.8em; }
+            .container { padding: 15px; }
+            .form-container, .quiz-container, .result-container { padding: 20px 15px; }
+            h2 { font-size: 1.2em; }
+            .question-text { font-size: 0.95em; }
+            .options label { padding: 10px; font-size: 0.9em; }
+            .btn { padding: 12px; font-size: 0.95em; }
+            .score { font-size: 2.2em; margin: 10px 0; }
+            .message { font-size: 0.95em; }
+            .correction { padding: 15px 10px; }
+            .correction h3 { font-size: 1em; }
+            .question-correction { padding: 10px; margin-bottom: 12px; }
+            .question-correction strong { font-size: 0.85em; }
+            .question-correction p { font-size: 0.82em; }
+            .explanation { font-size: 0.75em !important; padding: 6px; }
+            .btn-group { flex-direction: column; }
+            .btn-group .btn { min-width: 100%; margin: 0 !important; }
+        }
+        @media (max-width: 400px) {
+            .form-container, .quiz-container, .result-container { padding: 15px 10px; }
+            .score { font-size: 2em; }
+            .question-correction { padding: 8px; }
+        }
     </style>
 </head>
 <body>
@@ -142,17 +276,17 @@
         <h1 id="title">📝 Quiz</h1>
         <p id="subtitle">Teste seus conhecimentos</p>
         <div class="header-btns">
-            <a href="index.html" class="header-btn" id="homeBtn">🏠 Voltar ao Início</a>
+            <a href="index.html" class="header-btn" id="homeBtn">🏠 Início</a>
             <a href="#" class="header-btn" id="backToListBtn">← Voltar às Aulas</a>
         </div>
     </header>
 
     <div class="container">
-        <!-- Formulário Inicial -->
+        <!-- FORMULÁRIO DE IDENTIFICAÇÃO -->
         <div class="form-container" id="formContainer">
             <h2>📋 Identificação do Estudante</h2>
-            <p style="margin-bottom: 25px; color: #666;">Preencha os dados abaixo para iniciar o quiz:</p>
-            
+            <p style="margin-bottom: 20px; color: #666;">Preencha os dados abaixo para iniciar o quiz:</p>
+
             <div class="error-msg" id="errorMsg"></div>
 
             <div class="form-group">
@@ -165,13 +299,25 @@
                 <select id="studentClass" required>
                     <option value="">Selecione sua turma</option>
                     <optgroup label="1ª Série">
-                        <option value="1A">1A</option><option value="1B">1B</option><option value="1C">1C</option><option value="1D">1D</option><option value="1E">1E</option>
+                        <option value="1A">1A</option>
+                        <option value="1B">1B</option>
+                        <option value="1C">1C</option>
+                        <option value="1D">1D</option>
+                        <option value="1E">1E</option>
                     </optgroup>
                     <optgroup label="2ª Série">
-                        <option value="2A">2A</option><option value="2B">2B</option><option value="2C">2C</option><option value="2D">2D</option><option value="2E">2E</option>
+                        <option value="2A">2A</option>
+                        <option value="2B">2B</option>
+                        <option value="2C">2C</option>
+                        <option value="2D">2D</option>
+                        <option value="2E">2E</option>
                     </optgroup>
                     <optgroup label="3ª Série">
-                        <option value="3A">3A</option><option value="3B">3B</option><option value="3C">3C</option><option value="3D">3D</option><option value="3F">3F</option>
+                        <option value="3A">3A</option>
+                        <option value="3B">3B</option>
+                        <option value="3C">3C</option>
+                        <option value="3D">3D</option>
+                        <option value="3F">3F</option>
                     </optgroup>
                 </select>
             </div>
@@ -180,7 +326,7 @@
             <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">🏠 Voltar ao Início</button>
         </div>
 
-        <!-- Quiz -->
+        <!-- QUIZ -->
         <div class="quiz-container hidden" id="quizContainer">
             <h2 id="quizTitle">Questões</h2>
             <div id="questionsContainer"></div>
@@ -188,30 +334,54 @@
             <button type="button" class="btn" id="submitBtn" onclick="submitQuiz()">Finalizar Quiz</button>
         </div>
 
-        <!-- Resultado -->
+        <!-- RESULTADO -->
         <div class="result-container hidden" id="resultContainer">
             <div class="result-box">
                 <h2>📊 Resultado do Quiz</h2>
                 <div class="score" id="scoreDisplay">0/5</div>
                 <div class="message" id="messageDisplay"></div>
-                <div id="saveStatus" class="success-msg"></div>
+                <div id="saveStatus"></div>
                 <div class="correction" id="correctionContainer">
                     <h3>📖 Correção Detalhada</h3>
                     <div id="corrections"></div>
                 </div>
-                <a href="#" id="backToLesson" class="btn" style="display:inline-block;width:auto;margin-top:20px;">← Voltar à Aula</a>
-                <a href="#" id="backToList" class="btn btn-secondary" style="display:inline-block;width:auto;margin-top:20px;margin-left:10px;">Ver Outras Aulas</a>
+                <div class="btn-group">
+                    <a href="#" id="backToLesson" class="btn">← Voltar à Aula</a>
+                    <a href="#" id="backToList" class="btn btn-secondary">Ver Outras Aulas</a>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Iframe oculto para envio ao Google Forms -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
     <script src="dados-aulas.js"></script>
     <script>
-        // ⚠️ IMPORTANTE: Cole aqui a URL do seu Apps Script (a que termina em /exec)
-        // Se não quiser usar o Google Sheets, deixe como está (funciona só com localStorage)
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw8gl706UfeInLDaeH-VmrR_u9mKn_UjEmikvcAziafoYj_R2wx1AXv6rWKRZf5q4bp/exec'; // Ex: 'https://script.google.com/macros/s/AKfycbw8gl706UfeInLDaeH-VmrR_u9mKn_UjEmikvcAziafoYj_R2wx1AXv6rWKRZf5q4bp/exec'
+        // ============================================================
+        // CONFIGURAÇÃO - PREENCHA AQUI:
+        // Cole a URL do seu Google Forms (termina em /formResponse)
+        // Se não quiser usar, deixe vazio: ''
+        // ============================================================
+        const GOOGLE_FORMS_URL = 'https://script.google.com/macros/s/AKfycbw8gl706UfeInLDaeH-VmrR_u9mKn_UjEmikvcAziafoYj_R2wx1AXv6rWKRZf5q4bp/exec'; // Ex: 'https://script.google.com/macros/s/AKfycbw8gl706UfeInLDaeH-VmrR_u9mKn_UjEmikvcAziafoYj_R2wx1AXv6rWKRZf5q4bp/exec';
 
-        // Verifica se os dados foram carregados
+        // IDs dos campos do formulário (entry.XXXXX)
+        // Para descobrir: abra o formulário, clique com botão direito
+        // em cada campo → Inspecionar → procure name="entry.XXXXX"
+        const FIELD_IDS = {
+            dataHora: 'entry.000000000',
+            nome: 'entry.000000000',
+            turma: 'entry.000000000',
+            materia: 'entry.000000000',
+            aula: 'entry.000000000',
+            acertos: 'entry.000000000',
+            total: 'entry.000000000',
+            porcentagem: 'entry.000000000'
+        };
+
+        // ============================================================
+        // VERIFICAÇÃO INICIAL
+        // ============================================================
         if (typeof dadosAulas === 'undefined') {
             document.body.innerHTML = `
                 <div style="text-align:center;padding:50px;">
@@ -297,9 +467,13 @@
                 date: new Date().toLocaleString('pt-BR')
             };
 
-            // Embaralha as alternativas
+            // ============================================================
+            // EMBARALHAMENTO DAS ALTERNATIVAS (CORRIGIDO)
+            // ============================================================
             const questoesOriginais = dadosAulas[materia][aulaNum].quiz;
+
             currentQuestions = questoesOriginais.map(q => {
+                // Cria array com letra original + texto
                 const alternativas = [
                     { letra: 'a', texto: q.alternativas.a },
                     { letra: 'b', texto: q.alternativas.b },
@@ -307,19 +481,27 @@
                     { letra: 'd', texto: q.alternativas.d },
                     { letra: 'e', texto: q.alternativas.e }
                 ];
-                
+
+                // Embaralha (Fisher-Yates)
                 for (let i = alternativas.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
                     [alternativas[i], alternativas[j]] = [alternativas[j], alternativas[i]];
                 }
-                
-                const novaLetraCorreta = alternativas.find(a => a.letra === q.correta).letra;
+
+                // NOVAS LETRAS por posição
                 const novasLetras = ['a', 'b', 'c', 'd', 'e'];
+
+                // ✅ CORREÇÃO: encontra o ÍNDICE da alternativa correta
+                // após o embaralhamento e atribui a NOVA letra
+                const correctIndex = alternativas.findIndex(a => a.letra === q.correta);
+                const novaLetraCorreta = novasLetras[correctIndex];
+
+                // Reconstrói as alternativas com as novas letras
                 const novasAlternativas = {};
                 alternativas.forEach((alt, idx) => {
                     novasAlternativas[novasLetras[idx]] = alt.texto;
                 });
-                
+
                 return {
                     enunciado: q.enunciado,
                     alternativas: novasAlternativas,
@@ -328,6 +510,7 @@
                 };
             });
 
+            // Renderiza as questões
             let html = '';
             currentQuestions.forEach((q, idx) => {
                 html += `<div class="question"><div class="question-text"><strong>Questão ${idx + 1}:</strong> ${q.enunciado}</div><div class="options">`;
@@ -343,27 +526,54 @@
             window.scrollTo(0, 0);
         }
 
-        async function enviarParaPlanilha(resultado) {
-            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === '') {
-                console.log('Google Sheets não configurado, usando apenas localStorage');
-                return false;
-            }
-            
-            try {
-                await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-                    body: JSON.stringify(resultado)
-                });
-                return true;
-            } catch(error) {
-                console.error('Erro ao enviar:', error);
-                return false;
-            }
+        // ============================================================
+        // ENVIO PARA GOOGLE FORMS (se configurado)
+        // ============================================================
+        function enviarParaGoogleForms(resultado) {
+            return new Promise((resolve) => {
+                try {
+                    if (!GOOGLE_FORMS_URL || GOOGLE_FORMS_URL === '') {
+                        resolve(false);
+                        return;
+                    }
+
+                    const params = new URLSearchParams();
+                    params.append(FIELD_IDS.dataHora, resultado.date);
+                    params.append(FIELD_IDS.nome, resultado.name);
+                    params.append(FIELD_IDS.turma, resultado.class);
+                    params.append(FIELD_IDS.materia, resultado.materia === 'filosofia' ? 'Filosofia' : 'Sociologia');
+                    params.append(FIELD_IDS.aula, 'Aula ' + resultado.aula);
+                    params.append(FIELD_IDS.acertos, resultado.score);
+                    params.append(FIELD_IDS.total, resultado.totalQuestions);
+                    params.append(FIELD_IDS.porcentagem, resultado.percentage + '%');
+
+                    const form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = GOOGLE_FORMS_URL;
+                    form.target = 'hidden_iframe';
+
+                    params.forEach((value, key) => {
+                        const input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = key;
+                        input.value = value;
+                        form.appendChild(input);
+                    });
+
+                    document.body.appendChild(form);
+                    form.submit();
+                    document.body.removeChild(form);
+
+                    resolve(true);
+                } catch(error) {
+                    console.error('Erro ao enviar:', error);
+                    resolve(false);
+                }
+            });
         }
 
         async function submitQuiz() {
+            // Verifica se todas as questões foram respondidas
             const answers = {};
             for (let i = 0; i < currentQuestions.length; i++) {
                 const selected = document.querySelector(`input[name="q${i}"]:checked`);
@@ -374,6 +584,7 @@
                 answers[`q${i}`] = selected.value;
             }
 
+            // Calcula pontuação e correções
             let score = 0;
             const corrections = [];
 
@@ -381,6 +592,7 @@
                 const userAnswer = answers[`q${idx}`];
                 const isCorrect = userAnswer === q.correta;
                 if (isCorrect) score++;
+
                 corrections.push({
                     question: idx + 1,
                     enunciado: q.enunciado,
@@ -401,12 +613,15 @@
                 timestamp: new Date().toISOString()
             };
 
+            // Desabilita botão e mostra loading
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="loading"></span> Salvando...';
 
-            const enviado = await enviarParaPlanilha(resultado);
+            // Envia para Google Forms (se configurado)
+            const enviado = await enviarParaGoogleForms(resultado);
 
+            // Salva também no localStorage (backup)
             let allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
             allResults.push(resultado);
             localStorage.setItem('quizResults', JSON.stringify(allResults));
@@ -420,35 +635,41 @@
 
             document.getElementById('scoreDisplay').textContent = `${score}/${currentQuestions.length}`;
 
+            // Mensagem conforme pontuação
             let message = '';
-            if (score === currentQuestions.length) message = '🏆 Excelente! Você dominou o conteúdo!';
-            else if (score >= 3) message = '👍 Bom trabalho! Revise os erros para aperfeiçoar.';
-            else message = '📚 Continue estudando! Revise a aula e tente novamente.';
+            if (score === currentQuestions.length) {
+                message = '🏆 Excelente! Você dominou o conteúdo!';
+            } else if (score >= 3) {
+                message = '👍 Bom trabalho! Revise os erros para aperfeiçoar.';
+            } else {
+                message = '📚 Continue estudando! Revise a aula e tente novamente.';
+            }
             document.getElementById('messageDisplay').textContent = message;
 
+            // Status de salvamento
             const saveStatus = document.getElementById('saveStatus');
-            if (GOOGLE_SCRIPT_URL && enviado) {
-                saveStatus.textContent = '✅ Seu resultado foi registrado com sucesso!';
-                saveStatus.classList.add('show');
-            } else if (GOOGLE_SCRIPT_URL) {
-                saveStatus.textContent = '⚠️ Não foi possível enviar para a planilha, mas suas respostas foram registradas.';
-                saveStatus.style.background = '#fff3cd';
-                saveStatus.style.color = '#856404';
-                saveStatus.style.borderLeftColor = '#ffc107';
-                saveStatus.classList.add('show');
+            if (GOOGLE_FORMS_URL && GOOGLE_FORMS_URL !== '') {
+                if (enviado) {
+                    saveStatus.className = 'success-msg show';
+                    saveStatus.textContent = '✅ Seu resultado foi registrado com sucesso!';
+                } else {
+                    saveStatus.className = 'warning-msg show';
+                    saveStatus.textContent = '⚠️ Não foi possível enviar automaticamente, mas suas respostas foram registradas localmente.';
+                }
             }
 
+            // Renderiza correções
             let correctionsHTML = '';
             corrections.forEach(corr => {
                 const statusClass = corr.isCorrect ? 'correct' : 'incorrect';
                 const statusIcon = corr.isCorrect ? '✅' : '❌';
-                
+
                 correctionsHTML += `
                     <div class="question-correction ${statusClass}">
                         <strong>${statusIcon} Questão ${corr.question}</strong>
-                        <p style="margin-bottom:10px;color:#555;font-style:italic;">${corr.enunciado}</p>
-                        <p>${corr.isCorrect ? 
-                            `<span class="correct-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - CORRETA</span>` : 
+                        <p style="font-style:italic;color:#555;">${corr.enunciado}</p>
+                        <p>${corr.isCorrect ?
+                            `<span class="correct-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - CORRETA</span>` :
                             `<span class="user-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - ERRADA</span><br>
                              <span class="correct-answer">Resposta correta: ${corr.correctAnswer}) ${corr.correctText}</span>`
                         }</p>
