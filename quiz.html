@@ -508,100 +508,122 @@
         }
 
         // ============================================================
-        // ENVIO PARA GOOGLE APPS SCRIPT (CORRIGIDO)
-        // ============================================================
-        async function enviarParaAppsScript(resultado) {
-            try {
-                if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === '') {
-                    return false;
-                }
-
-                // Monta o objeto com os dados
-                const dados = {
-                    dataHora: resultado.date,
-                    nome: resultado.name,
-                    turma: resultado.class,
-                    materia: resultado.materia === 'filosofia' ? 'Filosofia' : 'Sociologia',
-                    aula: 'Aula ' + resultado.aula,
-                    acertos: resultado.score,
-                    total: resultado.totalQuestions,
-                    porcentagem: resultado.percentage + '%'
-                };
-
-                // Envia via fetch (método correto para Apps Script)
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors', // Necessário para Apps Script
-                    headers: {
-                        'Content-Type': 'text/plain;charset=utf-8'
-                    },
-                    body: JSON.stringify(dados)
-                });
-                
-                return true;
-            } catch(error) {
-                console.error('Erro ao enviar:', error);
-                return false;
-            }
+// ENVIO PARA GOOGLE APPS SCRIPT (VERSÃO CORRIGIDA)
+// ============================================================
+async function enviarParaAppsScript(resultado) {
+    try {
+        if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === '') {
+            console.warn('URL do Apps Script não configurada');
+            return false;
         }
+
+        // Validação antes de enviar
+        if (!resultado || !resultado.name || !resultado.class) {
+            console.error('Dados incompletos:', resultado);
+            return false;
+        }
+
+        // Monta o objeto com os dados
+        // IMPORTANTE: envia APENAS o número da aula, sem "Aula "
+        const dados = {
+            dataHora: resultado.date || new Date().toLocaleString('pt-BR'),
+            nome: resultado.name || 'Sem nome',
+            turma: resultado.class || 'Sem turma',
+            materia: resultado.materia === 'filosofia' ? 'Filosofia' : 'Sociologia',
+            aula: String(resultado.aula),  // ← Apenas o número, como string
+            acertos: resultado.score ?? 0,
+            total: resultado.totalQuestions ?? 5,
+            porcentagem: (resultado.percentage ?? 0) + '%'
+        };
+
+        console.log('Enviando dados:', dados); // Para debug
+
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8'
+            },
+            body: JSON.stringify(dados)
+        });
+        
+        return true;
+    } catch(error) {
+        console.error('Erro ao enviar:', error);
+        return false;
+    }
+}
 
         async function submitQuiz() {
-            // Verifica se todas as questões foram respondidas
-            const answers = {};
-            for (let i = 0; i < currentQuestions.length; i++) {
-                const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                if (!selected) {
-                    showError('quizErrorMsg', `⚠️ Por favor, responda a questão ${i + 1} antes de finalizar.`);
-                    return;
-                }
-                answers[`q${i}`] = selected.value;
-            }
-
-            // Calcula pontuação e correções
-            let score = 0;
-            const corrections = [];
-
-            currentQuestions.forEach((q, idx) => {
-                const userAnswer = answers[`q${idx}`];
-                const isCorrect = userAnswer === q.correta;
-                if (isCorrect) score++;
-
-                corrections.push({
-                    question: idx + 1,
-                    enunciado: q.enunciado,
-                    userAnswer,
-                    correctAnswer: q.correta,
-                    userText: q.alternativas[userAnswer],
-                    correctText: q.alternativas[q.correta],
-                    isCorrect,
-                    explanation: q.explicacao
-                });
-            });
-
-            const resultado = {
-                ...studentData,
-                score: score,
-                totalQuestions: currentQuestions.length,
-                percentage: Math.round((score / currentQuestions.length) * 100),
-                timestamp: new Date().toISOString()
-            };
-
-            // Desabilita botão e mostra loading
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="loading"></span> Salvando...';
-
-            // Envia para Apps Script
-            const enviado = await enviarParaAppsScript(resultado);
-
-            // Salva também no localStorage (backup)
-            let allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
-            allResults.push(resultado);
-            localStorage.setItem('quizResults', JSON.stringify(allResults));
-
-            displayResults(score, corrections, enviado);
+    // Verifica se todas as questões foram respondidas
+    const answers = {};
+    for (let i = 0; i < currentQuestions.length; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (!selected) {
+            showError('quizErrorMsg', `⚠️ Por favor, responda a questão ${i + 1} antes de finalizar.`);
+            return;
         }
+        answers[`q${i}`] = selected.value;
+    }
 
+    // Calcula pontuação e correções
+    let score = 0;
+    const corrections = [];
+
+    currentQuestions.forEach((q, idx) => {
+        const userAnswer = answers[`q${idx}`];
+        const isCorrect = userAnswer === q.correta;
+        if (isCorrect) score++;
+
+        corrections.push({
+            question: idx + 1,
+            enunciado: q.enunciado,
+            userAnswer,
+            correctAnswer: q.correta,
+            userText: q.alternativas[userAnswer],
+            correctText: q.alternativas[q.correta],
+            isCorrect,
+            explanation: q.explicacao
+        });
+    });
+
+    const totalQuestions = currentQuestions.length || 5;
+    const percentage = Math.round((score / totalQuestions) * 100);
+
+    // Monta o resultado COM VALIDAÇÃO
+    const resultado = {
+        name: studentData.name || 'Sem nome',
+        class: studentData.class || 'Sem turma',
+        materia: studentData.materia || 'filosofia',
+        aula: studentData.aula || 1,           // ← Apenas o número
+        date: studentData.date || new Date().toLocaleString('pt-BR'),
+        score: score,
+        totalQuestions: totalQuestions,
+        percentage: percentage,
+        timestamp: new Date().toISOString()
+    };
+
+    console.log('Resultado montado:', resultado); // Para debug
+
+    // Desabilita botão e mostra loading
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="loading"></span> Salvando...';
+
+    // Envia para Apps Script
+    const enviado = await enviarParaAppsScript(resultado);
+
+    // Salva também no localStorage (backup)
+    try {
+        let allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
+        allResults.push(resultado);
+        localStorage.setItem('quizResults', JSON.stringify(allResults));
+    } catch(e) {
+        console.error('Erro ao salvar no localStorage:', e);
+    }
+
+    displayResults(score, corrections, enviado);
+}
         function displayResults(score, corrections, enviado) {
             document.getElementById('quizContainer').classList.add('hidden');
             document.getElementById('resultContainer').classList.remove('hidden');
