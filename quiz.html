@@ -419,4 +419,240 @@
         function showError(elementId, message) {
             const errorDiv = document.getElementById(elementId);
             errorDiv.textContent = message;
-            errorDiv.classList.add
+            errorDiv.classList.add('show');
+            setTimeout(() => errorDiv.classList.remove('show'), 4000);
+        }
+
+        function startQuiz() {
+            const name = document.getElementById('studentName').value.trim();
+            const classSelected = document.getElementById('studentClass').value;
+
+            if (!name || name.length < 3) {
+                showError('errorMsg', '⚠️ Por favor, preencha seu nome completo (mínimo 3 caracteres).');
+                return;
+            }
+            if (!classSelected) {
+                showError('errorMsg', '⚠️ Por favor, selecione sua turma.');
+                return;
+            }
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const materia = urlParams.get('materia');
+            const aulaNum = parseInt(urlParams.get('aula'));
+
+            studentData = {
+                name: name,
+                class: classSelected,
+                materia: materia,
+                aula: aulaNum,
+                date: new Date().toLocaleString('pt-BR')
+            };
+
+            // ============================================================
+            // EMBARALHAMENTO DAS ALTERNATIVAS (CORRIGIDO)
+            // ============================================================
+            const questoesOriginais = dadosAulas[materia][aulaNum].quiz;
+
+            currentQuestions = questoesOriginais.map(q => {
+                // Cria array com letra original + texto
+                const alternativas = [
+                    { letra: 'a', texto: q.alternativas.a },
+                    { letra: 'b', texto: q.alternativas.b },
+                    { letra: 'c', texto: q.alternativas.c },
+                    { letra: 'd', texto: q.alternativas.d },
+                    { letra: 'e', texto: q.alternativas.e }
+                ];
+
+                // Embaralha (Fisher-Yates)
+                for (let i = alternativas.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [alternativas[i], alternativas[j]] = [alternativas[j], alternativas[i]];
+                }
+
+                // NOVAS LETRAS por posição
+                const novasLetras = ['a', 'b', 'c', 'd', 'e'];
+
+                // ✅ CORREÇÃO: encontra o ÍNDICE da alternativa correta
+                // após o embaralhamento e atribui a NOVA letra
+                const correctIndex = alternativas.findIndex(a => a.letra === q.correta);
+                const novaLetraCorreta = novasLetras[correctIndex];
+
+                // Reconstrói as alternativas com as novas letras
+                const novasAlternativas = {};
+                alternativas.forEach((alt, idx) => {
+                    novasAlternativas[novasLetras[idx]] = alt.texto;
+                });
+
+                return {
+                    enunciado: q.enunciado,
+                    alternativas: novasAlternativas,
+                    correta: novaLetraCorreta,
+                    explicacao: q.explicacao
+                };
+            });
+
+            // Renderiza as questões
+            let html = '';
+            currentQuestions.forEach((q, idx) => {
+                html += `<div class="question"><div class="question-text"><strong>Questão ${idx + 1}:</strong> ${q.enunciado}</div><div class="options">`;
+                ['a', 'b', 'c', 'd', 'e'].forEach(letra => {
+                    html += `<label><input type="radio" name="q${idx}" value="${letra}"> ${letra}) ${q.alternativas[letra]}</label>`;
+                });
+                html += `</div></div>`;
+            });
+            document.getElementById('questionsContainer').innerHTML = html;
+
+            document.getElementById('formContainer').classList.add('hidden');
+            document.getElementById('quizContainer').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        // ============================================================
+        // ENVIO PARA GOOGLE APPS SCRIPT (CORRIGIDO)
+        // ============================================================
+        async function enviarParaAppsScript(resultado) {
+            try {
+                if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === '') {
+                    return false;
+                }
+
+                // Monta o objeto com os dados
+                const dados = {
+                    dataHora: resultado.date,
+                    nome: resultado.name,
+                    turma: resultado.class,
+                    materia: resultado.materia === 'filosofia' ? 'Filosofia' : 'Sociologia',
+                    aula: 'Aula ' + resultado.aula,
+                    acertos: resultado.score,
+                    total: resultado.totalQuestions,
+                    porcentagem: resultado.percentage + '%'
+                };
+
+                // Envia via fetch (método correto para Apps Script)
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Necessário para Apps Script
+                    headers: {
+                        'Content-Type': 'text/plain;charset=utf-8'
+                    },
+                    body: JSON.stringify(dados)
+                });
+                
+                return true;
+            } catch(error) {
+                console.error('Erro ao enviar:', error);
+                return false;
+            }
+        }
+
+        async function submitQuiz() {
+            // Verifica se todas as questões foram respondidas
+            const answers = {};
+            for (let i = 0; i < currentQuestions.length; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (!selected) {
+                    showError('quizErrorMsg', `⚠️ Por favor, responda a questão ${i + 1} antes de finalizar.`);
+                    return;
+                }
+                answers[`q${i}`] = selected.value;
+            }
+
+            // Calcula pontuação e correções
+            let score = 0;
+            const corrections = [];
+
+            currentQuestions.forEach((q, idx) => {
+                const userAnswer = answers[`q${idx}`];
+                const isCorrect = userAnswer === q.correta;
+                if (isCorrect) score++;
+
+                corrections.push({
+                    question: idx + 1,
+                    enunciado: q.enunciado,
+                    userAnswer,
+                    correctAnswer: q.correta,
+                    userText: q.alternativas[userAnswer],
+                    correctText: q.alternativas[q.correta],
+                    isCorrect,
+                    explanation: q.explicacao
+                });
+            });
+
+            const resultado = {
+                ...studentData,
+                score: score,
+                totalQuestions: currentQuestions.length,
+                percentage: Math.round((score / currentQuestions.length) * 100),
+                timestamp: new Date().toISOString()
+            };
+
+            // Desabilita botão e mostra loading
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="loading"></span> Salvando...';
+
+            // Envia para Apps Script
+            const enviado = await enviarParaAppsScript(resultado);
+
+            // Salva também no localStorage (backup)
+            let allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
+            allResults.push(resultado);
+            localStorage.setItem('quizResults', JSON.stringify(allResults));
+
+            displayResults(score, corrections, enviado);
+        }
+
+        function displayResults(score, corrections, enviado) {
+            document.getElementById('quizContainer').classList.add('hidden');
+            document.getElementById('resultContainer').classList.remove('hidden');
+
+            document.getElementById('scoreDisplay').textContent = `${score}/${currentQuestions.length}`;
+
+            // Mensagem conforme pontuação
+            let message = '';
+            if (score === currentQuestions.length) {
+                message = '🏆 Excelente! Você dominou o conteúdo!';
+            } else if (score >= 3) {
+                message = '👍 Bom trabalho! Revise os erros para aperfeiçoar.';
+            } else {
+                message = '📚 Continue estudando! Revise a aula e tente novamente.';
+            }
+            document.getElementById('messageDisplay').textContent = message;
+
+            // Status de salvamento
+            const saveStatus = document.getElementById('saveStatus');
+            if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== '') {
+                if (enviado) {
+                    saveStatus.className = 'success-msg show';
+                    saveStatus.textContent = '✅ Seu resultado foi registrado com sucesso!';
+                } else {
+                    saveStatus.className = 'warning-msg show';
+                    saveStatus.textContent = '⚠️ Não foi possível enviar automaticamente, mas suas respostas foram registradas localmente.';
+                }
+            }
+
+            // Renderiza correções
+            let correctionsHTML = '';
+            corrections.forEach(corr => {
+                const statusClass = corr.isCorrect ? 'correct' : 'incorrect';
+                const statusIcon = corr.isCorrect ? '✅' : '❌';
+
+                correctionsHTML += `
+                    <div class="question-correction ${statusClass}">
+                        <strong>${statusIcon} Questão ${corr.question}</strong>
+                        <p style="font-style:italic;color:#555;">${corr.enunciado}</p>
+                        <p>${corr.isCorrect ?
+                            `<span class="correct-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - CORRETA</span>` :
+                            `<span class="user-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - ERRADA</span><br>
+                             <span class="correct-answer">Resposta correta: ${corr.correctAnswer}) ${corr.correctText}</span>`
+                        }</p>
+                        <div class="explanation"><strong>Explicação:</strong> ${corr.explanation}</div>
+                    </div>
+                `;
+            });
+            document.getElementById('corrections').innerHTML = correctionsHTML;
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
