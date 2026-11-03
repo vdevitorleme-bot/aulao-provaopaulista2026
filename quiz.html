@@ -4,676 +4,778 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Provão Paulista 2026</title>
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f7fa;
-            min-height: 100vh;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #12395b;
             color: white;
-            padding: 30px 20px;
+            padding: 20px 16px;
             text-align: center;
         }
-        header.sociologia {
-            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+
+        header h1 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
         }
-        header h1 { font-size: 1.8em; margin-bottom: 10px; }
-        header p { font-size: 1em; opacity: 0.95; }
-        .header-btns {
-            margin-top: 15px;
+
+        header p {
+            opacity: 0.9;
+        }
+
+        .menu-topo {
+            margin-top: 12px;
             display: flex;
-            gap: 10px;
             justify-content: center;
+            gap: 12px;
             flex-wrap: wrap;
         }
-        .header-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: white;
-            color: #667eea;
+
+        .menu-topo a {
+            color: white;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: transform 0.3s;
+            background: rgba(255,255,255,0.12);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.95rem;
         }
-        .header-btn.sociologia { color: #56ab2f; }
-        .header-btn:hover { transform: scale(1.05); }
+
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 900px;
+            margin: 24px auto;
+            padding: 0 16px;
         }
-        .form-container, .quiz-container, .result-container {
+
+        .card {
             background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            margin-bottom: 22px;
         }
+
         h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.4em;
+            margin-bottom: 12px;
+            color: #12395b;
         }
-        .form-group { margin-bottom: 20px; }
+
+        h3 {
+            margin: 18px 0 10px;
+            color: #12395b;
+        }
+
         label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-        input, select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-        }
-        input:focus, select:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-            margin-top: 10px;
-            text-align: center;
-            text-decoration: none;
-        }
-        .btn.sociologia { background: #56ab2f; }
-        .btn:hover { background: #5568d3; }
-        .btn.sociologia:hover { background: #4a9528; }
-        .btn:disabled { background: #999; cursor: not-allowed; }
-        .btn-secondary { background: #95a5a6; }
-        .btn-secondary:hover { background: #7f8c8d; }
-        .error-msg {
-            background: #ffebee;
-            color: #c62828;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border-left: 4px solid #c62828;
-            display: none;
-        }
-        .error-msg.show { display: block; }
-        .success-msg {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border-left: 4px solid #2e7d32;
-            display: none;
-        }
-        .success-msg.show { display: block; }
-        .warning-msg {
-            background: #fff3cd;
-            color: #856404;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border-left: 4px solid #ffc107;
-            display: none;
-        }
-        .warning-msg.show { display: block; }
-        .question {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #eee;
-        }
-        .question:last-of-type { border-bottom: none; }
-        .question-text {
-            font-size: 1em;
-            color: #333;
-            margin-bottom: 15px;
-            font-weight: 600;
-            line-height: 1.5;
-        }
-        .options label {
-            display: block;
-            padding: 12px;
-            background: #f8f9ff;
-            border: 2px solid #e8ecff;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: normal;
-            font-size: 0.95em;
-            line-height: 1.4;
-        }
-        .options label:hover {
-            background: #e8ecff;
-            border-color: #667eea;
-        }
-        .options input[type="radio"] {
-            margin-right: 10px;
-            width: auto;
-        }
-        .hidden { display: none; }
-        .result-box { text-align: center; padding: 20px; }
-        .score {
-            font-size: 3em;
-            color: #667eea;
             font-weight: bold;
-            margin: 15px 0;
+            margin: 14px 0 6px;
         }
-        .score.sociologia { color: #56ab2f; }
-        .message {
-            font-size: 1.1em;
-            color: #444;
-            margin-bottom: 20px;
-        }
-        .correction {
-            text-align: left;
-            margin-top: 20px;
-            padding: 20px 15px;
-            background: #f8f9ff;
-            border-radius: 10px;
-        }
-        .correction h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-        .question-correction {
-            margin-bottom: 15px;
+
+        input[type="text"],
+        select {
+            width: 100%;
             padding: 12px;
-            background: white;
+            border: 1px solid #b8c4d0;
             border-radius: 8px;
-            border-left: 4px solid #667eea;
+            font-size: 1rem;
+            background: #fff;
         }
-        .question-correction.correct { border-left-color: #56ab2f; }
-        .question-correction.incorrect { border-left-color: #e74c3c; }
-        .question-correction strong {
-            color: #333;
-            display: block;
-            margin-bottom: 5px;
-            font-size: 0.9em;
+
+        button {
+            border: 0;
+            border-radius: 10px;
+            padding: 12px 18px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
         }
-        .question-correction p {
-            font-size: 0.85em;
-            line-height: 1.4;
-            margin-bottom: 5px;
+
+        .btn-principal {
+            background: #12395b;
+            color: white;
+            margin-top: 18px;
+            width: 100%;
         }
-        .correct-answer { color: #56ab2f; font-weight: 600; font-size: 0.85em; }
-        .user-answer { color: #e74c3c; font-weight: 600; font-size: 0.85em; }
-        .explanation {
-            margin-top: 8px;
-            padding: 8px;
-            background: #f5f7fa;
-            border-radius: 5px;
-            font-size: 0.8em !important;
-            color: #555;
-            line-height: 1.4;
+
+        .btn-principal:hover {
+            background: #0d2b45;
         }
-        .btn-group {
+
+        .btn-principal:disabled {
+            background: #8fa3b8;
+            cursor: not-allowed;
+        }
+
+        .btn-secundario {
+            background: #e5edf5;
+            color: #12395b;
+        }
+
+        .info-quiz {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            background: #eef4fa;
+            border: 1px solid #d6e4f0;
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 20px;
+            font-size: 0.96rem;
+        }
+
+        .questao {
+            border: 1px solid #d9e2ec;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 18px;
+            background: #ffffff;
+        }
+
+        .questao p.enunciado {
+            margin-bottom: 14px;
+            font-weight: bold;
+        }
+
+        .alternativa {
             display: flex;
             gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
+            align-items: flex-start;
+            border: 1px solid #d9e2ec;
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background: #fbfdff;
         }
-        .btn-group .btn {
-            flex: 1;
-            min-width: 150px;
-        }
-        .loading {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 3px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
-            vertical-align: middle;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* ===== RESPONSIVIDADE MOBILE ===== */
-        @media (max-width: 768px) {
-            header { padding: 20px 15px; }
-            header h1 { font-size: 1.3em; }
-            header p { font-size: 0.85em; }
-            .header-btn { padding: 8px 15px; font-size: 0.8em; }
-            .container { padding: 15px; }
-            .form-container, .quiz-container, .result-container { padding: 20px 15px; }
-            h2 { font-size: 1.2em; }
-            .question-text { font-size: 0.95em; }
-            .options label { padding: 10px; font-size: 0.9em; }
-            .btn { padding: 12px; font-size: 0.95em; }
-            .score { font-size: 2.2em; margin: 10px 0; }
-            .message { font-size: 0.95em; }
-            .correction { padding: 15px 10px; }
-            .correction h3 { font-size: 1em; }
-            .question-correction { padding: 10px; margin-bottom: 12px; }
-            .question-correction strong { font-size: 0.85em; }
-            .question-correction p { font-size: 0.82em; }
-            .explanation { font-size: 0.75em !important; padding: 6px; }
-            .btn-group { flex-direction: column; }
-            .btn-group .btn { min-width: 100%; margin: 0 !important; }
+        .alternativa:hover {
+            background: #eef5ff;
         }
-        @media (max-width: 400px) {
-            .form-container, .quiz-container, .result-container { padding: 15px 10px; }
-            .score { font-size: 2em; }
-            .question-correction { padding: 8px; }
+
+        .alternativa input {
+            margin-top: 4px;
+        }
+
+        .resultado-box {
+            text-align: center;
+            background: #eef4fa;
+            border: 1px solid #d6e4f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 18px 0;
+        }
+
+        .resultado-box .grande {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #12395b;
+        }
+
+        .resultado-box .porcentagem {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .correcao-item {
+            border: 1px solid #d9e2ec;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            background: #fff;
+        }
+
+        .correcao-item.acertou {
+            border-left: 6px solid #2e7d32;
+        }
+
+        .correcao-item.errou {
+            border-left: 6px solid #c62828;
+        }
+
+        .alternativa-correcao {
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #fbfdff;
+        }
+
+        .alternativa-correcao.correta {
+            background: #e8f5e9;
+            border-color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .alternativa-correcao.errada {
+            background: #ffebee;
+            border-color: #c62828;
+        }
+
+        .explicacao {
+            margin-top: 12px;
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .acoes {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .acoes button,
+        .acoes a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .aviso {
+            background: #fff3cd;
+            border: 1px solid #ffe69c;
+            color: #664d03;
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 14px;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+
+            .info-quiz {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <header id="header">
-        <h1 id="title">📝 Quiz</h1>
-        <p id="subtitle">Teste seus conhecimentos</p>
-        <div class="header-btns">
-            <a href="index.html" class="header-btn" id="homeBtn">🏠 Início</a>
-            <a href="#" class="header-btn" id="backToListBtn">← Voltar às Aulas</a>
+
+    <header>
+        <h1>📝 Quiz - Provão Paulista 2026</h1>
+        <p>Teste seus conhecimentos</p>
+
+        <div class="menu-topo">
+            <a href="index.html">🏠 Início</a>
+            <a href="#" onclick="history.back(); return false;">← Voltar às Aulas</a>
         </div>
     </header>
 
-    <div class="container">
-        <!-- FORMULÁRIO DE IDENTIFICAÇÃO -->
-        <div class="form-container" id="formContainer">
+    <main class="container">
+
+        <!-- TELA DE ERRO -->
+        <section id="tela-erro" class="card" hidden>
+            <h2>⚠️ Quiz indisponível</h2>
+            <p id="mensagem-erro">Não foi possível carregar o quiz.</p>
+            <p class="aviso">
+                Verifique se o link da aula está no formato correto, por exemplo:<br><br>
+                <strong>quiz.html?materia=filosofia&aula=1</strong><br>
+                <strong>quiz.html?materia=sociologia&aula=3</strong>
+            </p>
+            <div class="acoes">
+                <a href="index.html"><button type="button" class="btn-secundario">🏠 Voltar ao Início</button></a>
+                <button type="button" class="btn-secundario" onclick="history.back()">← Voltar</button>
+            </div>
+        </section>
+
+        <!-- TELA DE IDENTIFICAÇÃO -->
+        <section id="tela-identificacao" class="card">
             <h2>📋 Identificação do Estudante</h2>
-            <p style="margin-bottom: 20px; color: #666;">Preencha os dados abaixo para iniciar o quiz:</p>
+            <p>Preencha os dados abaixo para iniciar o quiz:</p>
 
-            <div class="error-msg" id="errorMsg"></div>
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo" autocomplete="name">
 
-            <div class="form-group">
-                <label for="studentName">Nome Completo *</label>
-                <input type="text" id="studentName" required placeholder="Digite seu nome completo">
-            </div>
+            <label for="turma">Turma *</label>
+            <select id="turma">
+                <option value="">Selecione sua turma</option>
+                <option value="1A">1A</option>
+                <option value="1B">1B</option>
+                <option value="1C">1C</option>
+                <option value="1D">1D</option>
+                <option value="1E">1E</option>
+                <option value="2A">2A</option>
+                <option value="2B">2B</option>
+                <option value="2C">2C</option>
+                <option value="2D">2D</option>
+                <option value="2E">2E</option>
+                <option value="3A">3A</option>
+                <option value="3B">3B</option>
+                <option value="3C">3C</option>
+                <option value="3D">3D</option>
+                <option value="3F">3F</option>
+            </select>
 
-            <div class="form-group">
-                <label for="studentClass">Turma *</label>
-                <select id="studentClass" required>
-                    <option value="">Selecione sua turma</option>
-                    <optgroup label="1ª Série">
-                        <option value="1A">1A</option>
-                        <option value="1B">1B</option>
-                        <option value="1C">1C</option>
-                        <option value="1D">1D</option>
-                        <option value="1E">1E</option>
-                    </optgroup>
-                    <optgroup label="2ª Série">
-                        <option value="2A">2A</option>
-                        <option value="2B">2B</option>
-                        <option value="2C">2C</option>
-                        <option value="2D">2D</option>
-                        <option value="2E">2E</option>
-                    </optgroup>
-                    <optgroup label="3ª Série">
-                        <option value="3A">3A</option>
-                        <option value="3B">3B</option>
-                        <option value="3C">3C</option>
-                        <option value="3D">3D</option>
-                        <option value="3F">3F</option>
-                    </optgroup>
-                </select>
-            </div>
+            <button id="btn-iniciar" type="button" class="btn-principal">Iniciar Quiz</button>
+        </section>
 
-            <button type="button" class="btn" id="startBtn" onclick="startQuiz()">Iniciar Quiz</button>
-            <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">🏠 Voltar ao Início</button>
-        </div>
+        <!-- TELA DO QUIZ -->
+        <section id="tela-quiz" class="card" hidden>
+            <h2>Questões</h2>
 
-        <!-- QUIZ -->
-        <div class="quiz-container hidden" id="quizContainer">
-            <h2 id="quizTitle">Questões</h2>
-            <div id="questionsContainer"></div>
-            <div class="error-msg" id="quizErrorMsg"></div>
-            <button type="button" class="btn" id="submitBtn" onclick="submitQuiz()">Finalizar Quiz</button>
-        </div>
-
-        <!-- RESULTADO -->
-        <div class="result-container hidden" id="resultContainer">
-            <div class="result-box">
-                <h2>📊 Resultado do Quiz</h2>
-                <div class="score" id="scoreDisplay">0/5</div>
-                <div class="message" id="messageDisplay"></div>
-                <div id="saveStatus"></div>
-                <div class="correction" id="correctionContainer">
-                    <h3>📖 Correção Detalhada</h3>
-                    <div id="corrections"></div>
+            <div class="info-quiz">
+                <div>
+                    <strong>Matéria:</strong> <span id="info-materia">-</span><br>
+                    <strong>Aula:</strong> <span id="info-aula">-</span>
                 </div>
-                <div class="btn-group">
-                    <a href="#" id="backToLesson" class="btn">← Voltar à Aula</a>
-                    <a href="#" id="backToList" class="btn btn-secondary">Ver Outras Aulas</a>
+
+                <div>
+                    <strong>Aluno:</strong> <span id="info-aluno">-</span><br>
+                    <strong>Turma:</strong> <span id="info-turma">-</span>
                 </div>
             </div>
-        </div>
-    </div>
 
+            <div id="questoes"></div>
+
+            <button id="btn-finalizar" type="button" class="btn-principal">Finalizar Quiz</button>
+        </section>
+
+        <!-- TELA DE RESULTADO -->
+        <section id="tela-resultado" class="card" hidden>
+            <h2>📊 Resultado do Quiz</h2>
+
+            <div class="resultado-box">
+                <div id="resultado-texto" class="grande">0/0</div>
+                <div id="resultado-porcentagem" class="porcentagem">0%</div>
+                <div id="resultado-mensagem"></div>
+            </div>
+
+            <h3>📖 Correção Detalhada</h3>
+            <div id="correcao"></div>
+
+            <div class="acoes">
+                <button type="button" class="btn-secundario" onclick="history.back()">← Voltar à Aula</button>
+                <a href="index.html"><button type="button" class="btn-secundario">🏠 Ver Outras Aulas</button></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- IMPORTANTE: o arquivo dados-aulas.js deve estar na mesma pasta -->
     <script src="dados-aulas.js"></script>
+
     <script>
         // ============================================================
-        // CONFIGURAÇÃO - COLE SUA URL DO APPS SCRIPT AQUI:
+        // CONFIGURAÇÃO OBRIGATÓRIA
+        // Cole aqui a URL do seu Google Apps Script terminando em /exec
         // ============================================================
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw8gl706UfeInLDaeH-VmrR_u9mKn_UjEmikvcAziafoYj_R2wx1AXv6rWKRZf5q4bp/exec';
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw8gl706UfeInLDaeH-VmrR_u9mKn_UjEmikvcAziafoYj_R2wx1AXv6rWKRZf5q4bp/exec";
 
-        // ============================================================
-        // VERIFICAÇÃO INICIAL
-        // ============================================================
-        if (typeof dadosAulas === 'undefined') {
-            document.body.innerHTML = `
-                <div style="text-align:center;padding:50px;">
-                    <h1 style="color:#e74c3c;">⚠️ Erro ao carregar</h1>
-                    <p style="margin:20px 0;">Não foi possível carregar as questões do quiz.</p>
-                    <p style="margin:20px 0;">Verifique se o arquivo <strong>dados-aulas.js</strong> está presente no repositório.</p>
-                    <a href="index.html" style="display:inline-block;padding:15px 30px;background:#667eea;color:white;text-decoration:none;border-radius:25px;font-weight:600;margin-top:20px;">Voltar ao Início</a>
-                </div>
-            `;
+        // ------------------------------------------------------------
+        // Elementos da tela
+        // ------------------------------------------------------------
+        const telaErro = document.getElementById("tela-erro");
+        const telaIdentificacao = document.getElementById("tela-identificacao");
+        const telaQuiz = document.getElementById("tela-quiz");
+        const telaResultado = document.getElementById("tela-resultado");
+
+        const mensagemErro = document.getElementById("mensagem-erro");
+
+        const nomeInput = document.getElementById("nome");
+        const turmaSelect = document.getElementById("turma");
+
+        const btnIniciar = document.getElementById("btn-iniciar");
+        const btnFinalizar = document.getElementById("btn-finalizar");
+
+        const infoMateria = document.getElementById("info-materia");
+        const infoAula = document.getElementById("info-aula");
+        const infoAluno = document.getElementById("info-aluno");
+        const infoTurma = document.getElementById("info-turma");
+
+        const containerQuestoes = document.getElementById("questoes");
+
+        const resultadoTexto = document.getElementById("resultado-texto");
+        const resultadoPorcentagem = document.getElementById("resultado-porcentagem");
+        const resultadoMensagem = document.getElementById("resultado-mensagem");
+        const containerCorrecao = document.getElementById("correcao");
+
+        // ------------------------------------------------------------
+        // Variáveis do quiz
+        // ------------------------------------------------------------
+        let nomeAluno = "";
+        let turmaAluno = "";
+        let materiaBruta = "";
+        let aulaNumero = "";
+        let materiaLabel = "";
+        let aulaLabel = "";
+        let questoes = [];
+
+        // ------------------------------------------------------------
+        // Funções auxiliares
+        // ------------------------------------------------------------
+        function salvarStorage(chave, valor) {
+            try {
+                sessionStorage.setItem(chave, valor);
+                localStorage.setItem(chave, valor);
+            } catch (erro) {
+                console.warn("Não foi possível salvar no armazenamento:", erro);
+            }
+        }
+
+        function lerStorage(chave) {
+            try {
+                return sessionStorage.getItem(chave) || localStorage.getItem(chave) || "";
+            } catch (erro) {
+                return "";
+            }
+        }
+
+        function gerarDataHora() {
+            try {
+                return new Intl.DateTimeFormat("pt-BR", {
+                    dateStyle: "short",
+                    timeStyle: "medium",
+                    timeZone: "America/Sao_Paulo"
+                }).format(new Date());
+            } catch (erro) {
+                const agora = new Date();
+                return agora.toLocaleDateString("pt-BR") + " " + agora.toLocaleTimeString("pt-BR");
+            }
+        }
+
+        // ------------------------------------------------------------
+        // Ler matéria e aula da URL
+        // Exemplo:
+        // quiz.html?materia=filosofia&aula=1
+        // quiz.html?materia=sociologia&aula=5
+        // ------------------------------------------------------------
+        const params = new URLSearchParams(window.location.search);
+
+        materiaBruta = params.get("materia") || "";
+        let aulaBruta = params.get("aula") || "";
+
+        // Suporte alternativo para links no formato:
+        // quiz.html#filosofia/1
+        if ((!materiaBruta || !aulaBruta) && window.location.hash) {
+            const hash = window.location.hash.replace("#", "").trim();
+            const partes = hash.split("/");
+
+            if (partes.length >= 2) {
+                if (!materiaBruta) materiaBruta = partes[0];
+                if (!aulaBruta) aulaBruta = partes[1];
+            }
+        }
+
+        // Se não estiver na URL, tenta recuperar da sessão/storage
+        if (!materiaBruta) materiaBruta = lerStorage("quiz_materia");
+        if (!aulaBruta) aulaBruta = lerStorage("quiz_aula");
+
+        materiaBruta = String(materiaBruta).toLowerCase().trim();
+        aulaBruta = String(aulaBruta).trim();
+
+        // Remove textos e pega apenas o número da aula
+        // Exemplo: "Aula 1" vira "1"
+        aulaNumero = aulaBruta.replace(/\D/g, "");
+
+        // Salva para manter durante a navegação
+        if (materiaBruta) salvarStorage("quiz_materia", materiaBruta);
+        if (aulaNumero) salvarStorage("quiz_aula", aulaNumero);
+        else if (aulaBruta) salvarStorage("quiz_aula", aulaBruta);
+
+        // Corrige nome da matéria
+        if (materiaBruta === "filosofia") {
+            materiaLabel = "Filosofia";
+        } else if (materiaBruta === "sociologia") {
+            materiaLabel = "Sociologia";
         } else {
-            inicializarQuiz();
+            materiaLabel = materiaBruta.charAt(0).toUpperCase() + materiaBruta.slice(1);
         }
 
-        function inicializarQuiz() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const materia = urlParams.get('materia');
-            const aulaNum = parseInt(urlParams.get('aula'));
-            const isSociologia = materia === 'sociologia';
+        // Corrige nome da aula
+        // Evita o problema de aparecer "Aula Aula 1"
+        if (aulaNumero) {
+            aulaLabel = "Aula " + aulaNumero;
+        } else {
+            aulaLabel = aulaBruta;
+        }
 
-            if (!materia || !aulaNum || !dadosAulas[materia] || !dadosAulas[materia][aulaNum]) {
-                document.body.innerHTML = `
-                    <div style="text-align:center;padding:50px;">
-                        <h1 style="color:#e74c3c;">⚠️ Aula não encontrada</h1>
-                        <p style="margin:20px 0;">Verifique o link e tente novamente.</p>
-                        <a href="index.html" style="display:inline-block;padding:15px 30px;background:#667eea;color:white;text-decoration:none;border-radius:25px;font-weight:600;">Voltar ao Início</a>
-                    </div>
+        // ------------------------------------------------------------
+        // Carregar questões do banco de dados
+        // ------------------------------------------------------------
+        try {
+            if (typeof dadosAulas !== "undefined" && dadosAulas[materiaBruta] && dadosAulas[materiaBruta][aulaNumero]) {
+                questoes = dadosAulas[materiaBruta][aulaNumero].quiz || [];
+            }
+        } catch (erro) {
+            console.error("Erro ao carregar questões:", erro);
+            questoes = [];
+        }
+
+        // ------------------------------------------------------------
+        // Se não encontrar quiz, mostra erro
+        // ------------------------------------------------------------
+        if (!materiaBruta || !aulaNumero || !questoes.length) {
+            telaIdentificacao.hidden = true;
+            telaErro.hidden = false;
+
+            const problemas = [];
+
+            if (!materiaBruta) {
+                problemas.push("matéria não encontrada");
+            }
+
+            if (!aulaNumero) {
+                problemas.push("aula não encontrada");
+            }
+
+            if (materiaBruta && aulaNumero && !questoes.length) {
+                problemas.push("nenhuma questão encontrada para esta aula");
+            }
+
+            mensagemErro.textContent = problemas.join(", ") + ".";
+        }
+
+        // ------------------------------------------------------------
+        // Iniciar quiz
+        // ------------------------------------------------------------
+        btnIniciar.addEventListener("click", function (evento) {
+            evento.preventDefault();
+
+            const nome = nomeInput.value.trim();
+            const turma = turmaSelect.value;
+
+            if (!nome) {
+                alert("Digite seu nome completo.");
+                nomeInput.focus();
+                return;
+            }
+
+            if (!turma) {
+                alert("Selecione sua turma.");
+                turmaSelect.focus();
+                return;
+            }
+
+            if (!questoes.length) {
+                alert("Este quiz não está disponível.");
+                return;
+            }
+
+            nomeAluno = nome;
+            turmaAluno = turma;
+
+            infoMateria.textContent = materiaLabel;
+            infoAula.textContent = aulaLabel;
+            infoAluno.textContent = nomeAluno;
+            infoTurma.textContent = turmaAluno;
+
+            renderQuestoes();
+
+            telaIdentificacao.hidden = true;
+            telaQuiz.hidden = false;
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        // ------------------------------------------------------------
+        // Renderizar questões
+        // ------------------------------------------------------------
+        function renderQuestoes() {
+            containerQuestoes.innerHTML = "";
+
+            questoes.forEach(function (questao, indice) {
+                const divQuestao = document.createElement("div");
+                divQuestao.className = "questao";
+                divQuestao.id = "questao-" + indice;
+
+                let alternativasHtml = "";
+
+                Object.entries(questao.alternativas).forEach(function ([letra, texto]) {
+                    alternativasHtml += `
+                        <label class="alternativa">
+                            <input type="radio" name="questao-${indice}" value="${letra}">
+                            <span><strong>${letra.toUpperCase()})</strong> ${texto}</span>
+                        </label>
+                    `;
+                });
+
+                divQuestao.innerHTML = `
+                    <p class="enunciado">Questão ${indice + 1}: ${questao.enunciado}</p>
+                    ${alternativasHtml}
                 `;
-                return;
-            }
 
-            const aula = dadosAulas[materia][aulaNum];
-            document.getElementById('title').textContent = `📝 Quiz - Aula ${aulaNum}`;
-            document.getElementById('subtitle').textContent = aula.titulo;
-            document.getElementById('quizTitle').textContent = `Questões - ${aula.titulo}`;
-            document.getElementById('backToLesson').href = `aula.html?materia=${materia}&aula=${aulaNum}`;
-            document.getElementById('backToList').href = `aulas-${materia}.html`;
-            document.getElementById('backToListBtn').href = `aulas-${materia}.html`;
-
-            if (isSociologia) {
-                document.getElementById('header').classList.add('sociologia');
-                document.getElementById('startBtn').classList.add('sociologia');
-                document.getElementById('submitBtn').classList.add('sociologia');
-                document.getElementById('scoreDisplay').classList.add('sociologia');
-                document.getElementById('backToLesson').classList.add('sociologia');
-                document.getElementById('backToList').classList.add('sociologia');
-                document.getElementById('backToListBtn').classList.add('sociologia');
-                document.getElementById('homeBtn').classList.add('sociologia');
-            }
+                containerQuestoes.appendChild(divQuestao);
+            });
         }
 
-        let studentData = {};
-        let currentQuestions = [];
+        // ------------------------------------------------------------
+        // Finalizar quiz
+        // ------------------------------------------------------------
+        btnFinalizar.addEventListener("click", async function (evento) {
+            evento.preventDefault();
 
-        function showError(elementId, message) {
-            const errorDiv = document.getElementById(elementId);
-            errorDiv.textContent = message;
-            errorDiv.classList.add('show');
-            setTimeout(() => errorDiv.classList.remove('show'), 4000);
-        }
+            const botao = evento.currentTarget;
 
-        function startQuiz() {
-            const name = document.getElementById('studentName').value.trim();
-            const classSelected = document.getElementById('studentClass').value;
-
-            if (!name || name.length < 3) {
-                showError('errorMsg', '⚠️ Por favor, preencha seu nome completo (mínimo 3 caracteres).');
-                return;
-            }
-            if (!classSelected) {
-                showError('errorMsg', '⚠️ Por favor, selecione sua turma.');
+            if (botao.disabled) {
                 return;
             }
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const materia = urlParams.get('materia');
-            const aulaNum = parseInt(urlParams.get('aula'));
+            let acertos = 0;
+            const faltando = [];
 
-            studentData = {
-                name: name,
-                class: classSelected,
-                materia: materia,
-                aula: aulaNum,
-                date: new Date().toLocaleString('pt-BR')
+            questoes.forEach(function (questao, indice) {
+                const marcado = document.querySelector(`input[name="questao-${indice}"]:checked`);
+
+                if (!marcado) {
+                    faltando.push(indice + 1);
+                } else if (marcado.value === questao.correta) {
+                    acertos++;
+                }
+            });
+
+            if (faltando.length > 0) {
+                alert("Responda todas as questões antes de finalizar.\n\nFaltam as questões: " + faltando.join(", "));
+
+                const primeiraFaltando = document.getElementById("questao-" + (faltando[0] - 1));
+
+                if (primeiraFaltando) {
+                    primeiraFaltando.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+
+                return;
+            }
+
+            botao.disabled = true;
+            botao.textContent = "Enviando...";
+
+            const total = questoes.length;
+            const porcentagem = total > 0 ? Math.round((acertos / total) * 100) : 0;
+
+            const payload = {
+                dataHora: gerarDataHora(),
+                nome: nomeAluno,
+                turma: turmaAluno,
+                materia: materiaLabel,
+                aula: aulaLabel,
+                acertos: acertos,
+                total: total,
+                porcentagem: porcentagem + "%"
             };
 
-            // ============================================================
-            // EMBARALHAMENTO DAS ALTERNATIVAS (CORRIGIDO)
-            // ============================================================
-            const questoesOriginais = dadosAulas[materia][aulaNum].quiz;
+            console.log("Dados sendo enviados para a planilha:", payload);
 
-            currentQuestions = questoesOriginais.map(q => {
-                // Cria array com letra original + texto
-                const alternativas = [
-                    { letra: 'a', texto: q.alternativas.a },
-                    { letra: 'b', texto: q.alternativas.b },
-                    { letra: 'c', texto: q.alternativas.c },
-                    { letra: 'd', texto: q.alternativas.d },
-                    { letra: 'e', texto: q.alternativas.e }
-                ];
-
-                // Embaralha (Fisher-Yates)
-                for (let i = alternativas.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [alternativas[i], alternativas[j]] = [alternativas[j], alternativas[i]];
+            if (SCRIPT_URL && !SCRIPT_URL.includes("COLE_AQUI")) {
+                try {
+                    await fetch(SCRIPT_URL, {
+                        method: "POST",
+                        body: new URLSearchParams(payload),
+                        mode: "no-cors",
+                        keepalive: true
+                    });
+                } catch (erro) {
+                    console.error("Erro ao enviar resultado:", erro);
                 }
-
-                // NOVAS LETRAS por posição
-                const novasLetras = ['a', 'b', 'c', 'd', 'e'];
-
-                // ✅ CORREÇÃO: encontra o ÍNDICE da alternativa correta
-                // após o embaralhamento e atribui a NOVA letra
-                const correctIndex = alternativas.findIndex(a => a.letra === q.correta);
-                const novaLetraCorreta = novasLetras[correctIndex];
-
-                // Reconstrói as alternativas com as novas letras
-                const novasAlternativas = {};
-                alternativas.forEach((alt, idx) => {
-                    novasAlternativas[novasLetras[idx]] = alt.texto;
-                });
-
-                return {
-                    enunciado: q.enunciado,
-                    alternativas: novasAlternativas,
-                    correta: novaLetraCorreta,
-                    explicacao: q.explicacao
-                };
-            });
-
-            // Renderiza as questões
-            let html = '';
-            currentQuestions.forEach((q, idx) => {
-                html += `<div class="question"><div class="question-text"><strong>Questão ${idx + 1}:</strong> ${q.enunciado}</div><div class="options">`;
-                ['a', 'b', 'c', 'd', 'e'].forEach(letra => {
-                    html += `<label><input type="radio" name="q${idx}" value="${letra}"> ${letra}) ${q.alternativas[letra]}</label>`;
-                });
-                html += `</div></div>`;
-            });
-            document.getElementById('questionsContainer').innerHTML = html;
-
-            document.getElementById('formContainer').classList.add('hidden');
-            document.getElementById('quizContainer').classList.remove('hidden');
-            window.scrollTo(0, 0);
-        }
-
-        // ============================================================
-// ENVIO PARA GOOGLE APPS SCRIPT (VERSÃO CORRIGIDA)
-// ============================================================
-async function enviarParaAppsScript(resultado) {
-    try {
-        if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === '') {
-            console.warn('URL do Apps Script não configurada');
-            return false;
-        }
-
-        // Validação antes de enviar
-        if (!resultado || !resultado.name || !resultado.class) {
-            console.error('Dados incompletos:', resultado);
-            return false;
-        }
-
-        // Monta o objeto com os dados
-        // IMPORTANTE: envia APENAS o número da aula, sem "Aula "
-        const dados = {
-            dataHora: resultado.date || new Date().toLocaleString('pt-BR'),
-            nome: resultado.name || 'Sem nome',
-            turma: resultado.class || 'Sem turma',
-            materia: resultado.materia === 'filosofia' ? 'Filosofia' : 'Sociologia',
-            aula: String(resultado.aula),  // ← Apenas o número, como string
-            acertos: resultado.score ?? 0,
-            total: resultado.totalQuestions ?? 5,
-            porcentagem: (resultado.percentage ?? 0) + '%'
-        };
-
-        console.log('Enviando dados:', dados); // Para debug
-
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'text/plain;charset=utf-8'
-            },
-            body: JSON.stringify(dados)
-        });
-        
-        return true;
-    } catch(error) {
-        console.error('Erro ao enviar:', error);
-        return false;
-    }
-}
-
-        async function submitQuiz() {
-    // Verifica se todas as questões foram respondidas
-    const answers = {};
-    for (let i = 0; i < currentQuestions.length; i++) {
-        const selected = document.querySelector(`input[name="q${i}"]:checked`);
-        if (!selected) {
-            showError('quizErrorMsg', `⚠️ Por favor, responda a questão ${i + 1} antes de finalizar.`);
-            return;
-        }
-        answers[`q${i}`] = selected.value;
-    }
-
-    // Calcula pontuação e correções
-    let score = 0;
-    const corrections = [];
-
-    currentQuestions.forEach((q, idx) => {
-        const userAnswer = answers[`q${idx}`];
-        const isCorrect = userAnswer === q.correta;
-        if (isCorrect) score++;
-
-        corrections.push({
-            question: idx + 1,
-            enunciado: q.enunciado,
-            userAnswer,
-            correctAnswer: q.correta,
-            userText: q.alternativas[userAnswer],
-            correctText: q.alternativas[q.correta],
-            isCorrect,
-            explanation: q.explicacao
-        });
-    });
-
-    const totalQuestions = currentQuestions.length || 5;
-    const percentage = Math.round((score / totalQuestions) * 100);
-
-    // Monta o resultado COM VALIDAÇÃO
-    const resultado = {
-        name: studentData.name || 'Sem nome',
-        class: studentData.class || 'Sem turma',
-        materia: studentData.materia || 'filosofia',
-        aula: studentData.aula || 1,           // ← Apenas o número
-        date: studentData.date || new Date().toLocaleString('pt-BR'),
-        score: score,
-        totalQuestions: totalQuestions,
-        percentage: percentage,
-        timestamp: new Date().toISOString()
-    };
-
-    console.log('Resultado montado:', resultado); // Para debug
-
-    // Desabilita botão e mostra loading
-    const submitBtn = document.getElementById('submitBtn');
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="loading"></span> Salvando...';
-
-    // Envia para Apps Script
-    const enviado = await enviarParaAppsScript(resultado);
-
-    // Salva também no localStorage (backup)
-    try {
-        let allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
-        allResults.push(resultado);
-        localStorage.setItem('quizResults', JSON.stringify(allResults));
-    } catch(e) {
-        console.error('Erro ao salvar no localStorage:', e);
-    }
-
-    displayResults(score, corrections, enviado);
-}
-        function displayResults(score, corrections, enviado) {
-            document.getElementById('quizContainer').classList.add('hidden');
-            document.getElementById('resultContainer').classList.remove('hidden');
-
-            document.getElementById('scoreDisplay').textContent = `${score}/${currentQuestions.length}`;
-
-            // Mensagem conforme pontuação
-            let message = '';
-            if (score === currentQuestions.length) {
-                message = '🏆 Excelente! Você dominou o conteúdo!';
-            } else if (score >= 3) {
-                message = '👍 Bom trabalho! Revise os erros para aperfeiçoar.';
             } else {
-                message = '📚 Continue estudando! Revise a aula e tente novamente.';
-            }
-            document.getElementById('messageDisplay').textContent = message;
-
-            // Status de salvamento
-            const saveStatus = document.getElementById('saveStatus');
-            if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== '') {
-                if (enviado) {
-                    saveStatus.className = 'success-msg show';
-                    saveStatus.textContent = '✅ Seu resultado foi registrado com sucesso!';
-                } else {
-                    saveStatus.className = 'warning-msg show';
-                    saveStatus.textContent = '⚠️ Não foi possível enviar automaticamente, mas suas respostas foram registradas localmente.';
-                }
+                console.warn("Atenção: você ainda não configurou a URL do Google Apps Script no arquivo quiz.html.");
+                // Se quiser ver um aviso na tela enquanto testa, descomente a linha abaixo:
+                // alert("Atenção: configure a URL do Google Apps Script no arquivo quiz.html.");
             }
 
-            // Renderiza correções
-            let correctionsHTML = '';
-            corrections.forEach(corr => {
-                const statusClass = corr.isCorrect ? 'correct' : 'incorrect';
-                const statusIcon = corr.isCorrect ? '✅' : '❌';
+            mostrarResultado(acertos, total, porcentagem);
+        });
 
-                correctionsHTML += `
-                    <div class="question-correction ${statusClass}">
-                        <strong>${statusIcon} Questão ${corr.question}</strong>
-                        <p style="font-style:italic;color:#555;">${corr.enunciado}</p>
-                        <p>${corr.isCorrect ?
-                            `<span class="correct-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - CORRETA</span>` :
-                            `<span class="user-answer">Sua resposta: ${corr.userAnswer}) ${corr.userText} - ERRADA</span><br>
-                             <span class="correct-answer">Resposta correta: ${corr.correctAnswer}) ${corr.correctText}</span>`
-                        }</p>
-                        <div class="explanation"><strong>Explicação:</strong> ${corr.explanation}</div>
+        // ------------------------------------------------------------
+        // Mostrar resultado
+        // ------------------------------------------------------------
+        function mostrarResultado(acertos, total, porcentagem) {
+            telaQuiz.hidden = true;
+            telaResultado.hidden = false;
+
+            resultadoTexto.textContent = acertos + "/" + total;
+            resultadoPorcentagem.textContent = porcentagem + "%";
+
+            if (porcentagem >= 80) {
+                resultadoMensagem.textContent = "Excelente! Você está muito bem preparado(a).";
+            } else if (porcentagem >= 60) {
+                resultadoMensagem.textContent = "Muito bom! Continue revisando.";
+            } else if (porcentagem >= 40) {
+                resultadoMensagem.textContent = "Bom começo, mas vale revisar novamente.";
+            } else {
+                resultadoMensagem.textContent = "Continue estudando! Revise o conteúdo e tente novamente.";
+            }
+
+            renderCorrecao();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        // ------------------------------------------------------------
+        // Correção detalhada
+        // ------------------------------------------------------------
+        function renderCorrecao() {
+            containerCorrecao.innerHTML = "";
+
+            questoes.forEach(function (questao, indice) {
+                const marcado = document.querySelector(`input[name="questao-${indice}"]:checked`);
+                const respostaAluno = marcado ? marcado.value : "";
+                const acertou = respostaAluno === questao.correta;
+
+                let alternativasHtml = "";
+
+                Object.entries(questao.alternativas).forEach(function ([letra, texto]) {
+                    let classe = "alternativa-correcao";
+
+                    if (letra === questao.correta) {
+                        classe += " correta";
+                    }
+
+                    if (letra === respostaAluno && letra !== questao.correta) {
+                        classe += " errada";
+                    }
+
+                    alternativasHtml += `
+                        <div class="${classe}">
+                            <strong>${letra.toUpperCase()})</strong> ${texto}
+                        </div>
+                    `;
+                });
+
+                const item = document.createElement("div");
+                item.className = "correcao-item " + (acertou ? "acertou" : "errou");
+
+                item.innerHTML = `
+                    <p><strong>Questão ${indice + 1}:</strong> ${questao.enunciado}</p>
+                    <p>
+                        <strong>Sua resposta:</strong> ${respostaAluno ? respostaAluno.toUpperCase() : "-"} |
+                        <strong>Resposta correta:</strong> ${questao.correta.toUpperCase()}
+                    </p>
+                    ${alternativasHtml}
+                    <div class="explicacao">
+                        <strong>Explicação:</strong> ${questao.explicacao}
                     </div>
                 `;
+
+                containerCorrecao.appendChild(item);
             });
-            document.getElementById('corrections').innerHTML = correctionsHTML;
-            window.scrollTo(0, 0);
         }
     </script>
 </body>
